@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "EZ4U",
+  "name": "EZ4U Dashboard",
+  "author": "Wioletta Gluza",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,7 +10,5 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "standalone"
 }
