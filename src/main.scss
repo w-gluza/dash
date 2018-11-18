@@ -1,1 +1,9 @@
 @import "../node_modules/normalize.css/normalize";
+
+@import "./sass/abstracts.scss";
+@import "./sass/base.scss";
+
+@import "./components/TopNav/TopNav.scss";
+@import "./components/SideNav/SideNav.scss";
+
+@import "./components/Chart/Chart.scss";

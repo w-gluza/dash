@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import "./main.scss";
-import { Button } from "@material-ui/core";
+
+import TopNav from "./components/TopNav/TopNav";
+import SideNav from "./components/SideNav/SideNav";
+import Chart from "./components/Chart/Chart";
+
+import Status from "./components/Status/Status";
 
 class App extends Component {
   render() {
     return (
-      <Button variant="contained" color="primary">
-        Log In Now
-      </Button>
+      <div>
+        <TopNav />
+        <SideNav />
+        <Chart />
+
+        <Status />
+      </div>
     );
   }
 }
-
 export default App;

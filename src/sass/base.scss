@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  list-style: none;
+  border: none;
+  background-color: transparent;
+  font-family: "Roboto", Helvetica, Arial, Verdana, Tahoma;
+}
+
+html {
+  // This define what 1rem is
+  // 10px/16pc = 62,5% --> 1rem = 10px;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+//button reset
+button {
+  cursor: pointer;
+  display: inline-block;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background-image: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.button {
+  color: $color-white;
+  background-color: $color-primary;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.04rem;
+  height: 3.6rem;
+  padding: 0 2.6rem;
+  margin: 0.6rem 0;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28),
+    0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
+}
+
+.test {
+  margin-left: 500px;
+}
