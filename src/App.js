@@ -7,54 +7,29 @@ import Chart from "./components/Chart/Chart";
 
 import Status from "./components/Status/Status";
 
-// const API = "https://hn.algolia.com/api/v1/search?query=";
-// const API =
-//   "https://api.ez4uteam.com/ez4usms/API/getAvailableCredits.php?account=WiolaTest&licensekey=adf9050fcded6680e6ed16d7";
-// const DEFAULT_QUERY = "redux";  <--- do I need it ??
+const account = "WiolaTest";
+const licensekey = "adf9050fcded6680e6ed16d7";
+const something = "getAvailableCredits.php?";
+const URL = `https://api.ez4uteam.com/ez4usms/API/${something}account=${account}licensekey=${licensekey}`;
 
-const myHeaders = {
-  "Content-Type": "application/json; charset=utf-8",
-  licensekey: "adf9050fcded6680e6ed16d7",
-  "cache-control": "no-cache"
-  // account: WiolaTest
-};
 class App extends Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   hits: []
-    // };
 
     this.state = {
       AvailableCreditsInfo: []
     };
   }
 
-  // componentDidMount() {
-  //   fetch(API)
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ hits: data.hits }));
-  //   // .then(data => this.setState({ AvailableCreditsInfo: data.AvailableCreditsInfo }));
-  // }
-
   componentDidMount() {
-    fetch(
-      "https://api.ez4uteam.com/ez4usms/API/getAvailableCredits.php?account=WiolaTest&licensekey=adf9050fcded6680e6ed16d7",
-      {
-        method: "get",
-        headers: myHeaders
-      }
-    )
-      .then(res => res.json())
+    fetch(URL)
+      .then(response => response.json())
       .then(data =>
         this.setState({ AvailableCreditsInfo: data.AvailableCreditsInfo })
       );
   }
 
   render() {
-    // const { hits } = this.state;
-
     const { AvailableCreditsInfo } = this.state;
 
     return (
@@ -64,14 +39,6 @@ class App extends Component {
         <Chart />
 
         <Status />
-
-        {/* <ul className="test">
-          {hits.map(hit => (
-            <li key={hit.objectID}>
-              <a href={hit.url}>{hit.title}</a>
-            </li>
-          ))}
-        </ul> */}
 
         <ul className="test">
           {AvailableCreditsInfo.map(x => (
