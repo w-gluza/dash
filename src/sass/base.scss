@@ -35,6 +35,10 @@ a:active {
   cursor: pointer;
 }
 
+a:visited {
+  color: $color-white;
+}
+
 //button reset
 button {
   cursor: pointer;

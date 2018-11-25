@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withNamespaces } from "react-i18next";
+import { NavLink } from "react-router-dom";
 import Icon from "../../assets/icons/";
 
 class SideNav extends Component {
@@ -17,22 +19,22 @@ class SideNav extends Component {
           <li className="sidenav__list--item">
             {" "}
             <Icon name="inbox" className="sidenav__icon" alt="LinkedIn logo" />
-            List & Campaigns
+            <NavLink to="/campaigns">{this.props.t("nav.campaigns")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
-            Quick SMS
+            <NavLink to="/quicksms">{this.props.t("nav.quicksms")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
-            Business Inteligence
+            <NavLink to="/statistics">{this.props.t("nav.statistics")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="report" className="sidenav__icon" alt="LinkedIn logo" />
-            Reports
+            <NavLink to="/reports">{this.props.t("nav.reports")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
@@ -41,7 +43,7 @@ class SideNav extends Component {
               className="sidenav__icon"
               alt="LinkedIn logo"
             />
-            Billings
+            <NavLink to="/billings">{this.props.t("nav.billings")}</NavLink>
           </li>
         </ul>
         <button className="button sidenav__button"> Upgrade Package </button>
@@ -49,4 +51,4 @@ class SideNav extends Component {
     );
   }
 }
-export default SideNav;
+export default withNamespaces("common")(SideNav);

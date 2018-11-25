@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withNamespaces } from "react-i18next";
 
 class Status extends Component {
   render() {
@@ -57,4 +58,4 @@ class Status extends Component {
     );
   }
 }
-export default Status;
+export default withNamespaces("common")(Status);
