@@ -1,15 +1,18 @@
 .sidenav {
-  color: $color-white;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 260px;
-  z-index: 1;
+  //   color: $color-white;
+  //   width: 260px;
+  //   z-index: 1;
   background-color: $color-blue-dark;
-  height: 100%;
-  position: fixed;
-  cursor: ponter;
+  //   position: fixed;
+  //   cursor: ponter;
 }
+// .sidenav {
+//   display: grid;
+//   // grid-template-columns: 2fr 8fr;
+//   grid-template-columns: minmax(26rem, 35rem);
+//   // grid-row: 1/-1;
+//   background-color: $color-blue-dark;
+// }
 
 .sidenav__title {
   font-size: 1.8rem;

@@ -37,21 +37,21 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <div>
+        <div className="dashboard__grid">
           <TopNav />
-          <Route exact path="/" component={Status} />
-          <Route exact path="/statistics" component={Chart} />
-          <Route exact path="/reports" component={Report} />
-
           <SideNav />
-
-          <ul className="test">
+          <main className="main">
+            <Route exact path="/" component={Status} />
+            <Route exact path="/statistics" component={Chart} />
+            <Route exact path="/reports" component={Report} />
+          </main>
+          {/* <ul className="test">
             {AvailableCreditsInfo.map(x => (
               <li key={x.Acquired}>
                 <a href={x.Scheduled}>{x.Consumed}</a>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </BrowserRouter>
     );
