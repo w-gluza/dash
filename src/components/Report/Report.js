@@ -1,26 +1,59 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
+const request = "getSMSList.php?";
+const account = "WiolaTest";
+const licensekey = "adf9050fcded6680e6ed16d7";
+const startDate = "2018-11-05";
+const endDate = "2018-11-25";
+const smsID = "0";
+const URL = `https://api.ez4uteam.com/ez4usms/API/${request}account=${account}&licensekey=${licensekey}&startDate=${startDate}&endDate=${endDate}&fromSMSID=${smsID}`;
+
 class Report extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      MessageList: []
+    };
+  }
+
+  componentDidMount() {
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => this.setState({ MessageList: data.MessageList }));
+  }
+
   render() {
+    const { MessageList } = this.state;
     return (
       <div className="report__container">
         <div className="card__header">Reports -> Last Week</div>
         <div className="card__body">
+          <div>
+            {MessageList.map(x => (
+              <li>
+                {/* <a href={x.Scheduled}>{x.AvailableCredits}</a> */}
+                <td>{x.PhoneNumber}</td>
+              </li>
+            ))}
+          </div>
+
           <table className="test__grid">
-            <tr className="cell__grid">
-              <th> Number</th>
-              <td>505050505</td>
-            </tr>
-            <tr className="cell__grid">
+            {/* <tr className="cell__grid"> */}
+            {/* <th> Number</th>
+            <td>505050505</td> */}
+
+            {/* </tr> */}
+            {/* <tr className="cell__grid">
               <th>Operator</th>
               <td>Portugal</td>
             </tr>
             <tr className="cell__grid">
               <th>Nr sms</th>
               <td>1</td>
-            </tr>
-            <tr className="cell__grid">
+            </tr> */}
+            {/* <tr className="cell__grid">
               <th>message</th>
               <td>Test</td>
             </tr>
@@ -34,46 +67,17 @@ class Report extends Component {
             </tr>
             <tr className="cell__grid">
               <th>Scheduled at</th>
-              <td>2018-11-18 21:27:41</td>
-            </tr>
-            <tr className="cell__grid">
+              <td>{x.ProcessTimeStamp}</td>
+            </tr> */}
+            {/* <tr className="cell__grid">
               <th>delivery timestamp</th>
               <td>2018-11-18 23:27:41</td>
             </tr>
             <tr className="cell__grid">
               <th>status</th>
               <td>Test</td>
-            </tr>
+            </tr> */}
           </table>
-
-          {/* <table className="table">
-            <thead className="table__head grid">
-              <tr>
-                <th>Number</th>
-                <th>Operator</th>
-                <th>Nr sms</th>
-                <th>message</th>
-                <th>sender</th>
-                <th>user</th>
-                <th>Scheduled at</th>
-                <th>delivery timestamp</th>
-                <th>status</th>
-              </tr>
-            </thead>
-            <tbody className="grid">
-              <tr>
-                <td>5053002033</td>
-                <td>Portugal</td>
-                <td>1</td>
-                <td>Test</td>
-                <td>Girls</td>
-                <td>WiolaTest</td>
-                <td>2018-11-18 21:27:41</td>
-                <td>2018-11-18 21:28:02</td>
-                <td>Delivered</td>
-              </tr>
-            </tbody>
-          </table> */}
         </div>
       </div>
     );

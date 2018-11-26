@@ -19,7 +19,9 @@ class SideNav extends Component {
           <li className="sidenav__list--item">
             {" "}
             <Icon name="inbox" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/campaigns">{this.props.t("nav.campaigns")}</NavLink>
+            <NavLink exact to="/">
+              {this.props.t("nav.campaigns")}
+            </NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}

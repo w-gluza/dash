@@ -82,10 +82,9 @@ button {
   display: grid;
   grid-template-areas:
     "sidenav topnav topnav"
-    "sidenav  main main"
     "sidenav  main main";
-  grid-template-rows: 6.4rem 1fr 1fr;
-  grid-template-columns: 26rem 1fr 1fr;
+  grid-template-rows: 6.4rem 1fr;
+  grid-template-columns: 26rem 1fr;
   width: 100vw;
   height: 100vh;
 }
