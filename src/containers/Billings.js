@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
 import Credit from "../components/Credit/Credit";
+import Pricing from "../components/Pricing/Pricing";
 
 class Billings extends Component {
   render() {
@@ -9,6 +10,7 @@ class Billings extends Component {
       <div>
         <p>Billings Container</p>
         <Credit />
+        <Pricing />
       </div>
     );
   }

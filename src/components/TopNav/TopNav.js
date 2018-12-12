@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
+import User from "../User/User";
 
 const request = "getAvailableCredits.php?";
 const account = "WiolaTest";
@@ -44,6 +45,8 @@ class TopNav extends Component {
             ))}
           </ul>
         </div>
+        <User />
+        <div />
       </div>
     );
   }

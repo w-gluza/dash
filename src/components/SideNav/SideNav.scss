@@ -1,18 +1,20 @@
 .sidenav {
-  //   color: $color-white;
-  //   width: 260px;
-  //   z-index: 1;
+  color: $color-white;
+  width: 260px;
+  z-index: 1;
   background-color: $color-blue-dark;
-  //   position: fixed;
-  //   cursor: ponter;
+  position: fixed;
+  cursor: ponter;
+  height: 100%;
 }
-// .sidenav {
-//   display: grid;
-//   // grid-template-columns: 2fr 8fr;
-//   grid-template-columns: minmax(26rem, 35rem);
-//   // grid-row: 1/-1;
-//   background-color: $color-blue-dark;
-// }
+.sidenav {
+  display: grid;
+  // grid-template-columns: 2fr 8fr;
+  grid-template-columns: minmax(26rem, 35rem);
+  grid-template-rows: 1fr 8fr 1fr;
+
+  background-color: $color-blue-dark;
+}
 
 .sidenav__title {
   font-size: 1.8rem;
@@ -44,8 +46,9 @@
 .sidenav__button {
   bottom: 0;
   margin: 1.5rem;
-  align-content: center;
-  position: absolute;
+  // position: absolute;
+  // right: 50%;
+  // left: 50%;
 }
 
 .sidenav__icon {
