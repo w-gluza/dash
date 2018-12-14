@@ -1,21 +1,20 @@
 .topnav {
   width: 100%;
-  background: linear-gradient(135deg, #2193b0, #00acc1);
+  // background: linear-gradient(135deg, #2193b0, #00acc1);
   // background: linear-gradient(135deg, #2b5876, #4e4376);
-  // background-color: #ffffff;
+  background-color: #37474f;
   height: 6.4rem;
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-gap: 2rem;
+  grid-template-columns: 4fr 4fr 1fr;
+  padding: 0 4rem 0 2rem;
 }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  margin-right: 0;
-  background-image: url("./example.jpg");
-  background-size: contain;
-  border: 2px solid white;
+.nav__lang__item {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav__lang {
+  text-align: center;
+  margin: auto;
 }

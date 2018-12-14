@@ -1,0 +1,24 @@
+.user__container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.user__nick {
+  color: $color-grey-light;
+  font-size: 1.5rem;
+  justify-self: end;
+  align-self: center;
+}
+.circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #ededed;
+  margin-right: 0;
+  background-image: url("./example.jpg");
+  background-size: contain;
+  border: 2px solid $color-grey-light;
+
+  justify-self: end;
+  align-self: center;
+}

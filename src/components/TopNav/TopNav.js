@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import User from "../User/User";
+import AvailableCreditBar from "../Bars/AvailableCreditBar";
 
 const request = "getAvailableCredits.php?";
 const account = "WiolaTest";
@@ -30,23 +31,28 @@ class TopNav extends Component {
 
     return (
       <div className="topnav">
-        <div>
-          <button onClick={() => i18n.changeLanguage("en")}>en</button>
-          <button onClick={() => i18n.changeLanguage("pt")}>pt</button>
-          <button onClick={() => i18n.changeLanguage("es")}>es</button>
-        </div>
-        <div>
-          Available Credit:
-          <ul className="test">
-            {AvailableCreditsInfo.map(x => (
-              <li key={x.Acquired}>
-                <a href={x.Scheduled}>{x.AvailableCredits}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <AvailableCreditBar />
         <User />
-        <div />
+        <nav className="nav__lang">
+          <button
+            className="nav__lang__item"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            en /
+          </button>
+          <button
+            className="nav__lang__item"
+            onClick={() => i18n.changeLanguage("pt")}
+          >
+            pt /
+          </button>
+          <button
+            className="nav__lang__item"
+            onClick={() => i18n.changeLanguage("es")}
+          >
+            es
+          </button>
+        </nav>
       </div>
     );
   }
