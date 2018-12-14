@@ -1,2 +1,46 @@
 .chart {
 }
+
+// #container {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   padding: 10px;
+//   width: 800px;
+//   height: 800px;
+//   background-color: #fff;
+// }
+
+.test__again {
+  z-index: 1000;
+  position: absolute;
+}
+
+.pie__text__container {
+  display: grid;
+  width: max-content;
+  // grid-gap: 0.4rem;
+}
+.pie__top__text,
+.pie__top__number,
+.pie__bottom__text,
+.pie__bottom__number {
+  color: $color-grey-dark;
+  text-align: center;
+}
+
+.pie__top__number {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  font-weight: 900;
+  border-bottom: 1px solid $color-grey-dark;
+}
+.pie__top__text,
+.pie__bottom__text {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+.pie__bottom__number {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}

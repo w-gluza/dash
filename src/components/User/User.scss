@@ -9,12 +9,10 @@
   justify-self: end;
   align-self: center;
 }
-.circle {
+.user__profile__img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-color: #ededed;
-  margin-right: 0;
   background-image: url("./example.jpg");
   background-size: contain;
   border: 2px solid $color-grey-light;

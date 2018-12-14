@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
 import Chart from "../components/Chart/Chart";
+import SuccessRate from "../components/Charts/SuccessRate";
 
 class Statistics extends Component {
   render() {
     return (
       <div>
-        <p>BI Container</p>
+        <SuccessRate />
         <Chart />
       </div>
     );

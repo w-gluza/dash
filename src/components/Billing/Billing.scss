@@ -1,30 +1,31 @@
+.billing__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+
 .count {
   font-size: 4rem;
   font-weight: 700;
-  color: #73879c;
-  border-left: 2px solid #adb2b5;
+  color: $color-blue-grey;
+  padding-left: 1rem;
+  border-left: 1px solid #adb2b5;
 }
 
 .count__top,
 .count__bottom {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #73879c;
+  color: $color-blue-grey;
+  padding-left: 1rem;
   line-height: 1.5;
 }
 
 .span__count--positive {
-  color: $color-primary;
+  color: $color-positive;
 }
 
 .span__count--negative {
-  color: $color-secondary;
-}
-
-.billing__container {
-  margin: 2rem;
-  background-color: #f1f1f1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  grid-gap: 2rem;
+  color: $color-negative;
 }

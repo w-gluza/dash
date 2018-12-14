@@ -6,7 +6,7 @@ class User extends Component {
     return (
       <div className="user__container">
         <p className="user__nick">Vasco Da Gama </p>
-        <div className="circle" />
+        <div className="user__profile__img" />
       </div>
     );
   }
