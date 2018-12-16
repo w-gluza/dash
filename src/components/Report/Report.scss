@@ -31,6 +31,11 @@ th {
   text-align: start;
 }
 
+td {
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
 .test__grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -39,4 +44,38 @@ th {
 .cell__grid {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.delivery__box {
+  height: 100%;
+  border-radius: inherit;
+  margin-top: 1rem;
+}
+
+.deliveryreport {
+  background-color: $color-primary;
+}
+// 0 – SMS not yet processed
+.deliveryreport__notprocessed {
+  background-color: pink;
+  }
+
+  //1 – SMS Delivered
+.deliveryreport__delivered {
+background-color: green;
+}
+
+// 2 – SMS Pending
+.deliveryreport__pending {
+  background-color: yellow;
+}
+
+//3 – Not Delivered (Permanent Failure)
+.deliveryreport__notdelivered {
+  background-color:red;
+}
+
+//4 – Expired (Not Permanent Failure)
+.deliveryreport__expired {
+  background-color:grey;
 }

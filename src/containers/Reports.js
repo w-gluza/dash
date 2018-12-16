@@ -7,7 +7,6 @@ class Reports extends Component {
   render() {
     return (
       <div>
-        <p>Reports Container</p>
         <Report />
       </div>
     );

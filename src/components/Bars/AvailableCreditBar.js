@@ -6,9 +6,9 @@ class AvailableCreditBar extends Component {
     super(props);
 
     this.state = {
-      percentage: 75
+      percentage: 55
     };
-  }
+  };
 
   render() {
     return (
@@ -32,7 +32,24 @@ const ProgressBar = props => {
 };
 
 const Filler = props => {
-  return <div className="filler" style={{ width: `${props.percentage}%` }} />;
+  return (
+    <div
+      className={`filler ${getColor(props.percentage)}`}
+      style={{
+        width: `${props.percentage}%`
+      }}
+    />
+  );
+};
+
+const getColor = percentage => {
+  if (percentage < 30) {
+    return "filler__negative";
+  } else if (percentage < 70) {
+    return "filler__warning";
+  } else {
+    return "filler__positive";
+  }
 };
 
 export default withNamespaces("common")(AvailableCreditBar);

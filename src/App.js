@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import "./main.scss";
 
@@ -17,18 +17,26 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="dashboard__grid">
-          <TopNav />
-          <SideNav />
-          {/* <Test /> */}
-          <main className="main">
-            <Route exact path="/" component={Campaigns} />
-            <Route exact path="/quicksms" component={QuickSMS} />
-            <Route exact path="/statistics" component={Statistics} />
-            <Route exact path="/reports" component={Reports} />
-            <Route exact path="/billings" component={Billings} />
-          </main>
-        </div>
+        <Switch>
+          <Route exact path="/login" render={() => <Link to='/'><button>login</button></Link>} />
+          <Route
+            path="/"
+            render={() => (
+              <div className="dashboard__grid">
+                <TopNav />
+                <SideNav />
+                {/* <Test /> */}
+                <main className="main">
+                  <Route exact path="/" component={Campaigns} />
+                  <Route exact path="/quicksms" component={QuickSMS} />
+                  <Route exact path="/statistics" component={Statistics} />
+                  <Route exact path="/reports" component={Reports} />
+                  <Route exact path="/billings" component={Billings} />
+                </main>
+              </div>
+            )}
+          />
+        </Switch>
       </BrowserRouter>
     );
   }

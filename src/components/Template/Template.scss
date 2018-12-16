@@ -1,7 +1,9 @@
 .template__fieldset {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   background: aqua;
+  border-radius: 12px;
+
 }
 
 textarea,
@@ -13,5 +15,5 @@ textarea {
   resize: none;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: $color-grey-light;
 }

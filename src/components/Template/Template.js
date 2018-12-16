@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
+import { getItem, setItem } from "../../localStorage";
 
-const initialState = {
+const initialFormState = {
   title: "",
   message: "",
   titleError: "",
@@ -9,12 +10,14 @@ const initialState = {
 };
 
 class Template extends Component {
-  state = initialState;
+  state = {
+    ...initialFormState,
+    templates: getItem("templates", [])
+  };
 
   change = e => {
-    const isCheckbox = e.target.type === "checkbox";
     this.setState({
-      [e.target.id]: isCheckbox ? e.target.checked : e.target.value
+      [e.target.id]: e.target.value
     });
   };
 
@@ -37,13 +40,38 @@ class Template extends Component {
 
     return true;
   };
+
   handleSubmit = e => {
     e.preventDefault();
     const isValid = this.validate();
 
     if (isValid) {
-      this.setState(initialState);
+      const newTemplates = [
+        ...this.state.templates,
+        {
+          title: this.state.title,
+          message: this.state.message
+        }
+      ];
+
+      setItem("templates", newTemplates);
+
+      this.setState({
+        ...initialFormState,
+        templates: newTemplates
+      });
     }
+  };
+
+  delete = id => {
+    const newTemplates = [...this.state.templates];
+    newTemplates.splice(id, 1);
+
+    setItem("templates", newTemplates);
+
+    this.setState({
+      templates: newTemplates
+    });
   };
 
   render() {
@@ -83,6 +111,15 @@ class Template extends Component {
             </button>
           </div>
         </form>
+
+        <div>
+          {this.state.templates.map((template, index) => (
+            <div key={index}>
+              {template.title} {template.message}
+              <button onClick={() => this.delete(index)}>Delete</button>
+            </div>
+          ))}
+        </div>
       </section>
     );
   }
