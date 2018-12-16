@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
-import { PieChart, Pie, Legend, Tooltip, Cell } from "recharts";
+import { PieChart, Pie, Tooltip, Cell } from "recharts";
 
 class SuccessRate extends Component {
   render() {

@@ -5,6 +5,7 @@ import "./main.scss";
 
 import TopNav from "./components/TopNav/TopNav";
 import SideNav from "./components/SideNav/SideNav";
+// import Test from "./components/Test/test";
 
 import Campaigns from "./containers/Campaigns";
 import QuickSMS from "./containers/QuickSMS";
@@ -19,6 +20,7 @@ class App extends Component {
         <div className="dashboard__grid">
           <TopNav />
           <SideNav />
+          {/* <Test /> */}
           <main className="main">
             <Route exact path="/" component={Campaigns} />
             <Route exact path="/quicksms" component={QuickSMS} />

@@ -1,0 +1,33 @@
+.bert {
+  width: 100%;
+  // background: linear-gradient(135deg, #2193b0, #00acc1);
+  // background: linear-gradient(135deg, #2b5876, #4e4376);
+  background-color: $color-primary;
+  height: 6.4rem;
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  //   padding: 0 4rem 0 2rem;
+  //   color: white;
+  //   font-size: 2rem;
+}
+
+.bert2 {
+  width: 100%;
+  // background: linear-gradient(135deg, #2193b0, #00acc1);
+  // background: linear-gradient(135deg, #2b5876, #4e4376);
+  background-color: $color-primary;
+  height: 6.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: white;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.bert__list--item {
+  padding-top: 2rem;
+}
+.nav__lang {
+  text-align: center;
+  margin: auto;
+}

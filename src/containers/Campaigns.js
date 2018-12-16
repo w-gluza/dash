@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import Status from "../components/Status/Status";
+import Template from "../components/Template/Template";
 
 class Campaigns extends Component {
   render() {
@@ -8,6 +9,7 @@ class Campaigns extends Component {
       <div>
         <p>Campaigns Container</p>
         <Status />
+        <Template />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
-import Chart from "../components/Chart/Chart";
+import Chart from "../components/Charts/Chart";
 import SuccessRate from "../components/Charts/SuccessRate";
 
 class Statistics extends Component {

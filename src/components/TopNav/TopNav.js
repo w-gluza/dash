@@ -3,31 +3,9 @@ import { withNamespaces } from "react-i18next";
 import User from "../User/User";
 import AvailableCreditBar from "../Bars/AvailableCreditBar";
 
-const request = "getAvailableCredits.php?";
-const account = "WiolaTest";
-const licensekey = "adf9050fcded6680e6ed16d7";
-const URL = `https://api.ez4uteam.com/ez4usms/API/${request}account=${account}&licensekey=${licensekey}`;
-
 class TopNav extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      AvailableCreditsInfo: []
-    };
-  }
-
-  componentDidMount() {
-    fetch(URL)
-      .then(response => response.json())
-      .then(data =>
-        this.setState({ AvailableCreditsInfo: data.AvailableCreditsInfo })
-      );
-  }
-
   render() {
     const { i18n } = this.props;
-    const { AvailableCreditsInfo } = this.state;
 
     return (
       <div className="topnav">
