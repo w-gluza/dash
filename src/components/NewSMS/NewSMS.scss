@@ -212,3 +212,9 @@
   .rdtTime td {
     cursor: default;
   }
+
+  .newSMS__container {
+    display: grid;
+    width: 50rem;
+    background-color: $color-white;
+  }

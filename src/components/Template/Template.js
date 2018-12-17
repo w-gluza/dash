@@ -77,46 +77,58 @@ class Template extends Component {
   render() {
     return (
       <section className="template__container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="template__fieldset">
-            <label>
-              <input
-                id="title"
-                placeholder={this.props.t("template.title")}
-                value={this.state.title}
-                onChange={this.change}
-                maxLength="50"
-                titleerror={this.props.t("template.titleError")}
-              />
-              <div className="title__error_message">
-                {this.state.titleError}
-              </div>
-            </label>
+        <form className="new__message__container" onSubmit={this.handleSubmit}>
+       
+        <div className="template__title__container">
+            <p className="template__heading">Create new template</p>
+        </div>
+        <label>            
+          <input
+              id="title"
+              placeholder={this.props.t("template.title")}
+              value={this.state.title}
+              onChange={this.change}
+              maxLength="50"
+              titleerror={this.props.t("template.titleError")}
+            />
+            <div className="title__error_message">{this.state.titleError}</div>
+          </label>
 
-            <label>
-              <textarea
-                id="message"
-                placeholder={this.props.t("contact.message")}
-                value={this.state.message}
-                onChange={this.change}
-                maxLength="500"
-              />
-              <div className="contact__error_message">
-                {this.state.messageError}
-              </div>
-            </label>
-
-            <button className="button" type="submit">
-              {this.props.t("template.button")}
-            </button>
-          </div>
+          <label>
+            <textarea
+              id="message"
+              placeholder={this.props.t("contact.message")}
+              value={this.state.message}
+              onChange={this.change}
+              maxLength="500"
+            />
+            <div className="contact__error_message">
+              {this.state.messageError}
+            </div>
+          </label>
+          
+          <button className="button" type="submit">
+            {this.props.t("template.button")}
+          </button>
         </form>
 
-        <div>
+        {/* zapytaj Kamila czy nie przenioslas key w zle miejsce  */}
+        <div className="generated__template__container">
+          <div className="template__title__container">
+            <p className="template__heading">Templates List</p>
+          </div>
+
           {this.state.templates.map((template, index) => (
-            <div key={index}>
-              {template.title} {template.message}
-              <button onClick={() => this.delete(index)}>Delete</button>
+            <div className="saved__messages__grid" key={index}>
+              <div className="message__title">{template.title}</div>
+              <div className="message__text">{template.message}</div>
+
+              <button
+                className="button delete__button"
+                onClick={() => this.delete(index)}
+              >
+                X
+              </button>
             </div>
           ))}
         </div>

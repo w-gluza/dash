@@ -1,4 +1,5 @@
 .chart {
+  position: relative;
 }
 
 // #container {
@@ -14,6 +15,17 @@
 .test__again {
   z-index: 1000;
   position: absolute;
+}
+
+.pie__text__supercontainer {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  left: 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pie__text__container {

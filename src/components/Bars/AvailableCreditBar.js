@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
+// import json from "../../assets/json/credit";
 
 class AvailableCreditBar extends Component {
   constructor(props) {
@@ -8,7 +9,10 @@ class AvailableCreditBar extends Component {
     this.state = {
       percentage: 55
     };
-  };
+  }
+  // state = {
+  //   AvailableCreditsInfo: json.AvailableCreditsInfo
+  // };
 
   render() {
     return (
@@ -18,6 +22,7 @@ class AvailableCreditBar extends Component {
     );
   }
 }
+// const { AvailableCreditsInfo } = this.state;
 
 const ProgressBar = props => {
   return (
@@ -26,7 +31,7 @@ const ProgressBar = props => {
       <div className="available__credit__bar">
         <Filler percentage={props.percentage} />
       </div>
-      <p className="available__credit__subheading"> 3553 SMS </p>
+      {/* <p className="available__credit__subheading">{AvailableCreditsInfo}</p> */}
     </div>
   );
 };
