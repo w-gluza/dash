@@ -2,7 +2,12 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://w-gluza.github.io/dashboard/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.0.1",
     "i18next": "^12.1.0",
     "moment": "^2.23.0",
     "node-sass": "^4.10.0",
@@ -19,8 +24,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

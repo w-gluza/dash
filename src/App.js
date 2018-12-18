@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import "./main.scss";
 
@@ -18,7 +18,16 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/login" render={() => <Link to='/'><button>login</button></Link>} />
+          <Redirect from="/dashboard" to="/" />
+          <Route
+            exact
+            path="/login"
+            render={() => (
+              <Link to="/">
+                <button>login</button>
+              </Link>
+            )}
+          />
           <Route
             path="/"
             render={() => (

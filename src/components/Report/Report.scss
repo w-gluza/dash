@@ -55,14 +55,20 @@ td {
 .deliveryreport {
   background-color: $color-primary;
 }
+
+.delivery__box__item {
+  font-size: 1.6rem;
+  font-weight: 2.1rem;
+  color: $color-grey-light;
+}
 // 0 – SMS not yet processed
 .deliveryreport__notprocessed {
   background-color: pink;
-  }
+}
 
-  //1 – SMS Delivered
+//1 – SMS Delivered
 .deliveryreport__delivered {
-background-color: green;
+  background-color: green;
 }
 
 // 2 – SMS Pending
@@ -72,10 +78,10 @@ background-color: green;
 
 //3 – Not Delivered (Permanent Failure)
 .deliveryreport__notdelivered {
-  background-color:red;
+  background-color: red;
 }
 
 //4 – Expired (Not Permanent Failure)
 .deliveryreport__expired {
-  background-color:grey;
+  background-color: grey;
 }

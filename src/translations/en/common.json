@@ -1,9 +1,77 @@
 {
-  "nav": {
+  "sideNav": {
+    "welcome": "Hello",
     "campaigns": "Lists&Campaigns",
     "quicksms": "Qucik SMS",
     "statistics": "Business Inteligence",
     "reports": "Reports",
-    "billings": "Billings"
+    "billings": "Billings",
+    "button": "Upgrade Package"
+  },
+  "topNav": {
+    "credit": "Available Credit"
+  },
+  "campaigns": {
+    "newSMSTemplate": "Create New Template",
+    "newSMSTemplateTitle": "SMS title",
+    "newSMSTemplateTitleError": "title is missing",
+    "newSMSTemplateMessage": "Inser your text message here",
+    "newSMSTemplateButton": "Save Template",
+    "templatesList": "Your Templates",
+    "newContactsList": "Submit new contacts",
+    "newContactsListTitle": "Contact List Title ",
+    "newContactsListNumber": "Insert number"
+  },
+  "quickSMS": {
+    "sendSMS": "Quick SMS",
+    "sendSMSTitle": "SMS title",
+    "sendSMSTitleError": "title is missing",
+    "sendSMSMessage": "Inser your text message here",
+    "sendSMSTemplate": "Choose template you want to use",
+    "sendSMSActivate": "Schedule your message",
+    "sendSMSSender": "Sender",
+    "sendSMSButton": "Send SMS"
+  },
+  "BI": {
+    "delivered": "delivered",
+    "delay": "delay",
+    "sent": "sent",
+    "averageDelay": "Average Delay",
+    "successRate": "Success Rate",
+    "totalNumber": "Total Nr of Processed Messages",
+    "totalContacts": "Total Nr of Processed Messages",
+    "statisticsSummary": "Summary"
+  },
+  "reports": {
+    "today": "Today",
+    "lastWeek": "Last Week",
+    "lastMonts": "Last Month",
+    "phoneNumber": "Phone Number",
+    "creationTime": "Creation Time",
+    "processTime": "Process Time",
+    "status": "Status",
+    "status0": "Not processed yet",
+    "status1": "Delivered",
+    "status2": "Pending",
+    "status3": "Not Delivered"
+  },
+  "billings": {
+    "aquiredVolume": "Aquired Volume",
+    "planConsumption": "Plan Consumption",
+    "landLineConsumption": "LandLine Consumption",
+    "availableCredits": "Available Credits",
+    "scheduledMessages": "Scheduled Messages",
+    "realCredit": "Real Credit",
+    "fromLastWeek": " From Last Week"
+  },
+  "pricing": {
+    "active": "Active",
+    "package": "Pacote ",
+    "aquiredVolume": "Aquired Volume",
+    "unitPrice": "Unit Price",
+    "button": "Upgrade Package",
+    "cardPackage": "Package",
+    "cardEntity": "Entity",
+    "cardReferenceNumber": "Reference No."
   }
 }

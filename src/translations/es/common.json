@@ -1,9 +1,77 @@
 {
-  "nav": {
-    "campaigns": "Listas & Campañas",
-    "quicksms": "Envio Pontual",
-    "statistics": "Estadisticas De La Cuenta",
-    "reports": "Registro",
-    "billings": "Facturación"
+  "sideNav": {
+    "welcome": "¡Hola!",
+    "campaigns": "Campañas",
+    "quicksms": "Envío Puntual",
+    "statistics": "Estadística",
+    "reports": "Informes",
+    "billings": "Facturación",
+    "button": "Actualizar Package"
+  },
+  "topNav": {
+    "credit": "Saldo"
+  },
+  "campaigns": {
+    "newSMSTemplate": "Añadir Nuevo Template",
+    "newSMSTemplateTitle": "Título de la SMS",
+    "newSMSTemplateTitleError": "Falta el Título",
+    "newSMSTemplateMessage": "Inserte su Mensaje de Texto",
+    "newSMSTemplateButton": "Guardar Template",
+    "templatesList": "Sus Templates",
+    "newContactsList": "Añadir nueva Lista de Contactos",
+    "newContactsListTitle": "Título de la Lista de Contactos ",
+    "newContactsListNumber": "Agregar Nuevo Contacto"
+  },
+  "quickSMS": {
+    "sendSMS": "Envío Puntual",
+    "sendSMSTitle": "Título de la SMS",
+    "sendSMSTitleError": "Falta el Título",
+    "sendSMSMessage": "Inserte su Mensaje de Texto",
+    "sendSMSTemplate": "Elija lo Template que desea utilizar",
+    "sendSMSActivate": "Programa tu Mensaje",
+    "sendSMSSender": "Remitente",
+    "sendSMSButton": "Enviar SMS"
+  },
+  "BI": {
+    "delivered": "Entregado",
+    "delay": "Retrasar",
+    "sent": "Expedida",
+    "averageDelay": "Retraso Medio",
+    "successRate": "tasa de Éxito",
+    "totalNumber": "Número Total de Mensajes Procesados",
+    "totalContacts": "Volumen de Contactos en Sistema",
+    "statisticsSummary": "Resumen"
+  },
+  "reports": {
+    "today": "Hoy",
+    "lastWeek": "La Semana Pasada",
+    "lastMonts": "El Mes Pasado",
+    "phoneNumber": "Número de Teléfono",
+    "creationTime": "Fecha de Creación",
+    "processTime": "Fecha de Envío",
+    "status": "Estado",
+    "status0": "Aún no Procesado",
+    "status1": "Entregado",
+    "status2": "Pendiente",
+    "status3": "No Entregado"
+  },
+  "billings": {
+    "aquiredVolume": "Volumen Adquirido",
+    "planConsumption": "Plan de Consumo",
+    "landLineConsumption": "Plan de Consumo Red Fija",
+    "availableCredits": "Crédito Disponible",
+    "scheduledMessages": "Mensajes Programados en el Sistema",
+    "realCredit": "Crédito Efectivo",
+    "fromLastWeek": " Desde la Semana Pasada"
+  },
+  "pricing": {
+    "active": "Activo",
+    "package": "Package",
+    "aquiredVolume": "Volumen Adquirido",
+    "unitPrice": "Precio Unitario",
+    "button": "Actualizar Package",
+    "cardPackage": "Package",
+    "cardEntity": "Entidad",
+    "cardReferenceNumber": "Número de Referencia"
   }
 }

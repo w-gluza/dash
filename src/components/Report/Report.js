@@ -3,33 +3,48 @@ import { withNamespaces } from "react-i18next";
 import json from "../../assets/json/status.json";
 
 class Report extends Component {
-
-  
   state = {
-    MessageList: json.MessageList,
+    MessageList: json.MessageList
   };
 
   render() {
-      
     const { MessageList } = this.state;
 
     return (
       <>
         <div className="card__header">Reports -> Last Week</div>
         <div className="card__body">
+          <div className="report__card__headings" />
+          <p>{this.props.t("reports.phoneNumber")}</p>
+          <p>{this.props.t("reports.creationTime")}</p>
+          <p>{this.props.t("reports.processTime")}</p>
+          <p>{this.props.t("reports.status")}</p>
           <div>
             {MessageList.map(deliveryReport => (
               <li className="delivery__box">
-                <td>{deliveryReport.PhoneNumber}</td>
-                <td>{deliveryReport.CreationTimeStamp}</td>
-                <td>{deliveryReport.ProcessTimeStamp}</td>
-                <td className={`deliveryreport ${getColor(deliveryReport.DeliveryStatus)}`}>{deliveryReport.DeliveryStatus}</td>
-
+                <td className="delivery__box__item">
+                  {deliveryReport.PhoneNumber}
+                </td>
+                <td className="delivery__box__item">
+                  {deliveryReport.CreationTimeStamp}
+                </td>
+                <td className="delivery__box__item">
+                  {deliveryReport.ProcessTimeStamp}
+                </td>
+                <td
+                  className={`deliveryreport ${getColor(
+                    deliveryReport.DeliveryStatus
+                  )}`}
+                >
+                  {this.props.t(`BI.status${deliveryReport.DeliveryStatus}`)}
+                  {/* {`deliveryreport $status`} */}
+                  {/* {deliveryReport.DeliveryStatus} */}
+                </td>
               </li>
             ))}
           </div>
         </div>
-        </>
+      </>
     );
   }
 }

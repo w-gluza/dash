@@ -92,23 +92,25 @@ class NewSMS extends Component {
       <section className="template__container">
         <div className="newSMS__container" onSubmit={this.handleSubmit}>
           <div className="template__title__container">
-            <p className="template__heading">Create new template</p>
+            <p className="template__heading">
+              {this.props.t("quickSMS.sendSMS")}
+            </p>
           </div>
           <label>
             <input
               id="title"
-              placeholder={this.props.t("template.title")}
+              placeholder={this.props.t("quickSMS.sendSMSTitle")}
               value={this.state.title}
               onChange={this.change}
               maxLength="50"
-              titleerror={this.props.t("template.titleError")}
+              titleerror={this.props.t("quickSMS.sendSMSTitleError")}
             />
             <div className="title__error_message">{this.state.titleError}</div>
           </label>
           <label>
             <textarea
               id="message"
-              placeholder={this.props.t("contact.message")}
+              placeholder={this.props.t("quickSMS.sendSMSMessage")}
               value={this.state.message}
               onChange={this.change}
               maxLength="500"
@@ -118,7 +120,10 @@ class NewSMS extends Component {
             </div>
           </label>
 
-          <Datetime isValidDate={valid} inputProps={{ placeholder: "N/A" }} />
+          <Datetime
+            isValidDate={valid}
+            inputProps={{ placeholder: "2018-12-18" }}
+          />
           <p>
             <select
               id="choosenTemplate"
@@ -134,12 +139,11 @@ class NewSMS extends Component {
           </p>
           {selectedTemplate && <p>{selectedTemplate.message}</p>}
           <p>
-            Sender
             <label>
               <input
-                id="title"
-                placeholder={this.props.t("sender")}
-                value={this.state.title}
+                id="sender"
+                placeholder={this.props.t("quickSMS.sendSMSSender")}
+                value={this.state.sender}
                 onChange={this.change}
                 maxLength="50"
               />

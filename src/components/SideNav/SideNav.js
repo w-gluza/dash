@@ -20,23 +20,25 @@ class SideNav extends Component {
             {" "}
             <Icon name="inbox" className="sidenav__icon" alt="LinkedIn logo" />
             <NavLink exact to="/">
-              {this.props.t("nav.campaigns")}
+              {this.props.t("sideNav.campaigns")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/quicksms">{this.props.t("nav.quicksms")}</NavLink>
+            <NavLink to="/quicksms">{this.props.t("sideNav.quicksms")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/statistics">{this.props.t("nav.statistics")}</NavLink>
+            <NavLink to="/statistics">
+              {this.props.t("sideNav.statistics")}
+            </NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
             <Icon name="report" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/reports">{this.props.t("nav.reports")}</NavLink>
+            <NavLink to="/reports">{this.props.t("sideNav.reports")}</NavLink>
           </li>
           <li className="sidenav__list--item">
             {" "}
@@ -45,7 +47,7 @@ class SideNav extends Component {
               className="sidenav__icon"
               alt="LinkedIn logo"
             />
-            <NavLink to="/billings">{this.props.t("nav.billings")}</NavLink>
+            <NavLink to="/billings">{this.props.t("sideNav.billings")}</NavLink>
           </li>
         </ul>
         <button className="button sidenav__button"> Upgrade Package </button>

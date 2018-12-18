@@ -27,11 +27,14 @@ class AvailableCreditBar extends Component {
 const ProgressBar = props => {
   return (
     <div className="available__credit__container">
-      <p className="available__credit__heading">Available Credits </p>
+      <p className="available__credit__heading">
+        Available Credit
+        {/* {this.props.t("topNav.credit")} */}
+      </p>
       <div className="available__credit__bar">
         <Filler percentage={props.percentage} />
       </div>
-      {/* <p className="available__credit__subheading">{AvailableCreditsInfo}</p> */}
+      <p className="available__credit__subheading">2000</p>
     </div>
   );
 };

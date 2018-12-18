@@ -78,18 +78,19 @@ class Template extends Component {
     return (
       <section className="template__container">
         <form className="new__message__container" onSubmit={this.handleSubmit}>
-       
-        <div className="template__title__container">
-            <p className="template__heading">Create new template</p>
-        </div>
-        <label>            
-          <input
+          <div className="template__title__container">
+            <p className="template__heading">
+              {this.props.t("campaigns.newSMSTemplate")}
+            </p>
+          </div>
+          <label>
+            <input
               id="title"
-              placeholder={this.props.t("template.title")}
+              placeholder={this.props.t("campaigns.newSMSTemplateTitle")}
               value={this.state.title}
               onChange={this.change}
               maxLength="50"
-              titleerror={this.props.t("template.titleError")}
+              titleerror={this.props.t("campaigns.newSMSTemplateTitleError")}
             />
             <div className="title__error_message">{this.state.titleError}</div>
           </label>
@@ -97,7 +98,7 @@ class Template extends Component {
           <label>
             <textarea
               id="message"
-              placeholder={this.props.t("contact.message")}
+              placeholder={this.props.t("campaigns.newSMSTemplateMessage")}
               value={this.state.message}
               onChange={this.change}
               maxLength="500"
@@ -106,16 +107,18 @@ class Template extends Component {
               {this.state.messageError}
             </div>
           </label>
-          
+
           <button className="button" type="submit">
-            {this.props.t("template.button")}
+            {this.props.t("campaigns.newSMSTemplateButton")}
           </button>
         </form>
 
         {/* zapytaj Kamila czy nie przenioslas key w zle miejsce  */}
         <div className="generated__template__container">
           <div className="template__title__container">
-            <p className="template__heading">Templates List</p>
+            <p className="template__heading">
+              {this.props.t("campaigns.templatesList")}
+            </p>
           </div>
 
           {this.state.templates.map((template, index) => (
