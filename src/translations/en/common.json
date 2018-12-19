@@ -38,9 +38,10 @@
     "sent": "sent",
     "averageDelay": "Average Delay",
     "successRate": "Success Rate",
-    "totalNumber": "Total Nr of Processed Messages",
+    "totalNumber": "Delivered Messages",
     "totalContacts": "Total Nr of Processed Messages",
-    "statisticsSummary": "Summary"
+    "statisticsSummary": "Summary",
+    "smsSend": "SMS Send"
   },
   "reports": {
     "today": "Today",

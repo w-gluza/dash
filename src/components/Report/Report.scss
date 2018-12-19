@@ -1,14 +1,12 @@
 .report__container {
   border: 0;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin: 5rem;
   border-radius: 6px;
-  color: $color-white;
-  background: #fff;
-  max-width: 100%;
 
-  padding-left: 25%;
-  padding-right: 5%;
+  display: grid;
+  grid-template: 100px 100px auto;
+  background-color: $color-white;
+  max-width: 600px;
 }
 
 .card__header {
@@ -18,10 +16,12 @@
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
     0 7px 10px -5px rgba($color-primary, 0.4);
   background: linear-gradient(60deg, $color-primary, $color-primary-dark);
+  display: grid;
 }
 
 .card__body {
-  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 th {
@@ -29,6 +29,13 @@ th {
   text-transform: uppercase;
   font-weight: 400;
   text-align: start;
+}
+.report__heading {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding-left: 2rem;
+  color: $color-primary;
 }
 
 td {
@@ -41,10 +48,10 @@ td {
   grid-template-columns: repeat(9, 1fr);
 }
 
-.cell__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+// .cell__grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+// }
 
 .delivery__box {
   height: 100%;
@@ -59,7 +66,7 @@ td {
 .delivery__box__item {
   font-size: 1.6rem;
   font-weight: 2.1rem;
-  color: $color-grey-light;
+  color: $color-grey-dark;
 }
 // 0 – SMS not yet processed
 .deliveryreport__notprocessed {
@@ -84,4 +91,13 @@ td {
 //4 – Expired (Not Permanent Failure)
 .deliveryreport__expired {
   background-color: grey;
+}
+
+.filterbutton {
+  padding: 5px;
+  border: 1px transparent solid;
+}
+
+.filterbutton__active {
+  border: 1px chartreuse solid;
 }

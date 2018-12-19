@@ -13,12 +13,6 @@ class SuccessRate extends Component {
 
     return (
       <div>
-        <div className="pie__text__container">
-          <p className="pie__top__text">Average Delay</p>
-          <p className="pie__top__number">5s</p>
-          <p className="pie__bottom__text"> SMS Send</p>
-          <p className="pie__bottom__number"> 485</p>
-        </div>
         <div style={{ position: "relative" }}>
           <PieChart width={300} height={300}>
             <Pie
@@ -38,10 +32,10 @@ class SuccessRate extends Component {
           </PieChart>
           <div className="pie__text__supercontainer">
             <div className="pie__text__container">
-              <p className="pie__top__text">Success Rate</p>
+              <p className="pie__top__text">{this.props.t("BI.successRate")}</p>
               <p className="pie__top__number">95%</p>
-              <p className="pie__bottom__text"> SMS Send</p>
-              <p className="pie__bottom__number"> 485</p>
+              <p className="pie__bottom__text"> {this.props.t("BI.smsSend")}</p>
+              <p className="pie__bottom__number"> 1245</p>
             </div>
           </div>
         </div>
