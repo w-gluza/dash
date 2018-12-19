@@ -5,7 +5,7 @@ class Status extends Component {
   render() {
     return (
       <div className="test">
-<p> For test</p>
+        <p> For test</p>
       </div>
     );
   }

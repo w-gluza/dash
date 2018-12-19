@@ -4,7 +4,7 @@
   z-index: 1;
   background-color: $color-blue-dark;
   position: fixed;
-  cursor: ponter;
+  cursor: pointer;
   height: 100%;
 }
 .sidenav {
@@ -63,4 +63,38 @@
   width: auto;
   fill: $color-primary;
   margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dashboard__grid {
+    display: grid;
+    grid-template-areas:
+      "topnav"
+      "main"
+      "mobile";
+    grid-template-rows: 6.4rem 1fr;
+    grid-template-columns: 26rem 1fr;
+    width: 100vw;
+    height: 100vh;
+  }
+  .topnav {
+    grid-area: topnav;
+  }
+
+  .sidenav {
+    grid-area: sidenav;
+    background-color: $color-blue-dark;
+  }
+
+  .main {
+    grid-area: main;
+  }
+  .mobilenav {
+    grid-area: mobile;
+  }
 }

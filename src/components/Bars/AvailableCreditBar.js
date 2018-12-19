@@ -1,30 +1,23 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 // import json from "../../assets/json/credit";
+import { getItem } from "../../localStorage";
 
 class AvailableCreditBar extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      percentage: 55
-    };
-  }
-  // state = {
-  //   AvailableCreditsInfo: json.AvailableCreditsInfo
-  // };
-
   render() {
-    return (
-      <>
-        <ProgressBar percentage={this.state.percentage} />
-      </>
-    );
+    return <ProgressBar />;
   }
 }
-// const { AvailableCreditsInfo } = this.state;
 
 const ProgressBar = props => {
+  const AvailableCreditsInfo = getItem("AvailableCreditsInfo", false);
+
+  const acquired = AvailableCreditsInfo
+    ? AvailableCreditsInfo[0].Acquired
+    : 2000;
+
+  const percentage = Math.max(0, Math.min(100, (acquired / 10000) * 100));
+
   return (
     <div className="available__credit__container">
       <p className="available__credit__heading">
@@ -32,9 +25,9 @@ const ProgressBar = props => {
         {/* {this.props.t("topNav.credit")} */}
       </p>
       <div className="available__credit__bar">
-        <Filler percentage={props.percentage} />
+        <Filler percentage={percentage} />
       </div>
-      <p className="available__credit__subheading">2000</p>
+      <p className="available__credit__subheading">{acquired}</p>
     </div>
   );
 };

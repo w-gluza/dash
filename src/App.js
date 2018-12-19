@@ -13,7 +13,18 @@ import Statistics from "./containers/Statistics";
 import Reports from "./containers/Reports";
 import Billings from "./containers/Billings";
 
+import { subscribe, unsubscribe } from "./localStorage";
+import MobileNav from "./components/MobileNav/MobileNav";
+
 class App extends Component {
+  componentDidMount() {
+    subscribe(this);
+  }
+
+  componentWillUnmount() {
+    unsubscribe(this);
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -34,6 +45,7 @@ class App extends Component {
               <div className="dashboard__grid">
                 <TopNav />
                 <SideNav />
+                <MobileNav />
                 {/* <Test /> */}
                 <main className="main">
                   <Route exact path="/" component={Campaigns} />

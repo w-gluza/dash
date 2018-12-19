@@ -32,17 +32,17 @@ class Billing extends Component {
                   <span className="span__count--positive">5%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
-              </div>{" "}
+              </div>
               <div className="billing__stats">
                 <p className="count__top">
                   {this.props.t("billings.landLineConsumption")}
                 </p>
                 <p className="count">{userCredit.ConsumedLandLine}</p>
                 <p className="count__bottom">
-                  <span className="span__count--positive">4%</span>{" "}
+                  <span className="span__count--positive">4%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
-              </div>{" "}
+              </div>
               <div className="billing__stats">
                 <p className="count__top">
                   {this.props.t("billings.availableCredits")}
@@ -52,7 +52,7 @@ class Billing extends Component {
                   <span className="span__count--negative">7%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
-              </div>{" "}
+              </div>
               <div className="billing__stats">
                 <p className="count__top">
                   {this.props.t("billings.scheduledMessages")}
@@ -62,7 +62,7 @@ class Billing extends Component {
                   <span className="span__count--positive">4%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
-              </div>{" "}
+              </div>
               <div className="billing__stats">
                 <p className="count__top">
                   {this.props.t("billings.realCredit")}

@@ -16,6 +16,7 @@ const yesterday = Datetime.moment().subtract(1, "day");
 const valid = function(current) {
   return current.isAfter(yesterday);
 };
+
 class NewSMS extends Component {
   state = {
     ...initialFormState,
@@ -26,6 +27,17 @@ class NewSMS extends Component {
 
   change = e => {
     this.setState({
+      [e.target.id]: e.target.value
+    });
+  };
+
+  changeTemplate = e => {
+    const selectedTemplate = this.state.templates.find(
+      template => template.title === e.target.value
+    );
+
+    this.setState({
+      message: selectedTemplate.message,
       [e.target.id]: e.target.value
     });
   };
@@ -84,10 +96,6 @@ class NewSMS extends Component {
   };
 
   render() {
-    const selectedTemplate = this.state.templates.find(
-      template => template.title === this.state.choosenTemplate
-    );
-
     return (
       <section className="template__container">
         <div className="newSMS__container" onSubmit={this.handleSubmit}>
@@ -128,8 +136,11 @@ class NewSMS extends Component {
             <select
               id="choosenTemplate"
               value={this.state.choosenTemplate}
-              onChange={this.change}
+              onChange={this.changeTemplate}
             >
+              <option disabled selected value={null}>
+                Choose your template
+              </option>
               {this.state.templates.map((template, index) => (
                 <option key={index} value={template.title}>
                   {template.title}
@@ -137,7 +148,6 @@ class NewSMS extends Component {
               ))}
             </select>
           </p>
-          {selectedTemplate && <p>{selectedTemplate.message}</p>}
           <p>
             <label>
               <input

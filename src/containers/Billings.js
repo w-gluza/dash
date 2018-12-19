@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import json from "../assets/json/credit";
+import { getItem, setItem } from "../localStorage";
 
 import Billing from "../components/Billing/Billing";
 import Pricing from "../components/Pricing/Pricing";
 
 class Billings extends Component {
   state = {
-    AvailableCreditsInfo: json.AvailableCreditsInfo
+    AvailableCreditsInfo: getItem(
+      "AvailableCreditsInfo",
+      json.AvailableCreditsInfo
+    )
   };
 
   handleAddCredits = amount => {
@@ -18,6 +22,8 @@ class Billings extends Component {
         ...AvailableCreditsInfo,
         Acquired: parseInt(AvailableCreditsInfo.Acquired) + amount
       };
+
+      setItem("AvailableCreditsInfo", [newAvailableCreditsInfo]);
 
       return {
         AvailableCreditsInfo: [newAvailableCreditsInfo]
