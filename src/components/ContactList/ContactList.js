@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import TagsInput from "react-tagsinput";
 import json from "../../assets/json/status.json";
+import PhoneNumbers from "./PhoneNumbers";
 
 import "react-tagsinput/react-tagsinput.css";
-
-console.log(json);
 
 const initialFormState = {
   listName: "",
@@ -80,9 +79,14 @@ class ContactList extends Component {
 
   render() {
     return (
-      <section className="contactlist__container">
+      <section>
         <form onSubmit={this.handleSubmit}>
-          <div className="contactlist__fieldset">
+          <div className="newNumbersList__container">
+            <div className="template__title__container">
+              <p className="template__heading">
+                {this.props.t("contactList.heading")}
+              </p>
+            </div>
             <label>
               <input
                 id="listName"
@@ -100,7 +104,7 @@ class ContactList extends Component {
             <label>
               <textarea
                 id="description"
-                placeholder={this.props.t("listname.message")}
+                placeholder={this.props.t("contactList.description")}
                 value={this.state.message}
                 onChange={this.change}
                 maxLength="500"
@@ -111,29 +115,9 @@ class ContactList extends Component {
             </label>
 
             <label>
-              <TagsInput
-                value={this.state.phoneNumber.split(";").filter(x => x)}
-                onChange={numbers =>
-                  this.setValue(
-                    "phoneNumber",
-                    numbers
-                      .map(number => number.replace(/\D/g, ""))
-                      .filter(x => x)
-                      .join(";")
-                  )
-                }
-                addKeys={[
-                  9, // tab
-                  13, // enter
-                  32, // space
-                  186 // semicolon
-                ]}
-                inputProps={{
-                  placeholder: this.props.t("listname.phoneNumber"),
-                  maxLength: "20",
-                  inputMode: "numeric",
-                  type: "number"
-                }}
+              <PhoneNumbers
+                value={this.state.phoneNumber}
+                onChange={numbers => this.setValue("phoneNumber", numbers)}
               />
 
               <div className="title__error_message">

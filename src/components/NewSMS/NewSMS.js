@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { getItem, setItem } from "../../localStorage";
 import * as Datetime from "react-datetime";
+import PhoneNumbers from "../ContactList/PhoneNumbers";
 
 const initialFormState = {
   title: "",
@@ -9,7 +10,9 @@ const initialFormState = {
   ActivationTimeStamp: "",
   sender: "",
   titleError: "",
-  messageError: ""
+  messageError: "",
+  phoneNumbers: "",
+  phoneNumbersError: ""
 };
 const yesterday = Datetime.moment().subtract(1, "day");
 
@@ -31,6 +34,12 @@ class NewSMS extends Component {
     });
   };
 
+  changeValue = (value, name) => {
+    this.setState({
+      [name]: value
+    });
+  };
+
   changeTemplate = e => {
     const selectedTemplate = this.state.templates.find(
       template => template.title === e.target.value
@@ -45,6 +54,7 @@ class NewSMS extends Component {
   validate = () => {
     let titleError = "";
     let messageError = "";
+    let phoneNumbersError = "";
 
     if (!this.state.title) {
       titleError = this.props.t("Title is missing");
@@ -54,8 +64,12 @@ class NewSMS extends Component {
       messageError = this.props.t("Message is missing");
     }
 
-    if (titleError || messageError) {
-      this.setState({ titleError, messageError });
+    if (!this.state.phoneNumbers) {
+      phoneNumbersError = this.props.t("Phone number is missing");
+    }
+
+    if (titleError || messageError || phoneNumbersError) {
+      this.setState({ titleError, messageError, phoneNumbersError });
       return false;
     }
 
@@ -147,6 +161,17 @@ class NewSMS extends Component {
                 </option>
               ))}
             </select>
+          </p>
+          <p>
+            <label>
+              <PhoneNumbers
+                value={this.state.phoneNumbers}
+                onChange={value => this.changeValue(value, "phoneNumbers")}
+              />
+              <div className="title__error_message">
+                {this.state.phoneNumbersError}
+              </div>
+            </label>
           </p>
           <p>
             <label>

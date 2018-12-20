@@ -17,7 +17,8 @@ class Report extends Component {
     }),
     filter: "all",
     fromDate: moment().subtract(7, "days"),
-    toDate: moment()
+    toDate: moment(),
+    recordsToShow: 20
   };
 
   handleSetFilter = filter => {
@@ -45,6 +46,12 @@ class Report extends Component {
     });
   };
 
+  handleShowMore = () => {
+    this.setState(state => ({
+      recordsToShow: state.recordsToShow + 20
+    }));
+  };
+
   isActiveFilter = filter => this.state.filter === filter;
 
   getFiltered = () => {
@@ -56,10 +63,12 @@ class Report extends Component {
         processMoment.isAfter(this.state.fromDate) &&
         processMoment.isBefore(this.state.toDate)
       );
-    }).slice(0, 20);
+    });
   };
 
   render() {
+    const reports = this.getFiltered();
+
     return (
       <section className="report__container">
         <div className="card__header">Reports -> Last Week</div>
@@ -154,7 +163,7 @@ class Report extends Component {
         </thead>
         <table>
           <tbody>
-            {this.getFiltered().map(deliveryReport => (
+            {reports.slice(0, this.state.recordsToShow).map(deliveryReport => (
               <tr className="delivery__box">
                 <td className="delivery__box__item">
                   {deliveryReport.PhoneNumber}
@@ -178,6 +187,9 @@ class Report extends Component {
             ))}
           </tbody>
         </table>
+        {reports.length > this.state.recordsToShow ? (
+          <button onClick={this.handleShowMore}>Show more...</button>
+        ) : null}
       </section>
     );
   }

@@ -1,3 +1,13 @@
-.contactlist__fieldset {
-    margin-top: 10rem;
+.newNumbersList__container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  max-width: 50rem;
+  min-height: 30rem;
+  border-radius: 12px;
+  background: $color-white;
+}
+.newNumbersList__container .template__title__container {
+  background: linear-gradient(45deg, #de6262, #ffb88c);
+  box-shadow: 0 12px 20px -10px rgba(#de6262, 1),
+    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#ffb88c, 0.2);
 }

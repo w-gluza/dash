@@ -1,17 +1,17 @@
 .topnav {
   width: 100%;
-  // background: linear-gradient(135deg, #2193b0, #00acc1);
-  // background: linear-gradient(135deg, #2b5876, #4e4376);
   background-color: #37474f;
   height: 6.4rem;
   display: grid;
   grid-template-columns: 4fr 4fr 1fr;
-  padding: 0 4rem 0 2rem;
+  padding: 0.5rem;
 }
 
 .nav__lang__item {
-  color: $color-white;
+  color: $color-grey-light;
   font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .nav__lang {

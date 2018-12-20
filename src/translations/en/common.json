@@ -14,7 +14,7 @@
     "credit": "Available Credit"
   },
   "campaigns": {
-    "newSMSTemplate": "Create New Template",
+    "newSMSTemplate": "Create New SMS Template",
     "newSMSTemplateTitle": "SMS title",
     "newSMSTemplateTitleError": "title is missing",
     "newSMSTemplateMessage": "Inser your text message here",
@@ -76,5 +76,11 @@
     "cardPackage": "Package",
     "cardEntity": "Entity",
     "cardReferenceNumber": "Reference No."
+  },
+  "contactList": {
+    "heading": "Create New Contact List",
+    "headingError": "Name of the template missing",
+    "phoneNumber": "Phone Number",
+    "button": "saved"
   }
 }

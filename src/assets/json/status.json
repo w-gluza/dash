@@ -46,7 +46,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-26 16:05:46",
       "ProcessTimeStamp": "2018-12-26 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "2"
     },
     {
       "smsID": "2198936",
@@ -54,7 +54,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-28 16:05:46",
       "ProcessTimeStamp": "2018-12-28 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "4"
     },
     {
       "smsID": "2128936",
@@ -70,7 +70,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-11-29 16:05:46",
       "ProcessTimeStamp": "2018-11-29 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "2"
     },
     {
       "smsID": "2238632",
@@ -86,7 +86,55 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-11-25 16:05:46",
       "ProcessTimeStamp": "2018-11-25 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2234630",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-08 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
       "DeliveryStatus": "0"
+    },
+    {
+      "smsID": "2234332",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-08 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
+      "DeliveryStatus": "4"
+    },
+    {
+      "smsID": "2234337",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-16 16:05:46",
+      "ProcessTimeStamp": "2018-12-16 16:06:46",
+      "DeliveryStatus": "3"
+    },
+    {
+      "smsID": "2234357",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-14 16:05:46",
+      "ProcessTimeStamp": "2018-12-14 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2234355",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-15 16:05:46",
+      "ProcessTimeStamp": "2018-12-15 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2234631",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-11-25 16:05:46",
+      "ProcessTimeStamp": "2018-11-25 16:06:46",
+      "DeliveryStatus": "1"
     },
     {
       "smsID": "2234630",
@@ -102,7 +150,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-18 16:05:46",
       "ProcessTimeStamp": "2018-12-18 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "4"
     },
     {
       "smsID": "2234337",
@@ -110,7 +158,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-16 16:05:46",
       "ProcessTimeStamp": "2018-12-16 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "3"
     },
     {
       "smsID": "2234357",
@@ -118,7 +166,7 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-14 16:05:46",
       "ProcessTimeStamp": "2018-12-14 16:06:46",
-      "DeliveryStatus": "0"
+      "DeliveryStatus": "2"
     },
     {
       "smsID": "2234355",
@@ -126,7 +174,183 @@
       "user": "Wiola",
       "CreationTimeStamp": "2018-12-15 16:05:46",
       "ProcessTimeStamp": "2018-12-15 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2196608",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2019-01-05 16:01:46",
+      "ProcessTimeStamp": "2019-01-03 16:03:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2196775",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2019-01-03 16:03:46",
+      "ProcessTimeStamp": "2019-01-03 16:05:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2196776",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2019-01-05 16:04:46",
+      "ProcessTimeStamp": "2019-01-05 16:08:46",
+      "DeliveryStatus": "3"
+    },
+    {
+      "smsID": "2198954",
+      "PhoneNumber": "967146050",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-24 16:05:46",
+      "ProcessTimeStamp": "2018-12-24 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2198955",
+      "PhoneNumber": "967146050",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-24 16:05:46",
+      "ProcessTimeStamp": "2018-12-24 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2198956",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-26 16:05:46",
+      "ProcessTimeStamp": "2018-12-26 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2198936",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-28 16:05:46",
+      "ProcessTimeStamp": "2018-12-28 16:06:46",
+      "DeliveryStatus": "4"
+    },
+    {
+      "smsID": "2128936",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-29 16:05:46",
+      "ProcessTimeStamp": "2018-12-29 16:06:46",
       "DeliveryStatus": "0"
+    },
+    {
+      "smsID": "2238936",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-11-29 16:05:46",
+      "ProcessTimeStamp": "2018-11-29 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2238632",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-11-28 16:05:46",
+      "ProcessTimeStamp": "2018-11-28 16:06:46",
+      "DeliveryStatus": "0"
+    },
+    {
+      "smsID": "2234631",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-11-25 16:05:46",
+      "ProcessTimeStamp": "2018-11-25 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2234630",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-08 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
+      "DeliveryStatus": "0"
+    },
+    {
+      "smsID": "2234332",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-08 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
+      "DeliveryStatus": "4"
+    },
+    {
+      "smsID": "2234337",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-16 16:05:46",
+      "ProcessTimeStamp": "2018-12-16 16:06:46",
+      "DeliveryStatus": "3"
+    },
+    {
+      "smsID": "2234357",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-14 16:05:46",
+      "ProcessTimeStamp": "2018-12-14 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2234355",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-15 16:05:46",
+      "ProcessTimeStamp": "2018-12-15 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2234631",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-11-25 16:05:46",
+      "ProcessTimeStamp": "2018-11-25 16:06:46",
+      "DeliveryStatus": "1"
+    },
+    {
+      "smsID": "2234630",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-18 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
+      "DeliveryStatus": "0"
+    },
+    {
+      "smsID": "2234332",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-18 16:05:46",
+      "ProcessTimeStamp": "2018-12-18 16:06:46",
+      "DeliveryStatus": "4"
+    },
+    {
+      "smsID": "2234337",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-16 16:05:46",
+      "ProcessTimeStamp": "2018-12-16 16:06:46",
+      "DeliveryStatus": "3"
+    },
+    {
+      "smsID": "2234357",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-14 16:05:46",
+      "ProcessTimeStamp": "2018-12-14 16:06:46",
+      "DeliveryStatus": "2"
+    },
+    {
+      "smsID": "2234355",
+      "PhoneNumber": "916155757",
+      "user": "Wiola",
+      "CreationTimeStamp": "2018-12-15 16:05:46",
+      "ProcessTimeStamp": "2018-12-15 16:06:46",
+      "DeliveryStatus": "1"
     }
   ]
 }

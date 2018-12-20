@@ -4,11 +4,10 @@ import { withNamespaces } from "react-i18next";
 import Template from "../components/Template/Template";
 import ContactList from "../components/ContactList/ContactList";
 
-
 class Campaigns extends Component {
   render() {
     return (
-      <div>
+      <div className="campaigns__grid">
         {/* <p>Campaigns Container</p> */}
         {/* <Status /> */}
         <Template />

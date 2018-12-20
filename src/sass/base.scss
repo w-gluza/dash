@@ -86,3 +86,9 @@ button {
 // .chart {
 //   grid-column: 1/-1;
 // }
+.campaigns__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  padding: 5rem 3rem;
+}

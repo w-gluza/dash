@@ -5,7 +5,7 @@ import { getItem } from "../../localStorage";
 
 class AvailableCreditBar extends Component {
   render() {
-    return <ProgressBar />;
+    return <ProgressBar t={this.props.t} />;
   }
 }
 
@@ -20,10 +20,7 @@ const ProgressBar = props => {
 
   return (
     <div className="available__credit__container">
-      <p className="available__credit__heading">
-        Available Credit
-        {/* {this.props.t("topNav.credit")} */}
-      </p>
+      <p className="available__credit__heading">{props.t("topNav.credit")}</p>
       <div className="available__credit__bar">
         <Filler percentage={percentage} />
       </div>
