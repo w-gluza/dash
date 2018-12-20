@@ -53,7 +53,7 @@
   height: 7rem;
 }
 
-.sidenav__list--item {
+.sidenav__list--item > a {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 2.1rem;
@@ -66,6 +66,10 @@
   transition: all 300ms linear;
   background-color: transparent;
   border-bottom: 1px solid rgba($color-white, 0.3);
+
+  &.sidenav__list--activelink {
+    background-color: $color-primary;
+  }
 }
 
 .sidenav__button {
@@ -151,9 +155,18 @@
     text-align: center;
     fill: rgba($color-grey-dark, 0.8);
     align-self: center;
+    &,
+    &:visited {
+      color: black;
+    }
   }
-}
-
-.mobilenav__list--item a {
-  color: $color-grey-dark;
+  .mobilenav__link--active {
+    &,
+    &:visited {
+      color: white;
+    }
+    path {
+      fill: white;
+    }
+  }
 }

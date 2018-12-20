@@ -2,11 +2,14 @@
   border: 0;
   border-radius: 6px;
   display: grid;
-  // grid-template: 100px 100px auto;
-  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 100rem;
+  margin: 5rem;
+  background-color: pink;
+}
 
-  background-color: $color-white;
-  // max-width: 60rem;
+.report__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card__header {
@@ -48,19 +51,10 @@ td {
   grid-template-columns: repeat(9, 1fr);
 }
 
-// .cell__grid {
-//   display: grid;
-//   grid-template-columns: 1fr;
-// }
-
-.delivery__box {
-  height: 100%;
-  border-radius: inherit;
-  margin-top: 1rem;
-}
-
-.deliveryreport {
-  background-color: $color-primary;
+.report__datepicker {
+  display: grid;
+  grid-template-columns: 3rem 11rem 3rem 11rem;
+  max-width: 250px;
 }
 
 .delivery__box__item {
@@ -70,27 +64,27 @@ td {
 }
 // 0 – SMS not yet processed
 .deliveryreport__notprocessed {
-  background-color: pink;
+  background-color: #eceff1;
 }
 
 //1 – SMS Delivered
 .deliveryreport__delivered {
-  background-color: green;
+  background-color: $color-positive;
 }
 
 // 2 – SMS Pending
 .deliveryreport__pending {
-  background-color: yellow;
+  background-color: $color-warning;
 }
 
 //3 – Not Delivered (Permanent Failure)
 .deliveryreport__notdelivered {
-  background-color: red;
+  background-color: $color-negative;
 }
 
 //4 – Expired (Not Permanent Failure)
 .deliveryreport__expired {
-  background-color: grey;
+  background-color: #b0bec5;
 }
 
 .filterbutton {

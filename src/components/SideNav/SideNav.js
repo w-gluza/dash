@@ -17,7 +17,7 @@ class SideNav extends Component {
         </div>
         <ul>
           <li className="sidenav__list--item">
-            <NavLink exact to="/">
+            <NavLink exact to="/" activeClassName="sidenav__list--activelink">
               <Icon
                 name="inbox"
                 className="sidenav__icon"
@@ -27,20 +27,23 @@ class SideNav extends Component {
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <NavLink to="/quicksms">
+            <NavLink to="/quicksms" activeClassName="sidenav__list--activelink">
               <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
               {this.props.t("sideNav.quicksms")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <NavLink to="/statistics">
+            <NavLink
+              to="/statistics"
+              activeClassName="sidenav__list--activelink"
+            >
               <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
 
               {this.props.t("sideNav.statistics")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <NavLink to="/reports">
+            <NavLink to="/reports" activeClassName="sidenav__list--activelink">
               <Icon
                 name="report"
                 className="sidenav__icon"
@@ -50,7 +53,7 @@ class SideNav extends Component {
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <NavLink to="/billings">
+            <NavLink to="/billings" activeClassName="sidenav__list--activelink">
               <Icon
                 name="pricing"
                 className="sidenav__icon"

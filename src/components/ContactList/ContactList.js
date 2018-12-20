@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
-import TagsInput from "react-tagsinput";
-import json from "../../assets/json/status.json";
 import PhoneNumbers from "./PhoneNumbers";
+import { toast } from "react-toastify";
 
 import "react-tagsinput/react-tagsinput.css";
 
@@ -63,6 +62,8 @@ class ContactList extends Component {
     const isValid = this.validate();
 
     if (isValid) {
+      toast("Contact list template created");
+
       this.setState({
         ...initialFormState,
         contactListTemplate: [
@@ -79,7 +80,7 @@ class ContactList extends Component {
 
   render() {
     return (
-      <section>
+      <section className="template__container">
         <form onSubmit={this.handleSubmit}>
           <div className="newNumbersList__container">
             <div className="template__title__container">
@@ -131,7 +132,12 @@ class ContactList extends Component {
           </div>
         </form>
 
-        <div>
+        <div className="generated__template__container">
+          <div className="template__title__container">
+            <p className="template__heading">
+              {this.props.t("campaigns.templatesList")}
+            </p>
+          </div>
           {this.state.contactListTemplate.map((template, index) => (
             <div key={index}>
               {template.listName} {template.description} {template.phoneNumber}

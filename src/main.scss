@@ -21,3 +21,7 @@
 @import "./components/User/User.scss";
 
 @import "./components/Test/Test.scss";
+
+.Toastify__progress-bar--default {
+  background: linear-gradient(to right, #fff, #2193b0, #00acc1);
+}

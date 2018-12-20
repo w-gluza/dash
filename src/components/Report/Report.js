@@ -135,56 +135,60 @@ class Report extends Component {
             Expired
           </button>
         </div>
-        <div>
-          from:{" "}
+        <div className="report__datepicker">
+          from:
           <Datetime
             value={this.state.fromDate}
             onChange={value => this.handleChangeFilterDate("fromDate", value)}
           />
-          to:{" "}
+          to:
           <Datetime
             value={this.state.toDate}
             onChange={value => this.handleChangeFilterDate("toDate", value)}
           />
         </div>
-        <thead>
-          <tr className="card__body">
-            <p className="report__heading">
-              {this.props.t("reports.phoneNumber")}
-            </p>
-            <p className="report__heading">
-              {this.props.t("reports.creationTime")}
-            </p>
-            <p className="report__heading">
-              {this.props.t("reports.processTime")}
-            </p>
-            <p className="report__heading">{this.props.t("reports.status")}</p>
-          </tr>
-        </thead>
         <table>
+          <thead>
+            <tr className="card__body">
+              <th className="report__heading">
+                {this.props.t("reports.phoneNumber")}
+              </th>
+              <th className="report__heading">
+                {this.props.t("reports.creationTime")}
+              </th>
+              <th className="report__heading">
+                {this.props.t("reports.processTime")}
+              </th>
+              <th className="report__heading">
+                {this.props.t("reports.status")}
+              </th>
+            </tr>
+          </thead>
           <tbody>
-            {reports.slice(0, this.state.recordsToShow).map(deliveryReport => (
-              <tr className="delivery__box">
-                <td className="delivery__box__item">
-                  {deliveryReport.PhoneNumber}
-                </td>
-                <td className="delivery__box__item">
-                  {deliveryReport.CreationTimeStamp}
-                </td>
-                <td className="delivery__box__item">
-                  {deliveryReport.ProcessTimeStamp}
-                </td>
-                <td
-                  className={`deliveryreport ${getColor(
-                    deliveryReport.DeliveryStatus
-                  )}`}
-                >
-                  {this.props.t(`BI.status${deliveryReport.DeliveryStatus}`)}
-                  {/* {`deliveryreport $status`} */}
-                  {/* {deliveryReport.DeliveryStatus} */}
-                </td>
-              </tr>
-            ))}
+            {reports
+              .slice(0, this.state.recordsToShow)
+              .map((deliveryReport, index) => (
+                <tr className="delivery__box report__columns" key={index}>
+                  <td className="delivery__box__item">
+                    {deliveryReport.PhoneNumber}
+                  </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.CreationTimeStamp}
+                  </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.ProcessTimeStamp}
+                  </td>
+                  <td
+                    className={`deliveryreport ${getColor(
+                      deliveryReport.DeliveryStatus
+                    )}`}
+                  >
+                    {this.props.t(`BI.status${deliveryReport.DeliveryStatus}`)}
+                    {/* {`deliveryreport $status`} */}
+                    {/* {deliveryReport.DeliveryStatus} */}
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
         {reports.length > this.state.recordsToShow ? (

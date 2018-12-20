@@ -43,7 +43,12 @@
     "totalNumber": "Delivered Messages",
     "totalContacts": "Total Nr of Processed Messages",
     "statisticsSummary": "Summary",
-    "smsSend": "SMS Send"
+    "smsSend": "SMS Send",
+    "status0": "not processed",
+    "status1": "Delivered",
+    "status2": "Pending",
+    "status3": "Not Delivered ",
+    "status4": "Expired"
   },
   "reports": {
     "today": "Today",

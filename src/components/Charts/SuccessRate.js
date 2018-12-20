@@ -15,6 +15,7 @@ class SuccessRate extends Component {
       <div style={{ position: "relative" }}>
         <PieChart width={300} height={300}>
           <Pie
+            dataKey="value"
             isAnimationActive={true}
             data={data}
             innerRadius={80}
@@ -23,7 +24,7 @@ class SuccessRate extends Component {
             fill="fill"
           >
             {data.map((entry, index) => (
-              <Cell fill={COLORS[index % COLORS.length]} />
+              <Cell key={index} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
           <Tooltip />

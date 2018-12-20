@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { getItem, setItem } from "../../localStorage";
+import { toast } from "react-toastify";
 
 const initialFormState = {
   title: "",
@@ -53,6 +54,8 @@ class Template extends Component {
           message: this.state.message
         }
       ];
+
+      toast("Template created!");
 
       setItem("templates", newTemplates);
 
@@ -108,33 +111,34 @@ class Template extends Component {
             </div>
           </label>
 
-          <button className="button" type="submit">
+          <button className="button submit__templates" type="submit">
             {this.props.t("campaigns.newSMSTemplateButton")}
           </button>
         </form>
 
-        {/* zapytaj Kamila czy nie przenioslas key w zle miejsce  */}
-        <div className="generated__template__container">
-          <div className="template__title__container">
-            <p className="template__heading">
-              {this.props.t("campaigns.templatesList")}
-            </p>
-          </div>
-
-          {this.state.templates.map((template, index) => (
-            <div className="saved__messages__grid" key={index}>
-              <div className="message__title">{template.title}</div>
-              <div className="message__text">{template.message}</div>
-
-              <button
-                className="button delete__button"
-                onClick={() => this.delete(index)}
-              >
-                X
-              </button>
+        {this.state.templates.length > 0 && (
+          <div className="generated__template__container">
+            <div className="template__title__container">
+              <p className="template__heading">
+                {this.props.t("campaigns.templatesList")}
+              </p>
             </div>
-          ))}
-        </div>
+
+            {this.state.templates.map((template, index) => (
+              <div className="saved__messages__grid" key={index}>
+                <div className="message__title">{template.title}</div>
+                <div className="message__text">{template.message}</div>
+
+                <button
+                  className="button delete__button"
+                  onClick={() => this.delete(index)}
+                >
+                  X
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
     );
   }

@@ -149,10 +149,10 @@ class NewSMS extends Component {
           <p>
             <select
               id="choosenTemplate"
-              value={this.state.choosenTemplate}
+              value={this.state.choosenTemplate || ""}
               onChange={this.changeTemplate}
             >
-              <option disabled selected value={null}>
+              <option disabled defaultValue value={null}>
                 Choose your template
               </option>
               {this.state.templates.map((template, index) => (
@@ -162,7 +162,7 @@ class NewSMS extends Component {
               ))}
             </select>
           </p>
-          <p>
+          <div>
             <label>
               <PhoneNumbers
                 value={this.state.phoneNumbers}
@@ -172,7 +172,7 @@ class NewSMS extends Component {
                 {this.state.phoneNumbersError}
               </div>
             </label>
-          </p>
+          </div>
           <p>
             <label>
               <input

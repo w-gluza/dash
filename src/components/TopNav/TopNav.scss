@@ -14,9 +14,15 @@
   font-weight: 300;
 }
 
+.nav__lang__item__active {
+  font-weight: bold;
+  color: $color-primary;
+}
+
 .nav__lang {
   text-align: center;
   margin: auto;
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {

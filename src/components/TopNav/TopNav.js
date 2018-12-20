@@ -13,19 +13,27 @@ class TopNav extends Component {
         <User />
         <nav className="nav__lang">
           <button
-            className="nav__lang__item"
+            className={`nav__lang__item ${
+              i18n.language === "en" ? "nav__lang__item__active" : ""
+            }`}
             onClick={() => i18n.changeLanguage("en")}
           >
-            en /
+            en
           </button>
+          {" / "}
           <button
-            className="nav__lang__item"
+            className={`nav__lang__item ${
+              i18n.language === "pt" ? "nav__lang__item__active" : ""
+            }`}
             onClick={() => i18n.changeLanguage("pt")}
           >
-            pt /
+            pt
           </button>
+          {" / "}
           <button
-            className="nav__lang__item"
+            className={`nav__lang__item ${
+              i18n.language === "es" ? "nav__lang__item__active" : ""
+            }`}
             onClick={() => i18n.changeLanguage("es")}
           >
             es
