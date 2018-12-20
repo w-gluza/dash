@@ -17,32 +17,47 @@ class SideNav extends Component {
         </div>
         <ul>
           <li className="sidenav__list--item">
-            <Icon name="inbox" className="sidenav__icon" alt="LinkedIn logo" />
             <NavLink exact to="/">
+              <Icon
+                name="inbox"
+                className="sidenav__icon"
+                alt="LinkedIn logo"
+              />
               {this.props.t("sideNav.campaigns")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/quicksms">{this.props.t("sideNav.quicksms")}</NavLink>
+            <NavLink to="/quicksms">
+              <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
+              {this.props.t("sideNav.quicksms")}
+            </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
             <NavLink to="/statistics">
+              <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
+
               {this.props.t("sideNav.statistics")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <Icon name="report" className="sidenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/reports">{this.props.t("sideNav.reports")}</NavLink>
+            <NavLink to="/reports">
+              <Icon
+                name="report"
+                className="sidenav__icon"
+                alt="LinkedIn logo"
+              />
+              {this.props.t("sideNav.reports")}
+            </NavLink>
           </li>
           <li className="sidenav__list--item">
-            <Icon
-              name="pricing"
-              className="sidenav__icon"
-              alt="LinkedIn logo"
-            />
-            <NavLink to="/billings">{this.props.t("sideNav.billings")}</NavLink>
+            <NavLink to="/billings">
+              <Icon
+                name="pricing"
+                className="sidenav__icon"
+                alt="LinkedIn logo"
+              />
+              {this.props.t("sideNav.billings")}
+            </NavLink>
           </li>
         </ul>
         <button className="button sidenav__button"> Upgrade Package </button>

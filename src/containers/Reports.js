@@ -6,9 +6,9 @@ import Report from "../components/Report/Report";
 class Reports extends Component {
   render() {
     return (
-      <div>
+      <>
         <Report />
-      </div>
+      </>
     );
   }
 }

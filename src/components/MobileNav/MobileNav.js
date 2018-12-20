@@ -7,47 +7,63 @@ class MobileNav extends Component {
   render() {
     return (
       <nav className="mobilnav">
-        <ul>
-          <li className="mobilenav__list--item">
-            <Icon
-              name="inbox"
-              className="mobilenav__icon"
-              alt="LinkedIn logo"
-            />
-            <NavLink exact to="/">
-              {this.props.t("mobilenav.campaigns")}
-            </NavLink>
-          </li>
-          <li className="mobilenav__list--item">
-            <Icon name="sms" className="mobilenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/quicksms">
-              {this.props.t("mobilenav.quicksms")}
-            </NavLink>
-          </li>
-          <li className="mobilenav__list--item">
-            <Icon name="bi" className="mobilenav__icon" alt="LinkedIn logo" />
-            <NavLink to="/statistics">
-              {this.props.t("mobilenav.statistics")}
-            </NavLink>
-          </li>
-          <li className="mobilenav__list--item">
-            <Icon
-              name="report"
-              className="mobilenav__icon"
-              alt="LinkedIn logo"
-            />
-            <NavLink to="/reports">{this.props.t("mobilenav.reports")}</NavLink>
-          </li>
-          <li className="mobilenav__list--item">
-            <Icon
-              name="pricing"
-              className="mobilenav__icon"
-              alt="LinkedIn logo"
-            />
-            <NavLink to="/billings">
-              {this.props.t("mobilenav.billings")}
-            </NavLink>
-          </li>
+        <ul className="mobilnav__container">
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink exact to="/" className="mobilenav__link">
+                <Icon
+                  name="inbox"
+                  className="mobilenav__icon"
+                  alt="Campaign Links"
+                />
+                {this.props.t("sideNav.campaignsMobile")}
+              </NavLink>
+            </li>
+          </div>
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink exact to="/quicksms" className="mobilenav__link">
+                <Icon name="sms" className="mobilenav__icon" alt="SMS icon" />
+                {this.props.t("sideNav.quicksms")}
+              </NavLink>
+            </li>
+          </div>
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink to="/statistics" className="mobilenav__link">
+                <Icon
+                  name="bi"
+                  alt="Business Inteligence Icon"
+                  className="mobilenav__icon"
+                />
+                {this.props.t("sideNav.statisticsMobile")}
+              </NavLink>
+            </li>
+          </div>
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink to="/reports" className="mobilenav__link">
+                <Icon
+                  name="report"
+                  className="mobilenav__icon"
+                  alt="Reports Icon"
+                />
+                {this.props.t("sideNav.reports")}
+              </NavLink>
+            </li>
+          </div>
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink to="/billings" className="mobilenav__link">
+                <Icon
+                  name="pricing"
+                  className="mobilenav__icon"
+                  alt="Billings Icon"
+                />
+                {this.props.t("sideNav.billings")}
+              </NavLink>
+            </li>
+          </div>
         </ul>
       </nav>
     );

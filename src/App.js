@@ -5,7 +5,6 @@ import "./main.scss";
 
 import TopNav from "./components/TopNav/TopNav";
 import SideNav from "./components/SideNav/SideNav";
-// import Test from "./components/Test/test";
 
 import Campaigns from "./containers/Campaigns";
 import QuickSMS from "./containers/QuickSMS";
@@ -42,19 +41,20 @@ class App extends Component {
           <Route
             path="/"
             render={() => (
-              <div className="dashboard__grid">
-                <TopNav />
-                <SideNav />
+              <>
+                <div className="dashboard__grid">
+                  <TopNav />
+                  <SideNav />
+                  <main className="main">
+                    <Route exact path="/" component={Campaigns} />
+                    <Route exact path="/quicksms" component={QuickSMS} />
+                    <Route exact path="/statistics" component={Statistics} />
+                    <Route exact path="/reports" component={Reports} />
+                    <Route exact path="/billings" component={Billings} />
+                  </main>
+                </div>
                 <MobileNav />
-                {/* <Test /> */}
-                <main className="main">
-                  <Route exact path="/" component={Campaigns} />
-                  <Route exact path="/quicksms" component={QuickSMS} />
-                  <Route exact path="/statistics" component={Statistics} />
-                  <Route exact path="/reports" component={Reports} />
-                  <Route exact path="/billings" component={Billings} />
-                </main>
-              </div>
+              </>
             )}
           />
         </Switch>

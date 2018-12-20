@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 
-import Chart from "../components/Charts/Chart";
+// import Chart from "../components/Charts/Chart";
 import SuccessRate from "../components/Charts/SuccessRate";
 import ProcessedMessages from "../components/Charts/AverageDelay";
 
 class Statistics extends Component {
   render() {
     return (
-      <div>
+      <section className="statistics__grid">
         <SuccessRate />
         <ProcessedMessages />
-
-        <Chart />
-      </div>
+        <ProcessedMessages />
+        {/* <Chart /> */}
+      </section>
     );
   }
 }

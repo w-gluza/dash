@@ -20,3 +20,9 @@
   justify-self: end;
   align-self: center;
 }
+
+@media screen and (max-width: 600px) {
+  .user__nick {
+    display: none;
+  }
+}

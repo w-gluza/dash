@@ -2,24 +2,9 @@
   position: relative;
 }
 
-// #container {
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-//   padding: 10px;
-//   width: 800px;
-//   height: 800px;
-//   background-color: #fff;
-// }
-
-.test__again {
-  z-index: 1000;
+.pie__container {
   position: absolute;
-}
-
-.pie__text__supercontainer {
-  position: absolute;
-  width: 300px;
+  max-width: 30rem;
   top: 0;
   left: 0;
   height: 300px;
@@ -28,11 +13,6 @@
   justify-content: center;
 }
 
-.pie__text__container {
-  display: grid;
-  width: max-content;
-  // grid-gap: 0.4rem;
-}
 .pie__top__text,
 .pie__top__number,
 .pie__bottom__text,

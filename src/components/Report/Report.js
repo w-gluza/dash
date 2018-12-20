@@ -60,8 +60,6 @@ class Report extends Component {
   };
 
   render() {
-    const { MessageList } = this.state;
-
     return (
       <section className="report__container">
         <div className="card__header">Reports -> Last Week</div>

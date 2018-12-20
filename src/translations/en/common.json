@@ -2,8 +2,10 @@
   "sideNav": {
     "welcome": "Hello",
     "campaigns": "Lists&Campaigns",
-    "quicksms": "Qucik SMS",
+    "campaignsMobile": "Campaigns",
+    "quicksms": "SMS",
     "statistics": "Business Inteligence",
+    "statisticsMobile": "BI",
     "reports": "Reports",
     "billings": "Billings",
     "button": "Upgrade Package"
@@ -36,7 +38,7 @@
     "delivered": "delivered",
     "delay": "delay",
     "sent": "sent",
-    "averageDelay": "Average Delay",
+    "averageDelay": "Speed Rate",
     "successRate": "Success Rate",
     "totalNumber": "Delivered Messages",
     "totalContacts": "Total Nr of Processed Messages",

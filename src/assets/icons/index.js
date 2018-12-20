@@ -2,9 +2,6 @@ import React from "react";
 
 import Logo from "./src/Logo";
 import Favicon from "./src/Favicon";
-import Facebook from "./src/Facebook";
-import YouTube from "./src/YouTube";
-import LinkedIn from "./src/LinkedIn";
 
 import SMS from "./src/SMS";
 import Pricing from "./src/Pricing";
@@ -19,12 +16,6 @@ const Icon = props => {
       return <Logo {...props} />;
     case "favicon":
       return <Favicon {...props} />;
-    case "facebook":
-      return <Facebook {...props} />;
-    case "youtube":
-      return <YouTube {...props} />;
-    case "linkedin":
-      return <LinkedIn {...props} />;
     case "sms":
       return <SMS {...props} />;
     case "pricing":

@@ -9,34 +9,31 @@ class SuccessRate extends Component {
       { name: "SMS Delivere", value: 95 },
       { name: "SMS Delayed", value: 5 }
     ];
-    const COLORS = ["#1da598", "#73879c"];
+    const COLORS = ["#1da598", "#ef5350"];
 
     return (
-      <div>
-        <div style={{ position: "relative" }}>
-          <PieChart width={300} height={300}>
-            <Pie
-              isAnimationActive={true}
-              data={data}
-              innerRadius={80}
-              outerRadius={100}
-              paddingAngle={2}
-              fill="fill"
-              label
-            >
-              {data.map((entry, index) => (
-                <Cell fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-          <div className="pie__text__supercontainer">
-            <div className="pie__text__container">
-              <p className="pie__top__text">{this.props.t("BI.successRate")}</p>
-              <p className="pie__top__number">95%</p>
-              <p className="pie__bottom__text"> {this.props.t("BI.smsSend")}</p>
-              <p className="pie__bottom__number"> 1245</p>
-            </div>
+      <div style={{ position: "relative" }}>
+        <PieChart width={300} height={300}>
+          <Pie
+            isAnimationActive={true}
+            data={data}
+            innerRadius={80}
+            outerRadius={100}
+            paddingAngle={2}
+            fill="fill"
+          >
+            {data.map((entry, index) => (
+              <Cell fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <Tooltip />
+        </PieChart>
+        <div className="pie__container">
+          <div className="pie__text__container">
+            <p className="pie__top__text">{this.props.t("BI.successRate")}</p>
+            <p className="pie__top__number">95%</p>
+            <p className="pie__bottom__text"> {this.props.t("BI.smsSend")}</p>
+            <p className="pie__bottom__number"> 1245</p>
           </div>
         </div>
       </div>

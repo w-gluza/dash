@@ -1,6 +1,7 @@
 .available__credit__container {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
+  grid-gap: 1rem;
 }
 
 .available__credit__bar {
@@ -45,4 +46,9 @@
 
 .filler__negative {
   background: $color-negative;
+}
+@media screen and (max-width: 600px) {
+  .available__credit__heading {
+    display: none;
+  }
 }

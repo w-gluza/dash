@@ -11,12 +11,12 @@ import {
 class Chart extends Component {
   render() {
     const data = [
-      { name: "June", sms: 4000 },
       { name: "July", sms: 3000 },
       { name: "August", sms: 2000 },
       { name: "September", sms: 2780 },
       { name: "October", sms: 1890 },
-      { name: "November", sms: 2390 }
+      { name: "November", sms: 2390 },
+      { name: "December", sms: 3390 }
     ];
     return (
       <div className="chart">
