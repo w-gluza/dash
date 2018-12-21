@@ -2,9 +2,11 @@
   border: 0;
   border-radius: 6px;
   display: grid;
-  max-width: 100rem;
+  max-width: 1000rem;
   margin: 5rem;
-  background-color: pink;
+  background-color: $color-white;
+  padding: 2rem;
+  grid-gap: 1rem;
 }
 
 .report__columns {
@@ -53,14 +55,32 @@ td {
 
 .report__datepicker {
   display: grid;
-  grid-template-columns: 3rem 11rem 3rem 11rem;
-  max-width: 250px;
+  grid-template-columns: repeat(4, max-content);
+  // max-width: 70rem;
+  grid-gap: 1.5rem;
 }
 
 .delivery__box__item {
   font-size: 1.6rem;
   font-weight: 2.1rem;
   color: $color-grey-dark;
+  padding: 0.6rem 0.4rem;
+  font-weight: 300;
+  line-height: 1.5;
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.deliveryreport__notprocessed,
+.deliveryreport__delivered,
+.deliveryreport__pending,
+.deliveryreport__notdelivered,
+.deliveryreport__expired {
+  color: $color-grey-dark;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-top: 0.3rem;
 }
 // 0 – SMS not yet processed
 .deliveryreport__notprocessed {
@@ -90,8 +110,18 @@ td {
 .filterbutton {
   padding: 5px;
   border: 1px transparent solid;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .filterbutton__active {
-  border: 1px chartreuse solid;
+  border-bottom: 1px $color-primary solid;
+}
+
+.report__span {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #73879c;
 }

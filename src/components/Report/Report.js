@@ -77,7 +77,7 @@ class Report extends Component {
           </p>
         </div>{" "}
         <div>
-          Filter by:
+          <span className="report__span">Filter by:</span>
           <button
             onClick={() => {
               this.handleSetFilter("all");
@@ -140,12 +140,12 @@ class Report extends Component {
           </button>
         </div>
         <div className="report__datepicker">
-          from:
+          <span className="report__span">from:</span>
           <Datetime
             value={this.state.fromDate}
             onChange={value => this.handleChangeFilterDate("fromDate", value)}
           />
-          to:
+          <span className="report__span">to:</span>
           <Datetime
             value={this.state.toDate}
             onChange={value => this.handleChangeFilterDate("toDate", value)}
@@ -188,8 +188,6 @@ class Report extends Component {
                     )}`}
                   >
                     {this.props.t(`BI.status${deliveryReport.DeliveryStatus}`)}
-                    {/* {`deliveryreport $status`} */}
-                    {/* {deliveryReport.DeliveryStatus} */}
                   </td>
                 </tr>
               ))}
