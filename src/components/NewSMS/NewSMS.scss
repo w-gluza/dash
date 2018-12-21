@@ -215,6 +215,18 @@ td.rdtYear:hover {
 
 .newSMS__container {
   display: grid;
-  max-width: 50rem;
+  max-width: 70rem;
   background-color: $color-white;
+  // padding: 2rem;
+  border-radius: 12px;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  grid-template-rows: 5rem 1fr 3fr 1fr 1fr;
+}
+
+.quick__sms--grid {
+  display: grid;
+}
+.helper {
+  margin-left: 2rem;
 }

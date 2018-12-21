@@ -128,7 +128,7 @@ class NewSMS extends Component {
               value={this.state.title}
               onChange={this.change}
               maxLength="50"
-              titleError={this.props.t("quickSMS.sendSMSTitleError")}
+              titleerror={this.props.t("quickSMS.sendSMSTitleError")}
             />
             <div className="title__error_message">{this.state.titleError}</div>
           </label>
@@ -188,7 +188,7 @@ class NewSMS extends Component {
             </label>
           </p>
 
-          <button className="button" type="submit">
+          <button className="button submit__button" type="submit">
             {this.props.t("SEND")}
           </button>
         </form>

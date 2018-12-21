@@ -178,7 +178,11 @@ input#title,
 .message__title,
 textarea,
 #listName,
-.react-tagsinput-input {
+.react-tagsinput-input,
+.rdt,
+select,
+input.form-control,
+#sender {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 2.1rem;
