@@ -31,7 +31,7 @@ class App extends Component {
       <>
         <BrowserRouter>
           <Switch>
-            <Redirect from="/dashboard" to="/" />
+            <Redirect from="/dashboard" to="/billings" />
             <Route
               exact
               path="/login"

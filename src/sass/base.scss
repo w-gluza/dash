@@ -77,6 +77,11 @@ button {
     0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
+.submit__button {
+  width: 20rem;
+  justify-self: center;
+}
+
 // BI container grid
 .statistics__grid {
   display: grid;
@@ -92,4 +97,104 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 3rem;
   padding: 5rem 3rem;
+}
+
+// -------------------- GRIDS -------------------------//
+.template__container {
+  display: grid;
+  grid-template-rows: 40rem auto;
+  border-radius: 12px;
+}
+
+.generated__template__container,
+.new__message__container,
+.newNumbersList__container {
+  max-width: 50rem;
+  background-color: $color-white;
+  border-radius: 12px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.new__message__container,
+.newNumbersList__container {
+  display: grid;
+  grid-template-rows: 5rem 1fr 3fr 1fr;
+  max-width: 50rem;
+  max-height: 32rem;
+}
+
+.template__title__container {
+  margin: 0px 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #2193b0, #00acc1);
+  box-shadow: 0 12px 20px -10px rgba(#2193b0, 1),
+    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#00acc1, 0.2);
+}
+
+// ----dynamic template container----/
+.generated__template__container {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+}
+
+.saved__messages__grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-gap: 1rem;
+  margin: 20px;
+  padding: 1rem;
+  border-bottom: 1px solid rgba($color-grey-dark, 0.3);
+}
+
+// ---------------- TYPOGRAPHY -------------------//
+
+// -----Top Nav ----//
+.available__credit__heading,
+.available__credit__subheading {
+  color: $color-grey-light;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  justify-self: start;
+  align-self: center;
+}
+.available__credit__subheading {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  .available__credit__heading {
+    display: none;
+  }
+}
+
+// -----INPUT CARDS / TEMPLATES GENERAL STYLING ----//
+
+input#title,
+#title,
+#message,
+.message__title,
+textarea,
+#listName,
+.react-tagsinput-input {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: $color-grey-dark;
+}
+
+.template__heading {
+  color: $color-white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1.3rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.message__text {
+  font-size: 1rem;
 }

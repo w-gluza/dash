@@ -111,7 +111,7 @@ class Template extends Component {
             </div>
           </label>
 
-          <button className="button submit__templates" type="submit">
+          <button className="button submit__button" type="submit">
             {this.props.t("campaigns.newSMSTemplateButton")}
           </button>
         </form>

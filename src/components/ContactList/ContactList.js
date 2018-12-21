@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import PhoneNumbers from "./PhoneNumbers";
 import { toast } from "react-toastify";
+import { setItem } from "../../localStorage";
 
 import "react-tagsinput/react-tagsinput.css";
 
 const initialFormState = {
   listName: "",
-  description: "",
   listNameError: "",
-  descriptionError: "",
   phoneNumber: "",
   phoneNumberError: ""
 };
@@ -34,23 +33,18 @@ class ContactList extends Component {
 
   validate = () => {
     let listNameError = "";
-    let descriptionError = "";
     let phoneNumberError = "";
 
     if (!this.state.listName) {
       listNameError = this.props.t("List name is missing");
     }
 
-    if (!this.state.description) {
-      descriptionError = this.props.t("Description is missing");
-    }
-
     if (!this.state.phoneNumber) {
       phoneNumberError = this.props.t("Phone number is missing");
     }
 
-    if (listNameError || descriptionError || phoneNumberError) {
-      this.setState({ listNameError, descriptionError, phoneNumberError });
+    if (listNameError || phoneNumberError) {
+      this.setState({ listNameError, phoneNumberError });
       return false;
     }
 
@@ -70,80 +64,85 @@ class ContactList extends Component {
           ...this.state.contactListTemplate,
           {
             listName: this.state.listName,
-            description: this.state.description,
             phoneNumber: this.state.phoneNumber
           }
         ]
       });
     }
   };
+  delete = id => {
+    const newTemplates = [...this.state.contactListTemplate];
+    newTemplates.splice(id, 1);
+
+    setItem("contactListTemplate", newTemplates);
+
+    this.setState({
+      contactListTemplate: newTemplates
+    });
+  };
 
   render() {
     return (
       <section className="template__container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="newNumbersList__container">
-            <div className="template__title__container">
-              <p className="template__heading">
-                {this.props.t("contactList.heading")}
-              </p>
-            </div>
-            <label>
-              <input
-                id="listName"
-                placeholder={this.props.t("contactList.description")}
-                value={this.state.title}
-                onChange={this.change}
-                maxLength="50"
-                titleerror={this.props.t("contactlist.descriptionError")}
-              />
-              <div className="title__error_message">
-                {this.state.listNameError}
-              </div>
-            </label>
-
-            <label>
-              <textarea
-                id="description"
-                placeholder={this.props.t("contactList.description")}
-                value={this.state.message}
-                onChange={this.change}
-                maxLength="500"
-              />
-              <div className="contact__error_message">
-                {this.state.descriptionError}
-              </div>
-            </label>
-
-            <label>
-              <PhoneNumbers
-                value={this.state.phoneNumber}
-                onChange={numbers => this.setValue("phoneNumber", numbers)}
-              />
-
-              <div className="title__error_message">
-                {this.state.phoneNumberError}
-              </div>
-            </label>
-
-            <button className="button" type="submit">
-              {this.props.t("template.button")}
-            </button>
-          </div>
-        </form>
-
-        <div className="generated__template__container">
+        <form
+          className="newNumbersList__container"
+          onSubmit={this.handleSubmit}
+        >
           <div className="template__title__container">
             <p className="template__heading">
-              {this.props.t("campaigns.templatesList")}
+              {this.props.t("contactList.heading")}
             </p>
           </div>
-          {this.state.contactListTemplate.map((template, index) => (
-            <div key={index}>
-              {template.listName} {template.description} {template.phoneNumber}
+          <label>
+            <input
+              id="listName"
+              placeholder={this.props.t("contactList.description")}
+              value={this.state.title}
+              onChange={this.change}
+              maxLength="50"
+              titleerror={this.props.t("contactlist.descriptionError")}
+            />
+            <div className="title__error_message">
+              {this.state.listNameError}
             </div>
-          ))}
-        </div>
+          </label>
+
+          <label>
+            <PhoneNumbers
+              value={this.state.phoneNumber}
+              onChange={numbers => this.setValue("phoneNumber", numbers)}
+            />
+
+            <div className="title__error_message">
+              {this.state.phoneNumberError}
+            </div>
+          </label>
+
+          <button className="button submit__button" type="submit">
+            {this.props.t("template.button")}
+          </button>
+        </form>
+        {this.state.contactListTemplate.length > 0 && (
+          <div className="generated__template__container">
+            <div className="template__title__container gradient__warm">
+              <p className="template__heading">
+                {this.props.t("campaigns.templatesList")}
+              </p>
+            </div>
+            {this.state.contactListTemplate.map((template, index) => (
+              <div className="saved__messages__grid" key={index}>
+                <div className="message__title"> {template.listName}</div>
+                <div className="message__text"> {template.phoneNumber}</div>
+                <button
+                  className="button delete__button"
+                  onClick={() => this.delete(index)}
+                >
+                  X
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
     );
   }

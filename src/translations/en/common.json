@@ -86,6 +86,13 @@
     "heading": "Create New Contact List",
     "headingError": "Name of the template missing",
     "phoneNumber": "Phone Number",
-    "button": "saved"
+    "button": "saved",
+    "description": "Insert your list title"
+  },
+  "template": {
+    "button": "Save Template"
+  },
+  "listname": {
+    "phoneNumber": "Insert the namber and press 'space'"
   }
 }

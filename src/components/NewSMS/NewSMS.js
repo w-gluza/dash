@@ -3,6 +3,7 @@ import { withNamespaces } from "react-i18next";
 import { getItem, setItem } from "../../localStorage";
 import * as Datetime from "react-datetime";
 import PhoneNumbers from "../ContactList/PhoneNumbers";
+import { toast } from "react-toastify";
 
 const initialFormState = {
   title: "",
@@ -81,6 +82,8 @@ class NewSMS extends Component {
     const isValid = this.validate();
 
     if (isValid) {
+      toast("Contact list template created");
+
       const newcampaignTemplate = [
         ...this.state.campaignTemplate,
         {
@@ -112,7 +115,7 @@ class NewSMS extends Component {
   render() {
     return (
       <section className="template__container">
-        <div className="newSMS__container" onSubmit={this.handleSubmit}>
+        <form className="newSMS__container" onSubmit={this.handleSubmit}>
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("quickSMS.sendSMS")}
@@ -125,7 +128,7 @@ class NewSMS extends Component {
               value={this.state.title}
               onChange={this.change}
               maxLength="50"
-              titleerror={this.props.t("quickSMS.sendSMSTitleError")}
+              titleError={this.props.t("quickSMS.sendSMSTitleError")}
             />
             <div className="title__error_message">{this.state.titleError}</div>
           </label>
@@ -188,7 +191,7 @@ class NewSMS extends Component {
           <button className="button" type="submit">
             {this.props.t("SEND")}
           </button>
-        </div>
+        </form>
       </section>
     );
   }

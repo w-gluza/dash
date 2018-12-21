@@ -18,7 +18,7 @@ class Report extends Component {
     filter: "all",
     fromDate: moment().subtract(7, "days"),
     toDate: moment(),
-    recordsToShow: 20
+    recordsToShow: 15
   };
 
   handleSetFilter = filter => {
@@ -48,7 +48,7 @@ class Report extends Component {
 
   handleShowMore = () => {
     this.setState(state => ({
-      recordsToShow: state.recordsToShow + 20
+      recordsToShow: state.recordsToShow + 15
     }));
   };
 
@@ -71,7 +71,11 @@ class Report extends Component {
 
     return (
       <section className="report__container">
-        <div className="card__header">Reports -> Last Week</div>
+        <div className="template__title__container">
+          <p className="template__heading">
+            {this.props.t("contactList.heading")}
+          </p>
+        </div>{" "}
         <div>
           Filter by:
           <button
