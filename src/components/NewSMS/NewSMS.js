@@ -145,26 +145,29 @@ class NewSMS extends Component {
             </div>
           </label>
 
-          <Datetime
-            isValidDate={valid}
-            inputProps={{ placeholder: "2018-12-18" }}
-          />
-          <p>
-            <select
-              id="choosenTemplate"
-              value={this.state.choosenTemplate || ""}
-              onChange={this.changeTemplate}
-            >
-              <option disabled defaultValue value={null}>
-                Choose your template
-              </option>
-              {this.state.templates.map((template, index) => (
-                <option key={index} value={template.title}>
-                  {template.title}
+          <div className="sms__container">
+            <Datetime
+              isValidDate={valid}
+              inputProps={{ placeholder: "2018-12-18" }}
+              className="calendar"
+            />
+            <p>
+              <select
+                id="choosenTemplate"
+                value={this.state.choosenTemplate || ""}
+                onChange={this.changeTemplate}
+              >
+                <option disabled defaultValue value={null}>
+                  Choose your template
                 </option>
-              ))}
-            </select>
-          </p>
+                {this.state.templates.map((template, index) => (
+                  <option key={index} value={template.title}>
+                    {template.title}
+                  </option>
+                ))}
+              </select>
+            </p>
+          </div>
           <div>
             <label>
               <PhoneNumbers
@@ -191,6 +194,7 @@ class NewSMS extends Component {
           <button className="button submit__button" type="submit">
             {this.props.t("SEND")}
           </button>
+          {/* </div> */}
         </form>
       </section>
     );

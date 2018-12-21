@@ -58,9 +58,9 @@
   "billings": {
     "aquiredVolume": "Volume Adquirido",
     "planConsumption": "Plano de Consumo",
-    "landLineConsumption": "Plano de Consumo Rede Fixa",
+    "landLineConsumption": "Rede Fixa",
     "availableCredits": "Crédito Disponível",
-    "scheduledMessages": "Mensagens Agendadas em Sistema",
+    "scheduledMessages": "Mensagens Agendadas",
     "realCredit": "Crédito Efetivo",
     "fromLastWeek": " Última Semana"
   },
