@@ -148,6 +148,23 @@ button {
   border-bottom: 1px solid rgba($color-grey-dark, 0.3);
 }
 
+@media screen and (max-width: 600px) {
+  .dashboard__grid {
+    display: grid;
+    grid-template-areas:
+      "topnav"
+      "main"
+      "mobile";
+    grid-template-rows: max-content auto 10rem;
+    height: 100%;
+  }
+  .topnav {
+    grid-area: topnav;
+  }
+
+  .main {
+    grid-area: main;
+  }}
 // ---------------- TYPOGRAPHY -------------------//
 
 // -----Top Nav ----//

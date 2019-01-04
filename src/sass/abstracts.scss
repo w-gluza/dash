@@ -15,3 +15,47 @@ $color-black: #000000;
 $color-positive: #1da598;
 $color-warning: #ffb74d;
 $color-negative: #ef5350;
+
+
+// Media Querry Manager              $breakpoint
+/*
+0 - 600px       Phone                 phone
+600 - 900px     Tablet Portrait       tab-port
+900 - 1200px    Tablet lanscape       tab-land
+1200 - 1800px   'Normal' style        
+1800px +        Big desktop           big-desk
+
+1em = 16px
+*/
+// 37.5 * 16 = 600px
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width: 37.5em) {
+        @content;
+      }
+    }
+  
+    // 56.25 * 16 = 900px
+    @if $breakpoint == tab-port {
+      @media (max-width: 56.25em) {
+        @content;
+      }
+    }
+  
+    // 75 * 16 = 1200px
+    @if $breakpoint == tab-land {
+      @media (max-width: 75em) {
+        @content;
+      }
+    }
+  
+    //Everything between 1200 - 1800 is regular desktop
+  
+    // 112.5 * 16 = 1800px
+    @if $breakpoint == big-desktop {
+      @media (min-width: 112.5em) {
+        @content;
+      }
+    }
+  }
+  

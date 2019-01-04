@@ -1,5 +1,50 @@
-@media only screen and (min-width: 600px) {
-  .mobilenav {
+@media screen and (min-width: 600px) {
+  .mobilnav {
     display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mobilnav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  .mobilnav__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: $color-primary;
+    min-height: 5.6rem;
+    padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+    grid-gap: 1.2rem;
+  }
+  .mobilenav__list--item {
+    display: grid;
+  }
+  .mobilenav__icon {
+    height: 2.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .mobilenav__link {
+    max-width: 12.8rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    fill: rgba($color-white, 0.76);
+    &,
+    &:visited {
+      color:rgba($color-white, 0.76);
+    }
+  }
+  .mobilenav__link--active {
+    &,
+    &:visited {
+      color: $color-white;
+    }
+    path {
+      fill: $color-white;
+    }
   }
 }
