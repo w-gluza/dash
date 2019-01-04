@@ -102,7 +102,7 @@ class ContactList extends Component {
               maxLength="50"
               titleerror={this.props.t("contactlist.descriptionError")}
             />
-            <div className="title__error_message">
+            <div className="error_message">
               {this.state.listNameError}
             </div>
           </label>
@@ -113,12 +113,12 @@ class ContactList extends Component {
               onChange={numbers => this.setValue("phoneNumber", numbers)}
             />
 
-            <div className="title__error_message">
+            <div className="error_message">
               {this.state.phoneNumberError}
             </div>
           </label>
 
-          <button className="button submit__button" type="submit">
+          <button className="button submit__button template__button" type="submit">
             {this.props.t("template.button")}
           </button>
         </form>

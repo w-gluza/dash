@@ -21,7 +21,8 @@ class PhoneNumber extends React.Component {
           9, // tab
           13, // enter
           32, // space
-          186 // semicolon
+          186, // semicolon
+          188 // coma
         ]}
         inputProps={{
           placeholder: this.props.t("listname.phoneNumber"),

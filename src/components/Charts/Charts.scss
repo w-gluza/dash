@@ -1,5 +1,7 @@
 .chart {
   position: relative;
+  margin-left: 100px;
+
 }
 
 .pie__container {
@@ -11,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .pie__top__text,

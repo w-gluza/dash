@@ -63,7 +63,7 @@ class SideNav extends Component {
             </NavLink>
           </li>
         </ul>
-        <button className="button sidenav__button"> Upgrade Package </button>
+        <button className="button sidenav__button"> <NavLink to="/billings">Upgrade Package</NavLink> </button>
       </nav>
     );
   }

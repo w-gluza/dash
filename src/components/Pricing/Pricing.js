@@ -8,7 +8,7 @@ class Pricing extends Component {
     return (
       <article className="pricing">
         <section className="pricing__table">
-          <div className="pricing__slot">
+          <div className="pricing__slot active__package">
             <div className="price-head current">
               <h4 className="pricing__subtitle">ACTIVE</h4>
               <h2 className="pricing__title">15 NOV 2018</h2>
@@ -35,11 +35,11 @@ class Pricing extends Component {
                 </li>
               </ul>
             </div>
-            <div className="price-button">
+            {/* <div className="price-button">
               <button className="button button__pricing current">
                 Upgrade Package
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="pricing__slot">
             <div className="price-head">
@@ -75,7 +75,6 @@ class Pricing extends Component {
               </button>
             </div>
           </div>
-
           <div className="pricing__slot">
             <div className="price-head">
               <h4 className="pricing__subtitle">209,10,60€</h4>

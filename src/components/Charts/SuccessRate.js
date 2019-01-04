@@ -30,12 +30,12 @@ class SuccessRate extends Component {
           <Tooltip />
         </PieChart>
         <div className="pie__container">
-          <div className="pie__text__container">
+        <div>
             <p className="pie__top__text">{this.props.t("BI.successRate")}</p>
             <p className="pie__top__number">95%</p>
             <p className="pie__bottom__text"> {this.props.t("BI.smsSend")}</p>
             <p className="pie__bottom__number"> 1245</p>
-          </div>
+        </div>
         </div>
       </div>
     );

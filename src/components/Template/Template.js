@@ -95,7 +95,7 @@ class Template extends Component {
               maxLength="50"
               titleerror={this.props.t("campaigns.newSMSTemplateTitleError")}
             />
-            <div className="title__error_message">{this.state.titleError}</div>
+            <div className="error_message">{this.state.titleError}</div>
           </label>
 
           <label>
@@ -106,12 +106,12 @@ class Template extends Component {
               onChange={this.change}
               maxLength="500"
             />
-            <div className="contact__error_message">
+            <div className="error_message">
               {this.state.messageError}
             </div>
           </label>
 
-          <button className="button submit__button" type="submit">
+          <button className="button submit__button template__button" type="submit">
             {this.props.t("campaigns.newSMSTemplateButton")}
           </button>
         </form>

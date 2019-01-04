@@ -30,7 +30,7 @@ class ProcessedMessages extends Component {
           <Tooltip />
         </PieChart>
         <div className="pie__container">
-          <div className="pie__text__container">
+          <div>
             <p className="pie__top__text">{this.props.t("BI.averageDelay")}</p>
             <p className="pie__top__number">84%</p>
             <p className="pie__bottom__text">SMS delivered in less</p>

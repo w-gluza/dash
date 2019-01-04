@@ -6,7 +6,7 @@
 }
 .pricing__slot {
   background-color: $color-white;
-  max-width: 25rem;
+  width: 25rem;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
@@ -15,6 +15,9 @@
   align-self: center;
   justify-self: center;
   background: $color-white;
+  &:hover {
+    @include mboxshadow(2);
+  }
 }
 
 .pricing__detail {
@@ -33,6 +36,9 @@
 .button__pricing {
   background: linear-gradient(45deg, #2193b0, #00acc1);
   margin-bottom: 2rem;
+}
+.active__package {
+height: 100%;
 }
 .current {
   background: linear-gradient(45deg, #de6262, #ffb88c);

@@ -9,8 +9,8 @@ class Statistics extends Component {
   render() {
     return (
       <section className="statistics__grid">
-        <SuccessRate />
         <ProcessedMessages />
+        <SuccessRate />
         <ProcessedMessages />
         {/* <Chart /> */}
       </section>
