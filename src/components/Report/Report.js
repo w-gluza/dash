@@ -71,12 +71,12 @@ class Report extends Component {
 
     return (
       <section className="report__container">
-        <div className="template__title__container">
+        <div className="template__title__container report__title__container">
           <p className="template__heading">
             {this.props.t("contactList.heading")}
           </p>
         </div>{" "}
-        <div>
+        <div className="filters__status__containers">
           <span className="report__span">Filter by:</span>
           <button
             onClick={() => {
@@ -154,16 +154,16 @@ class Report extends Component {
         <table>
           <thead>
             <tr className="card__body">
-              <th className="report__heading">
+              <th>
                 {this.props.t("reports.phoneNumber")}
               </th>
-              <th className="report__heading">
+              <th>
                 {this.props.t("reports.creationTime")}
               </th>
-              <th className="report__heading">
+              <th>
                 {this.props.t("reports.processTime")}
               </th>
-              <th className="report__heading">
+              <th>
                 {this.props.t("reports.status")}
               </th>
             </tr>

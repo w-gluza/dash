@@ -79,8 +79,8 @@ class Template extends Component {
 
   render() {
     return (
-      <section className="template__container">
-        <form className="new__message__container" onSubmit={this.handleSubmit}>
+      <section>
+        <form className="template__container lists__grid" onSubmit={this.handleSubmit}>
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("campaigns.newSMSTemplate")}

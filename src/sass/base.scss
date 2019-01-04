@@ -129,39 +129,34 @@ button {
 
 
 // -------------------- GRIDS -------------------------//
-.template__container {
-  display: grid;
-  grid-template-rows: 40rem auto;
-  border-radius: 12px;
-}
+// .template__container {
+//   display: grid;
+//   grid-template-rows: 40rem auto;
+//   border-radius: 12px;
+// }
 
-.generated__template__container,
-.new__message__container,
-.newNumbersList__container {
-  max-width: 50rem;
-  background-color: $color-white;
-  border-radius: 12px;
-  @include mboxshadow(1); // depth level 1
+// .generated__template__container,
+// .new__message__container,
+// .newNumbersList__container {
 
+// }
 
-}
-.new__message__container,
-.newNumbersList__container {
-  display: grid;
-  grid-template-rows: 5rem 2rem 3fr 1fr;
-  max-width: 50rem;
-  max-height: 34rem;
-}
 
 .template__title__container {
   margin: 0px 20px;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-top: -45px;
+  margin-bottom:45px;
   border-radius: 6px;
   background: linear-gradient(45deg, #2193b0, #00acc1);
   box-shadow: 0 12px 20px -10px rgba(#2193b0, 1),
     0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#00acc1, 0.2);
 }
+
+.report__title__container {
+  margin-top: -45px;
+  margin-bottom: 45px;
+}
+
 
 // ----dynamic template container----/
 .generated__template__container {
@@ -235,6 +230,9 @@ select,
   line-height: 2.1rem;
   color: $color-grey-dark;
 }
+.rdt{
+  align-self: center;
+}
 
 .template__heading {
   color: $color-white;
@@ -248,4 +246,9 @@ select,
 
 .message__text {
   font-size: 1rem;
+}
+
+
+.Toastify__progress-bar--default {
+  background: linear-gradient(to right, #fff, #2193b0, #00acc1);
 }

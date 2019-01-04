@@ -1,0 +1,39 @@
+// ---------- General APP Layout ----------- //
+
+
+// ---------- Containers Layout ----------- //
+// ---------- Components Layout ----------- //
+
+
+// Top Nav credit informations bar
+.available__credit__container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
+
+
+  // --- Billings ---//
+
+
+
+
+
+
+
+  // --- Billings ---//
+  //pricing cards container 
+.billing__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem;
+}
+
+.pricing__table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    padding: 2rem;
+}

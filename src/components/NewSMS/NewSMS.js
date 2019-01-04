@@ -114,14 +114,14 @@ class NewSMS extends Component {
 
   render() {
     return (
-      <section className="template__container">
-        <form className="newSMS__container" onSubmit={this.handleSubmit}>
+      <section>
+        <form className="template__container newSMS__grid" onSubmit={this.handleSubmit}>
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("quickSMS.sendSMS")}
             </p>
           </div>
-          <label>
+          <label className="one2">
             <input
               id="title"
               placeholder={this.props.t("quickSMS.sendSMSTitle")}
@@ -130,7 +130,7 @@ class NewSMS extends Component {
               maxLength="50"
               titleerror={this.props.t("quickSMS.sendSMSTitleError")}
             />
-            <div className="title__error_message">{this.state.titleError}</div>
+            <div className="error_message">{this.state.titleError}</div>
           </label>
           <label>
             <textarea
@@ -140,12 +140,11 @@ class NewSMS extends Component {
               onChange={this.change}
               maxLength="500"
             />
-            <div className="contact__error_message">
+            <div className="error_message">
               {this.state.messageError}
             </div>
           </label>
-
-          <div className="sms__container">
+          <div className="one2 x2">
             <Datetime
               isValidDate={valid}
               inputProps={{ placeholder: "2018-12-18" }}
@@ -168,18 +167,18 @@ class NewSMS extends Component {
               </select>
             </p>
           </div>
-          <div>
+          <div className="one5">
             <label>
               <PhoneNumbers
                 value={this.state.phoneNumbers}
                 onChange={value => this.changeValue(value, "phoneNumbers")}
               />
-              <div className="title__error_message">
+              <div className="error_message">
                 {this.state.phoneNumbersError}
               </div>
             </label>
           </div>
-          <p>
+          <p className="one6">
             <label>
               <input
                 id="sender"
@@ -190,11 +189,9 @@ class NewSMS extends Component {
               />
             </label>
           </p>
-
-          <button className="button submit__button" type="submit">
+          <button className="button submit__button one7" type="submit">
             {this.props.t("SEND")}
           </button>
-          {/* </div> */}
         </form>
       </section>
     );

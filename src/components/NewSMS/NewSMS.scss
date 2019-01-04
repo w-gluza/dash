@@ -4,7 +4,7 @@
 .rdtPicker {
   display: none;
   position: absolute;
-  width: 250px;
+  width: min-content;
   padding: 4px;
   margin-top: 1px;
   z-index: 99999 !important;
@@ -213,33 +213,9 @@ td.rdtYear:hover {
   cursor: default;
 }
 
-.newSMS__container {
-  display: grid;
-  max-width: 70rem;
-  height: 45rem;
-  max-height: auto;
-  background-color: $color-white;
-  // padding: 2rem;
-  border-radius: 12px;
-  margin-top: 5rem;
-  margin-left: 5rem;
-  grid-template-rows: 5rem 1fr 3fr 1fr 1fr 5rem 1fr;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
 
-.quick__sms--grid {
-  display: grid;
-}
-.sms__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
-  margin-left: 5%;
-  justify-items: center;
-  align-items: center;
-  font-weight: 400;
-}
+
+
 .react-tagsinput {
   width: 90%;
   margin-left: 5%;

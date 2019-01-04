@@ -83,9 +83,9 @@ class ContactList extends Component {
 
   render() {
     return (
-      <section className="template__container">
+      <section>
         <form
-          className="newNumbersList__container"
+          className="template__container lists__grid"
           onSubmit={this.handleSubmit}
         >
           <div className="template__title__container">

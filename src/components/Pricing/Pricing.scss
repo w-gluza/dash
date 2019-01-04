@@ -1,9 +1,3 @@
-.pricing__table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-  padding: 2rem;
-}
 .pricing__slot {
   background-color: $color-white;
   width: 25rem;

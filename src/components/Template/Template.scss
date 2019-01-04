@@ -1,7 +1,7 @@
-label {
-  width: 90%;
-  margin-left: 5%;
-}
+// label {
+//   width: 90%;
+//   margin-left: 5%;
+// }
 
 input#listName,
 input#title {
@@ -21,11 +21,10 @@ input#title:focus {
 
 textarea {
   width: 100%;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
+  // margin-bottom: 0.5rem;
+  // margin-top: 2rem;
   resize: none;
   border: 0.1rem solid rgba($color-grey-dark, 0.2);
-  padding: 1rem;
 }
 
 textarea:focus {

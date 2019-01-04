@@ -2,6 +2,7 @@
 
 @import "./sass/abstracts.scss";
 @import "./sass/base.scss";
+@import "./sass/grids.scss";
 
 @import "./components/Bars/AvailableCreditBar.scss";
 @import "./components/Billing/Billing.scss";
@@ -20,8 +21,71 @@
 @import "./components/TopNav/TopNav.scss";
 @import "./components/User/User.scss";
 
-@import "./components/Test/Test.scss";
 
-.Toastify__progress-bar--default {
-  background: linear-gradient(to right, #fff, #2193b0, #00acc1);
+//----- NEW SMSes Template, Contact List Template, Qucik SMS, Reports, 
+.template__container {
+max-width: 50rem;
+padding: 2rem;
+background-color: $color-white;
+border-radius: 12px;
+padding: 2rem;
+@include mboxshadow(1); // depth level 1
+}
+
+.quickSMS__container--modifier {
+    height: auto;
+}
+.newSMS__grid {
+    display: grid;
+    grid-template-rows: 5rem 2rem 4fr 3rem 4fr 1fr;
+    // grid-template-rows: 5rem 2rem 3fr 1fr;
+    height: 50rem;
+    background-color: red;
+    grid-gap: 2rem;
+
+}
+
+.lists__grid {
+    display: grid;
+    grid-template-rows: 5rem 2rem 3fr 1fr;
+    max-height: 34rem;
+  }
+
+  .one{
+      width: 100%;
+      height: 100%;
+  }
+
+  .one2{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+} .one3{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+} .one4{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+} .one5{
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+
+} 
+.one6{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+.one7{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

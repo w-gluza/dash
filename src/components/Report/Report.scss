@@ -1,46 +1,30 @@
 .report__container {
-  border: 0;
-  border-radius: 6px;
   display: grid;
-  max-width: 1000rem;
+  grid-template-rows: 5rem 5rem 5rem auto;
+  border-radius: 6px;
   margin: 5rem;
   background-color: $color-white;
   padding: 2rem;
-  grid-gap: 1rem;
 }
 
+.card__body,
 .report__columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.card__header {
-  border-radius: 3px;
-  margin-top: -20px;
-  padding: 15px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
-    0 7px 10px -5px rgba($color-primary, 0.4);
-  background: linear-gradient(60deg, $color-primary, $color-primary-dark);
-  display: grid;
+  width: 100%;
 }
 
 .card__body {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 2rem;
 }
 
 th {
-  color: $color-primary;
-  text-transform: uppercase;
-  font-weight: 400;
-  text-align: start;
-}
-.report__heading {
-  font-weight: 300;
   font-size: 1.6rem;
   line-height: 1.5;
-  padding-left: 2rem;
   color: $color-primary;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: start;
 }
 
 td {
@@ -48,15 +32,10 @@ td {
   margin-top: 1rem;
 }
 
-.test__grid {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-}
 
 .report__datepicker {
   display: grid;
   grid-template-columns: repeat(4, max-content);
-  // max-width: 70rem;
   grid-gap: 1.5rem;
 }
 
@@ -107,6 +86,12 @@ td {
   background-color: #b0bec5;
 }
 
+.filters__status__containers {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  grid-gap: 1rem;
+  padding: 1rem 0 1rem 0rem;
+}
 .filterbutton {
   padding: 5px;
   border: 1px transparent solid;
@@ -124,4 +109,5 @@ td {
   line-height: 1.5;
   font-weight: 700;
   color: #73879c;
+  align-self: center;
 }
