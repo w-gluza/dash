@@ -1,8 +1,8 @@
 {
-  "name": "dashboard",
+  "name": "dash",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://w-gluza.github.io/dashboard/",
+  "homepage": "https://w-gluza.github.io/dash/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "i18next": "^12.1.0",
