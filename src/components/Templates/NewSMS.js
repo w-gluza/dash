@@ -82,7 +82,7 @@ class NewSMS extends Component {
     const isValid = this.validate();
 
     if (isValid) {
-      toast("Contact list template created");
+      toast("Hurray, your message was successfully sent!");
 
       const newcampaignTemplate = [
         ...this.state.campaignTemplate,
@@ -115,7 +115,10 @@ class NewSMS extends Component {
   render() {
     return (
       <section className="sms__container">
-        <form className="template__container newSMS__grid" onSubmit={this.handleSubmit}>
+        <form
+          className="template__container newSMS__grid"
+          onSubmit={this.handleSubmit}
+        >
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("quickSMS.sendSMS")}
@@ -140,9 +143,7 @@ class NewSMS extends Component {
               onChange={this.change}
               maxLength="500"
             />
-            <div className="error_message">
-              {this.state.messageError}
-            </div>
+            <div className="error_message">{this.state.messageError}</div>
           </label>
           <div className="x2">
             <Datetime

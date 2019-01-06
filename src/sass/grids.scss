@@ -35,13 +35,13 @@
 //----- NEW SMSes Template, Contact List Template, Qucik SMS, Reports,
 .lists__grid {
   display: grid;
-  grid-template-rows: 5rem 2rem 12rem 1fr;
+  grid-template-rows: 2rem 2rem 12rem 1fr;
   max-height: 34rem;
   grid-gap: 2rem;
 }
 .newSMS__grid {
   display: grid;
-  grid-template-rows: 5rem 2rem 4fr 3rem 4fr 1fr;
+  grid-template-rows: 2rem 2rem 4fr 3rem 4fr 1fr;
   height: 50rem;
   grid-gap: 2rem;
 }
@@ -49,7 +49,7 @@
 // ---- Dynamic template container----/
 .dynamic__template {
   display: grid;
-  grid-template-rows: 5rem 1fr;
+  grid-template-rows: 2rem 1fr;
   margin-top: 5rem;
 }
 

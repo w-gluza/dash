@@ -35,11 +35,6 @@ class Pricing extends Component {
                 </li>
               </ul>
             </div>
-            {/* <div className="price-button">
-              <button className="button button__pricing current">
-                Upgrade Package
-              </button>
-            </div> */}
           </div>
           <div className="pricing__slot">
             <div className="price-head">

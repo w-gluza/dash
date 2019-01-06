@@ -10,7 +10,7 @@
 .template__title__container {
   margin: 0px 20px;
   margin-top: -45px;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
   border-radius: 6px;
   background: linear-gradient(45deg, #2193b0, #00acc1);
   box-shadow: 0 12px 20px -10px rgba(#2193b0, 1),
@@ -47,7 +47,7 @@ select#choosenTemplate {
   height: 100%;
   margin-left: 0% !important;
   border: 1px solid #ccc;
-  overflow: hidden;
+  overflow: auto !important;
   padding: 0.5rem;
   background-color: #f8f8f8;
 }
@@ -71,11 +71,6 @@ select#choosenTemplate {
   color: $color-grey-light !important;
   font-weight: 300 !important;
   border: 1px solid $color-primary !important;
-}
-
-#listName {
-  width: 100%;
-  height: 100%;
 }
 
 .react-tagsinput-tag {

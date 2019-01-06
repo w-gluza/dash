@@ -100,10 +100,8 @@ button {
 
 input {
   width: 100%;
-  height: 100%;
   line-height: 2;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 
 textarea {
@@ -117,7 +115,9 @@ textarea {
     border: 0.1rem solid $color-primary;
   }
 }
-
+textarea#message {
+  padding: 0.5rem;
+}
 .report__title__container {
   margin-top: -45px;
   margin-bottom: 45px;
@@ -170,7 +170,7 @@ input#title,
 #message,
 .message__title,
 textarea,
-#listName,
+input#listName,
 .react-tagsinput-input,
 .rdt,
 select,
