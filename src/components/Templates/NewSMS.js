@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { getItem, setItem } from "../../localStorage";
 import * as Datetime from "react-datetime";
-import PhoneNumbers from "../ContactList/PhoneNumbers";
+import PhoneNumbers from "./PhoneNumbers";
 import { toast } from "react-toastify";
 
 const initialFormState = {
@@ -114,14 +114,14 @@ class NewSMS extends Component {
 
   render() {
     return (
-      <section>
+      <section className="sms__container">
         <form className="template__container newSMS__grid" onSubmit={this.handleSubmit}>
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("quickSMS.sendSMS")}
             </p>
           </div>
-          <label className="one2">
+          <label>
             <input
               id="title"
               placeholder={this.props.t("quickSMS.sendSMSTitle")}
@@ -144,7 +144,7 @@ class NewSMS extends Component {
               {this.state.messageError}
             </div>
           </label>
-          <div className="one2 x2">
+          <div className="x2">
             <Datetime
               isValidDate={valid}
               inputProps={{ placeholder: "2018-12-18" }}
@@ -167,7 +167,7 @@ class NewSMS extends Component {
               </select>
             </p>
           </div>
-          <div className="one5">
+          <div>
             <label>
               <PhoneNumbers
                 value={this.state.phoneNumbers}
@@ -178,7 +178,7 @@ class NewSMS extends Component {
               </div>
             </label>
           </div>
-          <p className="one6">
+          <p>
             <label>
               <input
                 id="sender"
@@ -189,7 +189,7 @@ class NewSMS extends Component {
               />
             </label>
           </p>
-          <button className="button submit__button one7" type="submit">
+          <button className="button submit__button" type="submit">
             {this.props.t("SEND")}
           </button>
         </form>

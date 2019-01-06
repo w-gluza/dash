@@ -42,7 +42,6 @@ a:visited {
   color: $color-white;
 }
 
-
 // hides spinner arrows in input number
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -52,8 +51,6 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-
 
 //button reset
 button {
@@ -90,87 +87,40 @@ button {
     0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
+.button__warm {
+  background: linear-gradient(45deg, #de6262, #ffb88c);
+  box-shadow: 0 12px 20px -10px rgba(#de6262, 1),
+    0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#ffb88c, 0.2);
+}
+
 .submit__button {
   width: 20rem;
   justify-self: center;
 }
 
-
-
-
-
-
-
-
-// BI container grid
-.statistics__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 2rem;
-  justify-items: center;
-}
-// .chart {
-//   grid-column: 1/-1;
-// }
-.campaigns__grid {
-  display: grid;
-  // grid-template-columns: 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-  padding: 5rem 3rem;
+input {
+  width: 100%;
+  height: 100%;
+  line-height: 2;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+  border: 0.1rem solid rgba($color-grey-dark, 0.2);
+  background-color: #f8f8f8;
+  height: 100%;
 
-
-
-
-
-
-
-
-// -------------------- GRIDS -------------------------//
-// .template__container {
-//   display: grid;
-//   grid-template-rows: 40rem auto;
-//   border-radius: 12px;
-// }
-
-// .generated__template__container,
-// .new__message__container,
-// .newNumbersList__container {
-
-// }
-
-
-.template__title__container {
-  margin: 0px 20px;
-  margin-top: -45px;
-  margin-bottom:45px;
-  border-radius: 6px;
-  background: linear-gradient(45deg, #2193b0, #00acc1);
-  box-shadow: 0 12px 20px -10px rgba(#2193b0, 1),
-    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#00acc1, 0.2);
+  &:focus {
+    border: 0.1rem solid $color-primary;
+  }
 }
 
 .report__title__container {
   margin-top: -45px;
   margin-bottom: 45px;
-}
-
-
-// ----dynamic template container----/
-.generated__template__container {
-  display: grid;
-  grid-template-rows: 5rem 1fr;
-}
-
-.saved__messages__grid {
-  display: grid;
-  grid-template-columns: 2fr 3fr 1fr;
-  grid-gap: 1rem;
-  margin: 20px;
-  padding: 1rem;
-  border-bottom: 1px solid rgba($color-grey-dark, 0.3);
 }
 
 @media screen and (max-width: 600px) {
@@ -189,7 +139,8 @@ button {
 
   .main {
     grid-area: main;
-  }}
+  }
+}
 // ---------------- TYPOGRAPHY -------------------//
 
 // -----Top Nav ----//
@@ -223,14 +174,13 @@ textarea,
 .react-tagsinput-input,
 .rdt,
 select,
-// input.form-control,
 #sender {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 2.1rem;
   color: $color-grey-dark;
 }
-.rdt{
+.rdt {
   align-self: center;
 }
 
@@ -247,7 +197,6 @@ select,
 .message__text {
   font-size: 1rem;
 }
-
 
 .Toastify__progress-bar--default {
   background: linear-gradient(to right, #fff, #2193b0, #00acc1);

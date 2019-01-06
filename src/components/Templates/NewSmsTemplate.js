@@ -10,7 +10,7 @@ const initialFormState = {
   messageError: ""
 };
 
-class Template extends Component {
+class NewSmsTemplate extends Component {
   state = {
     ...initialFormState,
     templates: getItem("templates", [])
@@ -111,13 +111,13 @@ class Template extends Component {
             </div>
           </label>
 
-          <button className="button submit__button template__button" type="submit">
+          <button className="button submit__button" type="submit">
             {this.props.t("campaigns.newSMSTemplateButton")}
           </button>
         </form>
 
         {this.state.templates.length > 0 && (
-          <div className="generated__template__container">
+          <div className="dynamic__template">
             <div className="template__title__container">
               <p className="template__heading">
                 {this.props.t("campaigns.templatesList")}
@@ -144,4 +144,4 @@ class Template extends Component {
   }
 }
 
-export default withNamespaces("common")(Template);
+export default withNamespaces("common")(NewSmsTemplate);

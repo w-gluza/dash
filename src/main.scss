@@ -7,85 +7,34 @@
 @import "./components/Bars/AvailableCreditBar.scss";
 @import "./components/Billing/Billing.scss";
 @import "./components/Charts/Charts.scss";
-@import "./components/ContactList/ContactList.scss";
-
-@import "./components/NewSMS/NewSMS.scss";
 
 @import "./components/Pricing/Pricing.scss";
 @import "./components/Report/Report.scss";
+@import "./components/RDT/RDT.scss";
 @import "./components/SideNav/SideNav.scss";
 
 @import "./components/MobileNav/MobileNav.scss";
 
-@import "./components/Template/Template.scss";
 @import "./components/TopNav/TopNav.scss";
 @import "./components/User/User.scss";
 
+@import "./components/Templates/Templates.scss";
 
-//----- NEW SMSes Template, Contact List Template, Qucik SMS, Reports, 
-.template__container {
-max-width: 50rem;
-padding: 2rem;
-background-color: $color-white;
-border-radius: 12px;
-padding: 2rem;
-@include mboxshadow(1); // depth level 1
+.error_message {
+  color: $color-negative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-.quickSMS__container--modifier {
-    height: auto;
+.delete__button {
+  background-color: $color-negative;
+  width: 100%;
 }
-.newSMS__grid {
-    display: grid;
-    grid-template-rows: 5rem 2rem 4fr 3rem 4fr 1fr;
-    // grid-template-rows: 5rem 2rem 3fr 1fr;
-    height: 50rem;
-    background-color: red;
-    grid-gap: 2rem;
-
-}
-
-.lists__grid {
-    display: grid;
-    grid-template-rows: 5rem 2rem 3fr 1fr;
-    max-height: 34rem;
-  }
-
-  .one{
-      width: 100%;
-      height: 100%;
-  }
-
-  .one2{
-    width: 100%;
-    height: 100%;
-    background-color: aqua;
-} .one3{
-    width: 100%;
-    height: 100%;
-    background-color: yellow;
-} .one4{
-    width: 100%;
-    height: 100%;
-    background-color: aqua;
-} .one5{
-    width: 100%;
-    height: 100%;
-    background-color: pink;
-
-} 
-.one6{
-    width: 100%;
-    height: 100%;
-    background-color: yellow;
-}
-.one7{
-    width: 100%;
-    height: 100%;
-    background-color: green;
-}
-
-.x2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+//glob?
+.calendar,
+select,
+input.form-control {
+  font-weight: 400;
+  color: $color-primary !important;
 }

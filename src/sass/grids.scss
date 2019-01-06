@@ -1,39 +1,88 @@
 // ---------- General APP Layout ----------- //
 
-
 // ---------- Containers Layout ----------- //
-// ---------- Components Layout ----------- //
 
+//-- QUICK SMS --//
+.campaigns__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  padding: 5rem 3rem;
+}
+
+// Business Inteligence container grid
+.statistics__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+// ---------- Components Layout ----------- //
 
 // Top Nav credit informations bar
 .available__credit__container {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    grid-gap: 1rem;
-    padding: 1rem;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
 
+// -- Lists and Campaigns Grid ---//
 
-  // --- Billings ---//
+//TEMPLATES
 
+//----- NEW SMSes Template, Contact List Template, Qucik SMS, Reports,
+.lists__grid {
+  display: grid;
+  grid-template-rows: 5rem 2rem 12rem 1fr;
+  max-height: 34rem;
+  grid-gap: 2rem;
+}
+.newSMS__grid {
+  display: grid;
+  grid-template-rows: 5rem 2rem 4fr 3rem 4fr 1fr;
+  height: 50rem;
+  grid-gap: 2rem;
+}
 
+// ---- Dynamic template container----/
+.dynamic__template {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  padding-top: 10rem;
+}
 
+.saved__messages__grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-gap: 1rem;
+  margin: 20px;
+  padding: 1rem;
+  border-bottom: 1px solid rgba($color-grey-dark, 0.3);
+}
 
+// ---- Quick SMS --- /@at-root
 
+.x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+// --- Billings ---//
 
-  // --- Billings ---//
-  //pricing cards container 
+// --- Billings ---//
+//pricing cards container
 .billing__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    grid-gap: 2rem;
-    margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem;
 }
 
 .pricing__table {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 3rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  padding: 2rem;
 }

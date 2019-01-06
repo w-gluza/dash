@@ -13,7 +13,7 @@ const initialFormState = {
   phoneNumberError: ""
 };
 
-class ContactList extends Component {
+class NewContactList extends Component {
   state = {
     ...initialFormState,
     contactListTemplate: []
@@ -88,7 +88,7 @@ class ContactList extends Component {
           className="template__container lists__grid"
           onSubmit={this.handleSubmit}
         >
-          <div className="template__title__container">
+          <div className="template__title__container gradient__warm">
             <p className="template__heading">
               {this.props.t("contactList.heading")}
             </p>
@@ -102,28 +102,23 @@ class ContactList extends Component {
               maxLength="50"
               titleerror={this.props.t("contactlist.descriptionError")}
             />
-            <div className="error_message">
-              {this.state.listNameError}
-            </div>
+            <div className="error_message">{this.state.listNameError}</div>
           </label>
 
-          <label>
+          <label className="test">
             <PhoneNumbers
               value={this.state.phoneNumber}
               onChange={numbers => this.setValue("phoneNumber", numbers)}
             />
-
-            <div className="error_message">
-              {this.state.phoneNumberError}
-            </div>
+            <div className="error_message">{this.state.phoneNumberError}</div>
           </label>
 
-          <button className="button submit__button template__button" type="submit">
+          <button className="button submit__button button__warm" type="submit">
             {this.props.t("template.button")}
           </button>
         </form>
         {this.state.contactListTemplate.length > 0 && (
-          <div className="generated__template__container">
+          <div className="dynamic__template">
             <div className="template__title__container gradient__warm">
               <p className="template__heading">
                 {this.props.t("campaigns.templatesList")}
@@ -148,4 +143,4 @@ class ContactList extends Component {
   }
 }
 
-export default withNamespaces("common")(ContactList);
+export default withNamespaces("common")(NewContactList);
