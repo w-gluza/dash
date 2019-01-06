@@ -154,18 +154,10 @@ class Report extends Component {
         <table>
           <thead>
             <tr className="card__body">
-              <th>
-                {this.props.t("reports.phoneNumber")}
-              </th>
-              <th>
-                {this.props.t("reports.creationTime")}
-              </th>
-              <th>
-                {this.props.t("reports.processTime")}
-              </th>
-              <th>
-                {this.props.t("reports.status")}
-              </th>
+              <th>{this.props.t("reports.phoneNumber")}</th>
+              <th>{this.props.t("reports.creationTime")}</th>
+              <th>{this.props.t("reports.processTime")}</th>
+              <th>{this.props.t("reports.status")}</th>
             </tr>
           </thead>
           <tbody>

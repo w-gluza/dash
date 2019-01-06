@@ -4,6 +4,7 @@
   border-radius: 12px;
   padding: 2rem;
   @include mboxshadow(1); // depth level 1
+  margin-bottom: 2rem;
 }
 
 .template__title__container {
@@ -22,7 +23,8 @@
 }
 
 input#listName,
-input#title {
+input#title,
+input#sender {
   border-bottom: 0.1rem solid rgba($color-grey-dark, 0.2);
   &:focus {
     border-bottom: 0.1rem solid $color-primary;
@@ -30,7 +32,7 @@ input#title {
 }
 // New SMS  (Quick SMS)
 .sms__container {
-  padding: 5rem;
+  padding: 5rem 3rem;
 }
 
 select#choosenTemplate {

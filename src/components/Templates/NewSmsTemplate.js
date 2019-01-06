@@ -80,7 +80,10 @@ class NewSmsTemplate extends Component {
   render() {
     return (
       <section>
-        <form className="template__container lists__grid" onSubmit={this.handleSubmit}>
+        <form
+          className="template__container lists__grid"
+          onSubmit={this.handleSubmit}
+        >
           <div className="template__title__container">
             <p className="template__heading">
               {this.props.t("campaigns.newSMSTemplate")}
@@ -106,9 +109,7 @@ class NewSmsTemplate extends Component {
               onChange={this.change}
               maxLength="500"
             />
-            <div className="error_message">
-              {this.state.messageError}
-            </div>
+            <div className="error_message">{this.state.messageError}</div>
           </label>
 
           <button className="button submit__button" type="submit">
@@ -117,7 +118,7 @@ class NewSmsTemplate extends Component {
         </form>
 
         {this.state.templates.length > 0 && (
-          <div className="dynamic__template">
+          <div className="dynamic__template template__container">
             <div className="template__title__container">
               <p className="template__heading">
                 {this.props.t("campaigns.templatesList")}

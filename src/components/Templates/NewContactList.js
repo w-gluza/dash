@@ -118,7 +118,7 @@ class NewContactList extends Component {
           </button>
         </form>
         {this.state.contactListTemplate.length > 0 && (
-          <div className="dynamic__template">
+          <div className="template__container dynamic__template">
             <div className="template__title__container gradient__warm">
               <p className="template__heading">
                 {this.props.t("campaigns.templatesList")}

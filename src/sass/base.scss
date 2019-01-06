@@ -157,7 +157,7 @@ textarea {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 600px) {
+@include respond(tab-port) {
   .available__credit__heading {
     display: none;
   }

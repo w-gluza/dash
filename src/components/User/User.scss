@@ -1,6 +1,8 @@
 .user__container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  // grid-template-columns: 3fr 1fr;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 2rem;
 }
 
 .user__nick {
@@ -8,6 +10,9 @@
   font-size: 1.5rem;
   justify-self: end;
   align-self: center;
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 .user__profile__img {
   width: 5rem;
@@ -19,10 +24,4 @@
 
   justify-self: end;
   align-self: center;
-}
-
-@media screen and (max-width: 600px) {
-  .user__nick {
-    display: none;
-  }
 }
