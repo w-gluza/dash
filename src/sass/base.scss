@@ -194,8 +194,12 @@ select,
   text-align: center;
 }
 
+.message__title {
+  word-break: break-word;
+}
 .message__text {
   font-size: 1rem;
+  word-break: break-word;
 }
 
 .Toastify__progress-bar--default {

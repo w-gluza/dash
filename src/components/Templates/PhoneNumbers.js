@@ -8,7 +8,10 @@ class PhoneNumber extends React.Component {
 
     return (
       <TagsInput
-        value={value.split(";").filter(x => x)}
+        value={value
+          .split(";")
+          .filter(x => x)
+          .map(x => " " + x)}
         onChange={numbers =>
           onChange(
             numbers

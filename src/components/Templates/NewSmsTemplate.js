@@ -107,7 +107,7 @@ class NewSmsTemplate extends Component {
               placeholder={this.props.t("campaigns.newSMSTemplateMessage")}
               value={this.state.message}
               onChange={this.change}
-              maxLength="500"
+              maxLength="160"
             />
             <div className="error_message">{this.state.messageError}</div>
           </label>
