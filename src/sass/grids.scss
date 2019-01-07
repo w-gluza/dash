@@ -35,7 +35,8 @@
   padding: 1rem;
 
   @include respond(tab-port) {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: auto max-content;
+    grid-gap: 1rem;
   }
 }
 
