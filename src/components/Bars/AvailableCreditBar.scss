@@ -4,7 +4,7 @@
   width: 15rem;
   border-radius: 5rem;
   border: 0.1rem solid $color-grey-light;
-  justify-self: center;
+  justify-self: left;
   align-self: center;
 
   @include respond(tab-port) {

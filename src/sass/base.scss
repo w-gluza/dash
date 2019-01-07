@@ -201,3 +201,22 @@ select,
 .Toastify__progress-bar--default {
   background: linear-gradient(to right, #fff, #2193b0, #00acc1);
 }
+
+.error_message {
+  color: $color-negative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.delete__button {
+  background-color: $color-negative;
+  width: 100%;
+}
+//glob?
+.calendar,
+select,
+input.form-control {
+  font-weight: 400;
+  color: $color-primary !important;
+}

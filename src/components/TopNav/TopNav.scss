@@ -1,27 +1,12 @@
-.topnav {
-  width: 100%;
-  background-color: #37474f;
-  height: 6.4rem;
-  display: grid;
-  grid-template-columns: 8fr max-content max-content;
-  grid-gap: 3rem;
-  padding: 0 2rem 0 2rem;
-  @include respond(tab-port) {
-    grid-template-columns: 15rem 5rem max-content;
-    grid-gap: 0rem;
-    padding: 0 1rem 0 1rem;
-  }
-}
-
 .nav__lang__item {
   color: $color-grey-light;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 300;
   height: 100%;
+  width: 3rem;
   @include respond(tab-port) {
-    width: 44px;
-    vertical-align: center;
+    width: 4.4rem;
   }
 }
 

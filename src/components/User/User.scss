@@ -1,8 +1,11 @@
 .user__container {
   display: grid;
-  // grid-template-columns: 3fr 1fr;
   grid-template-columns: repeat(2, max-content);
   grid-gap: 2rem;
+  @include respond(tab-port) {
+    grid-gap: 0rem;
+    justify-self: end;
+  }
 }
 
 .user__nick {

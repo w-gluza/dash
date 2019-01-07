@@ -26,17 +26,32 @@
 // }
 
 // ---------- Components Layout ----------- //
+// ------- TOP NAV -----//
+.topnav {
+  width: 100%;
+  background-color: #37474f;
+  height: 6.4rem;
+  display: grid;
+  grid-template-columns: 8fr max-content max-content;
+  grid-gap: 3rem;
+  padding: 0 2rem 0 2rem;
+  @include respond(tab-port) {
+    grid-template-columns: 15rem auto max-content;
+    grid-gap: 0rem;
+    padding: 0 0rem 0 0rem;
+  }
+}
 
 // Top Nav credit informations bar
 .available__credit__container {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-gap: 2rem;
-  padding: 1rem;
+  padding-left: 1rem;
 
   @include respond(tab-port) {
-    grid-template-columns: auto max-content;
-    grid-gap: 1rem;
+    grid-template-columns: max-content max-content;
+    grid-gap: 0.5rem;
   }
 }
 
