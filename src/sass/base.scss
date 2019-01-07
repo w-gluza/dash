@@ -108,7 +108,7 @@ textarea {
   width: 100%;
   resize: none;
   border: 0.1rem solid rgba($color-grey-dark, 0.2);
-  background-color: #f8f8f8;
+  background-color: $color-grey-light;
   height: 100%;
 
   &:focus {
@@ -229,5 +229,5 @@ select,
 select,
 input.form-control {
   font-weight: 400;
-  color: $color-primary !important;
+  color: $color-primary;
 }

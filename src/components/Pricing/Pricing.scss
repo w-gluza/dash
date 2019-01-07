@@ -22,20 +22,20 @@
 // .pricing__slot,
 .price-head {
   padding: 50px;
-  background: linear-gradient(45deg, #2193b0, #00acc1);
+  background: linear-gradient(45deg, $color-blue, $color-primary);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
 }
 
 .button__pricing {
-  background: linear-gradient(45deg, #2193b0, #00acc1);
+  background: linear-gradient(45deg, $color-blue, $color-primary);
   margin-bottom: 2rem;
 }
 .active__package {
-height: 100%;
+  height: 100%;
 }
 .current {
-  background: linear-gradient(45deg, #de6262, #ffb88c);
+  background: linear-gradient(45deg, $color-negative, $color-warning);
 }
 
 .pricing__subtitle {

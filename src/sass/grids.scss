@@ -29,7 +29,7 @@
 // ------- TOP NAV -----//
 .topnav {
   width: 100%;
-  background-color: #37474f;
+  background-color: $color-grey-dark;
   height: 6.4rem;
   display: grid;
   grid-template-columns: 8fr max-content max-content;
@@ -83,7 +83,7 @@
 
 .saved__messages__grid {
   display: grid;
-  grid-template-columns: 7rem auto 7rem;
+  grid-template-columns: 7rem auto rem;
   grid-gap: 1rem;
   margin: 20px;
   padding: 1rem;

@@ -75,7 +75,7 @@ th {
 }
 // 0 – SMS not yet processed
 .deliveryreport__notprocessed {
-  background-color: #eceff1;
+  background-color: $color-grey;
 }
 
 //1 – SMS Delivered
@@ -95,7 +95,7 @@ th {
 
 //4 – Expired (Not Permanent Failure)
 .deliveryreport__expired {
-  background-color: #b0bec5;
+  background-color: rgba($color-grey-dark, 0.3);
 }
 
 .filters__status__containers {
@@ -125,7 +125,7 @@ th {
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 700;
-  color: #73879c;
+  color: $color-blue-grey;
   align-self: center;
 
   @include respond(tab-port) {

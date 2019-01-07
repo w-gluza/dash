@@ -1,11 +1,6 @@
-// .chart {
-//   position: relative;
-// }
-
 #container {
   box-sizing: border-box;
   width: 100%;
-  // height: auto;
   padding-right: 2rem;
 }
 
@@ -24,7 +19,7 @@
 .pie__top__number,
 .pie__bottom__text,
 .pie__bottom__number {
-  color: $color-grey-dark;
+  color: rgba($color-grey-dark, 0.9);
   text-align: center;
 }
 

@@ -12,14 +12,14 @@
   margin-top: -45px;
   margin-bottom: 15px;
   border-radius: 6px;
-  background: linear-gradient(45deg, #2193b0, #00acc1);
-  box-shadow: 0 12px 20px -10px rgba(#2193b0, 1),
-    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#00acc1, 0.2);
+  background: linear-gradient(45deg, $color-blue, $color-primary);
+  box-shadow: 0 12px 20px -10px rgba($color-blue, 1),
+    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba($color-primary, 0.2);
 }
 .gradient__warm {
-  background: linear-gradient(45deg, #de6262, #ffb88c);
-  box-shadow: 0 12px 20px -10px rgba(#de6262, 1),
-    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(#ffb88c, 0.2);
+  background: linear-gradient(45deg, $color-negative, $color-warning);
+  box-shadow: 0 12px 20px -10px rgba($color-negative, 1),
+    0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba($color-warning, 0.2);
 }
 
 input#listName,
@@ -43,13 +43,12 @@ select#choosenTemplate {
 
 // Numbers Tags Imput RESET
 .react-tagsinput {
-  width: 100% !important;
+  width: 100%;
   height: 100%;
-  margin-left: 0% !important;
-  border: 1px solid #ccc;
-  overflow: auto !important;
+  border: 1px solid $color-grey;
+  overflow: auto;
   padding: 0.5rem;
-  background-color: #f8f8f8;
+  background-color: $color-grey-light;
 }
 .react-tagsinput--focused {
   border: 1px solid $color-primary;

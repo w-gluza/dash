@@ -3,8 +3,10 @@
 $color-primary: #00acc1;
 $color-primary-dark: #007c91;
 
-$color-grey-dark: #3f4652;
-$color-grey-light: #f5f5f5;
+$color-grey-dark: #37474f;
+
+$color-grey: #eeeeee;
+$color-grey-light: #f8f8f8;
 
 $color-blue-grey: #73879c;
 $color-blue-dark: rgba(38, 50, 56, 1);
@@ -12,9 +14,11 @@ $color-blue-dark: rgba(38, 50, 56, 1);
 $color-white: #ffffff;
 $color-black: #000000;
 
+$color-blue: #2193b0;
+
 $color-positive: #1da598;
-$color-warning: #ffb74d;
-$color-negative: #ef5350;
+$color-warning: #ffb88c;
+$color-negative: #de6262;
 
 // ------------------ MIXINS ----------------------- //
 // Media Querry Manager              $breakpoint
@@ -29,54 +33,48 @@ $color-negative: #ef5350;
 */
 // 37.5 * 16 = 600px
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-      @media (max-width: 37.5em) {
-        @content;
-      }
-    }
-  
-    // 56.25 * 16 = 900px
-    @if $breakpoint == tab-port {
-      @media (max-width: 56.25em) {
-        @content;
-      }
-    }
-  
-    // 75 * 16 = 1200px
-    @if $breakpoint == tab-land {
-      @media (max-width: 75em) {
-        @content;
-      }
-    }
-  
-    //Everything between 1200 - 1800 is regular desktop
-  
-    // 112.5 * 16 = 1800px
-    @if $breakpoint == big-desktop {
-      @media (min-width: 112.5em) {
-        @content;
-      }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
     }
   }
 
-
- // Material Design box shadows //
-  @mixin mboxshadow($depth:1) {
-    @if $depth==1 {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  // 56.25 * 16 = 900px
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
     }
-    @else if $depth==2 {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-    @else if $depth==3 {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    }
-    @else if $depth==4 {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    }
-    @else if $depth==5 {
-      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-    }
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
   }
-  
+
+  // 75 * 16 = 1200px
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  //Everything between 1200 - 1800 is regular desktop
+
+  // 112.5 * 16 = 1800px
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// Material Design box shadows //
+@mixin mboxshadow($depth: 1) {
+  @if $depth==1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  } @else if $depth==2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  } @else if $depth==3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  } @else if $depth==4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  } @else if $depth==5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
