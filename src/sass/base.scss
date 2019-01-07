@@ -202,6 +202,13 @@ select,
   background: linear-gradient(to right, #fff, #2193b0, #00acc1);
 }
 
+.Toastify__toast-container {
+  width: 30rem;
+  @include respond(tab-port) {
+    width: 20rem;
+  }
+}
+
 .error_message {
   color: $color-negative;
   font-size: 1.1rem;

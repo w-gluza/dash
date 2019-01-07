@@ -19,7 +19,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{userCredit.Acquired}</p>
                 <p className="count__bottom">
-                  <span className="span__count--positive">2%</span>
+                  <span className="span__count--positive">+2%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>
@@ -29,7 +29,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{userCredit.Consumed}</p>
                 <p className="count__bottom">
-                  <span className="span__count--positive">5%</span>
+                  <span className="span__count--positive">+5%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>
@@ -39,7 +39,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{userCredit.ConsumedLandLine}</p>
                 <p className="count__bottom">
-                  <span className="span__count--positive">4%</span>
+                  <span className="span__count--positive">+4%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>
@@ -49,7 +49,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{AvailableCredits}</p>
                 <p className="count__bottom">
-                  <span className="span__count--negative">7%</span>
+                  <span className="span__count--negative">-7%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>
@@ -59,7 +59,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{userCredit.Scheduled}</p>
                 <p className="count__bottom">
-                  <span className="span__count--positive">4%</span>
+                  <span className="span__count--positive">+4%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>
@@ -69,7 +69,7 @@ class Billing extends Component {
                 </p>
                 <p className="count">{AvailableCreditsWithoutScheduled}</p>
                 <p className="count__bottom">
-                  <span className="span__count--negative">3%</span>
+                  <span className="span__count--negative">-3%</span>
                   {this.props.t("billings.fromLastWeek")}
                 </p>
               </div>

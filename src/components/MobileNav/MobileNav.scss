@@ -30,12 +30,12 @@
     font-size: 1.2rem;
     line-height: 1.2rem;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
-    fill: rgba($color-white, 0.76);
+    fill: rgba($color-white, 0.56);
     &,
     &:visited {
-      color:rgba($color-white, 0.76);
+      color: rgba($color-white, 0.56);
     }
   }
   .mobilenav__link--active {
