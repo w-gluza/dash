@@ -63,7 +63,12 @@ class SideNav extends Component {
             </NavLink>
           </li>
         </ul>
-        <button className="button sidenav__button"> <NavLink to="/billings">Upgrade Package</NavLink> </button>
+        <button className="button sidenav__button">
+          {" "}
+          <NavLink to="/billings">
+            {this.props.t("sideNav.button")}
+          </NavLink>{" "}
+        </button>
       </nav>
     );
   }

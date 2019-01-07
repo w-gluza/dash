@@ -25,7 +25,7 @@ class PhoneNumber extends React.Component {
           188 // coma
         ]}
         inputProps={{
-          placeholder: this.props.t("listname.phoneNumber"),
+          placeholder: this.props.t("campaigns.newContactsListPlaceholder"),
           maxLength: "20",
           inputMode: "numeric",
           type: "number"

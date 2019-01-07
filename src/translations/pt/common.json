@@ -2,8 +2,10 @@
   "sideNav": {
     "welcome": "Olá",
     "campaigns": "Campanhas",
-    "quicksms": "Envio Pontual",
+    "campaignsMobile": "Campanhas",
+    "quicksms": "SMS",
     "statistics": "Estatísticas",
+    "statisticsMobile": "BI",
     "reports": "Relatórios",
     "billings": "Faturação",
     "button": "Atualizar Pacote"
@@ -12,15 +14,17 @@
     "credit": "Saldo"
   },
   "campaigns": {
-    "newSMSTemplate": "Adicionar Novo Template",
+    "newSMSTemplate": "Adicionar Template",
     "newSMSTemplateTitle": "Título da SMS",
     "newSMSTemplateTitleError": "Falta o Título",
     "newSMSTemplateMessage": "Escreva a sua mensagem",
     "newSMSTemplateButton": "Guardar Template",
     "templatesList": "Os seus Templates",
-    "newContactsList": "Adicionar Nova Lista de Contactos",
+    "newContactsList": "Lista De Contacto",
     "newContactsListTitle": "Título da Lista de Contactos ",
-    "newContactsListNumber": "Escolha o número"
+    "newContactsListNumber": "Escolha o número",
+    "newContactsListPlaceholder": "Insira o número e pressione 'space'",
+    "newContactsListButton": "Guardar Template"
   },
   "quickSMS": {
     "sendSMS": "Envio Pontual",
@@ -37,23 +41,31 @@
     "delay": "Atrasada",
     "sent": "Enviada",
     "averageDelay": "Atraso Médio",
+    "averageDelayBottomText": "SMS entregue menos de",
+    "averageDelayBottomNumber": "de 90",
     "successRate": "Taxa de Sucesso",
-    "totalNumber": "Número Total de Mensagens Processadas",
+    "totalNumber": "Mensagens Processadas:",
     "totalContacts": "Número Total de Mensagens Processadas",
     "statisticsSummary": "Resumo"
   },
   "reports": {
+    "heading": "Relatório De Entrega",
+    "filter": "Filtrar por",
+    "all": "Todos",
+    "from": "de",
+    "to": "para",
     "today": "Hoje",
     "lastWeek": "Última Semana",
     "lastMonts": "Último Mês",
-    "phoneNumber": "Número de Telefone",
+    "phoneNumber": "Número de Tel.",
     "creationTime": "Data de Criação",
     "processTime": "Data de Envio",
     "status": "Estado",
-    "status0": "Em processamento",
+    "status0": "Não Processado",
     "status1": "Entregue",
     "status2": "Pendente",
-    "status3": "Não Entregue"
+    "status3": "Não Entregue",
+    "status4": "Expirado"
   },
   "billings": {
     "aquiredVolume": "Volume Adquirido",

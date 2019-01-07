@@ -33,8 +33,12 @@ class ProcessedMessages extends Component {
           <div>
             <p className="pie__top__text">{this.props.t("BI.averageDelay")}</p>
             <p className="pie__top__number">84%</p>
-            <p className="pie__bottom__text">SMS delivered in less</p>
-            <p className="pie__bottom__number">than 90s</p>
+            <p className="pie__bottom__text">
+              {this.props.t("BI.averageDelayBottomText")}
+            </p>
+            <p className="pie__bottom__number">
+              {this.props.t("BI.averageDelayBottomNumber")}
+            </p>
           </div>
         </div>
       </div>

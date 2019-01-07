@@ -20,9 +20,11 @@
     "newSMSTemplateMessage": "Inser your text message here",
     "newSMSTemplateButton": "Save Template",
     "templatesList": "Your Templates",
-    "newContactsList": "Submit new contacts",
+    "newContactsList": "New Contact List",
     "newContactsListTitle": "Contact List Title ",
-    "newContactsListNumber": "Insert number"
+    "newContactsListNumber": "Insert number",
+    "newContactsListPlaceholder": "Insert number and press 'space'",
+    "newContactsListButton": "Save Template"
   },
   "quickSMS": {
     "sendSMS": "Quick SMS",
@@ -39,18 +41,19 @@
     "delay": "delay",
     "sent": "sent",
     "averageDelay": "Speed Rate",
+    "averageDelayBottomText": "SMS delivered in less",
+    "averageDelayBottomNumber": "than 90s",
     "successRate": "Success Rate",
-    "totalNumber": "Delivered Messages",
-    "totalContacts": "Total Nr of Processed Messages",
-    "statisticsSummary": "Summary",
-    "smsSend": "SMS Send",
-    "status0": "not processed",
-    "status1": "Delivered",
-    "status2": "Pending",
-    "status3": "Not Delivered ",
-    "status4": "Expired"
+    "totalNumber": "Processed Messages:",
+    "totalContacts": "Processed Messages:",
+    "statisticsSummary": "Summary"
   },
   "reports": {
+    "heading": "Delivery Report",
+    "filter": "Filter by",
+    "all": "All",
+    "from": "from",
+    "to": "to",
     "today": "Today",
     "lastWeek": "Last Week",
     "lastMonts": "Last Month",
@@ -58,10 +61,11 @@
     "creationTime": "Creation Time",
     "processTime": "Process Time",
     "status": "Status",
-    "status0": "Not processed yet",
+    "status0": "Not processed",
     "status1": "Delivered",
     "status2": "Pending",
-    "status3": "Not Delivered"
+    "status3": "Not Delivered",
+    "status4": "Expired"
   },
   "billings": {
     "aquiredVolume": "Aquired Volume",
@@ -93,6 +97,6 @@
     "button": "Save Template"
   },
   "listname": {
-    "phoneNumber": "Insert number and press 'space'"
+    "placeholder": "Insert number and press 'space'"
   }
 }

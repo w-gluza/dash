@@ -72,12 +72,12 @@ class Report extends Component {
     return (
       <section className="report__container">
         <div className="template__title__container report__title__container">
-          <p className="template__heading">
-            {this.props.t("contactList.heading")}
-          </p>
+          <p className="template__heading">{this.props.t("reports.heading")}</p>
         </div>{" "}
         <div className="filters__status__containers">
-          <span className="report__span">Filter by:</span>
+          <span className="report__span">
+            {this.props.t("reports.filter")}:
+          </span>
           <button
             onClick={() => {
               this.handleSetFilter("all");
@@ -86,7 +86,7 @@ class Report extends Component {
               this.isActiveFilter("all") ? "filterbutton__active" : ""
             }`}
           >
-            All
+            {this.props.t("reports.all")}
           </button>
           <button
             onClick={() => {
@@ -96,7 +96,7 @@ class Report extends Component {
               this.isActiveFilter("0") ? "filterbutton__active" : ""
             }`}
           >
-            Not processed
+            {this.props.t("reports.status0")}
           </button>
           <button
             onClick={() => {
@@ -106,7 +106,7 @@ class Report extends Component {
               this.isActiveFilter("1") ? "filterbutton__active" : ""
             }`}
           >
-            Delivered
+            {this.props.t("reports.status1")}
           </button>
           <button
             onClick={() => {
@@ -116,7 +116,7 @@ class Report extends Component {
               this.isActiveFilter("2") ? "filterbutton__active" : ""
             }`}
           >
-            Pending
+            {this.props.t("reports.status2")}
           </button>
           <button
             onClick={() => {
@@ -126,7 +126,7 @@ class Report extends Component {
               this.isActiveFilter("3") ? "filterbutton__active" : ""
             }`}
           >
-            Not Delivered
+            {this.props.t("reports.status3")}
           </button>
           <button
             onClick={() => {
@@ -136,16 +136,16 @@ class Report extends Component {
               this.isActiveFilter("4") ? "filterbutton__active" : ""
             }`}
           >
-            Expired
+            {this.props.t("reports.status4")}
           </button>
         </div>
         <div className="report__datepicker">
-          <span className="report__span">from:</span>
+          <span className="report__span">{this.props.t("reports.from")}:</span>
           <Datetime
             value={this.state.fromDate}
             onChange={value => this.handleChangeFilterDate("fromDate", value)}
           />
-          <span className="report__span">to:</span>
+          <span className="report__span">{this.props.t("reports.to")}:</span>
           <Datetime
             value={this.state.toDate}
             onChange={value => this.handleChangeFilterDate("toDate", value)}
@@ -179,7 +179,9 @@ class Report extends Component {
                       deliveryReport.DeliveryStatus
                     )}`}
                   >
-                    {this.props.t(`BI.status${deliveryReport.DeliveryStatus}`)}
+                    {this.props.t(
+                      `reports.status${deliveryReport.DeliveryStatus}`
+                    )}
                   </td>
                 </tr>
               ))}

@@ -90,13 +90,13 @@ class NewContactList extends Component {
         >
           <div className="template__title__container gradient__warm">
             <p className="template__heading">
-              {this.props.t("contactList.heading")}
+              {this.props.t("campaigns.newContactsList")}
             </p>
           </div>
           <label>
             <input
               id="listName"
-              placeholder={this.props.t("contactList.description")}
+              placeholder={this.props.t("campaigns.newContactsListTitle")}
               value={this.state.title}
               onChange={this.change}
               maxLength="50"
@@ -114,7 +114,7 @@ class NewContactList extends Component {
           </label>
 
           <button className="button submit__button button__warm" type="submit">
-            {this.props.t("template.button")}
+            {this.props.t("campaigns.newContactsListButton")}
           </button>
         </form>
         {this.state.contactListTemplate.length > 0 && (

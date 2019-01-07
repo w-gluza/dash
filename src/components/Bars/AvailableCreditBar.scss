@@ -6,6 +6,11 @@
   border: 0.1rem solid $color-grey-light;
   justify-self: center;
   align-self: center;
+
+  @include respond(tab-port) {
+    width: 12rem;
+    height: 1.6rem;
+  }
 }
 
 .filler {

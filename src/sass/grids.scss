@@ -14,9 +14,16 @@
 .statistics__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  // grid-template-columns: repeat(3, minmax(30rem, 1fr));
+
   grid-gap: 2rem;
   justify-items: center;
 }
+
+// section.statistics__grid:nth-child(2) {
+//   grid-column: span 2;
+//   background-color: red;
+// }
 
 // ---------- Components Layout ----------- //
 
@@ -26,6 +33,10 @@
   grid-template-columns: repeat(3, max-content);
   grid-gap: 2rem;
   padding: 1rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 // -- Lists and Campaigns Grid ---//
@@ -44,6 +55,7 @@
   grid-template-rows: 2rem 2rem 4fr 3rem 4fr 1fr;
   height: 50rem;
   grid-gap: 2rem;
+  margin: auto;
 }
 
 // ---- Dynamic template container----/

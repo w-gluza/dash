@@ -2,8 +2,10 @@
   "sideNav": {
     "welcome": "¡Hola!",
     "campaigns": "Campañas",
-    "quicksms": "Envío Puntual",
+    "campaignsMobile": "Campañas",
+    "quicksms": "SMS",
     "statistics": "Estadística",
+    "statisticsMobile": "BI",
     "reports": "Informes",
     "billings": "Facturación",
     "button": "Actualizar Package"
@@ -37,23 +39,31 @@
     "delay": "Retrasar",
     "sent": "Expedida",
     "averageDelay": "Retraso Medio",
-    "successRate": "tasa de Éxito",
-    "totalNumber": "Número Total de Mensajes Procesados",
+    "averageDelayBottomText": "SMS entregue menos de",
+    "averageDelayBottomNumber": "de 90",
+    "successRate": "Tasa De Éxito",
+    "totalNumber": "Mensagens Processadas:",
     "totalContacts": "Volumen de Contactos en Sistema",
     "statisticsSummary": "Resumen"
   },
   "reports": {
+    "heading": "Relatório De Entrega",
+    "filter": "Filtrar por",
+    "all": "Todos",
+    "from": "de",
+    "to": "para",
     "today": "Hoy",
     "lastWeek": "La Semana Pasada",
     "lastMonts": "El Mes Pasado",
-    "phoneNumber": "Número de Teléfono",
+    "phoneNumber": "Número de Tel.",
     "creationTime": "Fecha de Creación",
     "processTime": "Fecha de Envío",
     "status": "Estado",
-    "status0": "Aún no Procesado",
+    "status0": "No Procesado",
     "status1": "Entregado",
     "status2": "Pendiente",
-    "status3": "No Entregado"
+    "status3": "No Entregado",
+    "status4": "Muerto"
   },
   "billings": {
     "aquiredVolume": "Volumen Adquirido",
