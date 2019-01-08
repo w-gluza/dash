@@ -24,17 +24,18 @@
 }
 
 .pie__top__number {
-  font-size: 2.8rem;
-  line-height: 1.3;
-  font-weight: 900;
+  font-size: $font-size-large;
+  line-height: $line-height-small;
+  font-weight: $font-weight-bold;
   border-bottom: 1px solid $color-grey-dark;
 }
 .pie__top__text,
 .pie__bottom__text {
-  font-size: 1.35rem;
-  line-height: 1.4;
+  font-size: $font-size-small;
+  line-height: $line-height-regular;
 }
 .pie__bottom__number {
-  font-size: 1.6rem;
-  line-height: 1.3;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
+  font-weight: $font-weight-medium;
 }

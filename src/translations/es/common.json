@@ -20,15 +20,17 @@
     "credit": "Saldo"
   },
   "campaigns": {
-    "newSMSTemplate": "Añadir Nuevo Template",
+    "newSMSTemplate": "Nuevo Template",
     "newSMSTemplateTitle": "Título de la SMS",
     "newSMSTemplateTitleError": "Falta el Título",
     "newSMSTemplateMessage": "Inserte su Mensaje de Texto",
     "newSMSTemplateButton": "Guardar Template",
     "templatesList": "Sus Templates",
-    "newContactsList": "Añadir nueva Lista de Contactos",
+    "newContactsList": "Lista de Contactos",
     "newContactsListTitle": "Título de la Lista de Contactos ",
-    "newContactsListNumber": "Agregar Nuevo Contacto"
+    "newContactsListNumber": "Agregar Nuevo Contacto",
+    "newContactsListPlaceholder": "Insira o número e pressione 'space'",
+    "newSMSTemplateButton": "Guardar Template"
   },
   "quickSMS": {
     "sendSMS": "Envío Puntual",

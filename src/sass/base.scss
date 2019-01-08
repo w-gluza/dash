@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
 *,
 *::after,
@@ -73,12 +73,12 @@ button {
 .button {
   color: $color-white;
   background-color: $color-primary;
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 3.6rem;
-  letter-spacing: 0.04rem;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
+  letter-spacing: $letter-spacing-regular;
   height: 3.6rem;
-  padding: 0 2.6rem;
+  padding: 0 2rem;
   margin: 0.6rem 0;
   border-radius: 0.2rem;
   text-transform: uppercase;
@@ -100,8 +100,8 @@ button {
 
 input {
   width: 100%;
-  line-height: 2;
-  font-size: 1.5rem;
+  line-height: $line-height-large;
+  font-size: $font-size-regular;
 }
 
 textarea {
@@ -147,10 +147,10 @@ textarea#message {
 .available__credit__heading,
 .available__credit__subheading {
   color: $color-grey-light;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  letter-spacing: 0.2rem;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
+  letter-spacing: $letter-spacing-regular;
   justify-self: start;
   align-self: center;
 }
@@ -176,9 +176,9 @@ input#listName,
 .rdt,
 select,
 #sender {
-  font-weight: 300;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
+  font-weight: $font-weight-light;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
   color: $color-grey-dark;
 }
 .rdt {
@@ -187,24 +187,34 @@ select,
 
 .template__heading {
   color: $color-white;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
   margin-top: 1.3rem;
-  letter-spacing: 0.08rem;
+  letter-spacing: $letter-spacing-small;
   text-transform: uppercase;
   text-align: center;
+
+  @include respond(tab-port) {
+    font-size: $font-size-regular;
+    margin-top: 1.6rem;
+  }
 }
 
 .message__title {
   word-break: break-word;
 }
 .message__text {
-  font-size: 1rem;
+  font-size: $font-size-extraSmall;
   word-break: break-word;
 }
 
 .Toastify__progress-bar--default {
-  background: linear-gradient(to right, #fff, #2193b0, #00acc1);
+  background: linear-gradient(
+    to right,
+    $color-white,
+    $color-blue,
+    $color-primary
+  );
 }
 
 .Toastify__toast-container {
@@ -216,8 +226,8 @@ select,
 
 .error_message {
   color: $color-negative;
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: $font-size-extraSmall;
+  font-weight: $font-weight-light;
   text-transform: uppercase;
 }
 
@@ -229,6 +239,6 @@ select,
 .calendar,
 select,
 input.form-control {
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   color: $color-primary;
 }

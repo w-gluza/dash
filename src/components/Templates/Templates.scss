@@ -56,9 +56,9 @@ select#choosenTemplate {
 
 .react-tagsinput-input {
   background: transparent;
-  font-weight: 300;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
+  font-weight: $font-weight-light;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
   color: $color-grey-dark;
   margin-bottom: 6px;
   margin-top: 1px;
@@ -68,11 +68,11 @@ select#choosenTemplate {
 .react-tagsinput-tag {
   background-color: $color-primary;
   color: $color-grey-light;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   border: 1px solid $color-primary;
   border-radius: 2px;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: $font-size-regular;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   padding: 0.5rem;

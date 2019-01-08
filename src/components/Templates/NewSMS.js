@@ -191,7 +191,7 @@ class NewSMS extends Component {
             </label>
           </p>
           <button className="button submit__button" type="submit">
-            {this.props.t("SEND")}
+            {this.props.t("quickSMS.sendSMSButton")}
           </button>
         </form>
       </section>

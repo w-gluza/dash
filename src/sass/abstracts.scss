@@ -20,6 +20,28 @@ $color-positive: #1da598;
 $color-warning: #ffb88c;
 $color-negative: #de6262;
 
+// Font Variables
+
+$font-size-extraSmall: 1rem;
+$font-size-small: 1.2rem;
+$font-size-regular: 1.4rem;
+$font-size-medium: 2rem;
+$font-size-large: 3.4rem;
+$font-size-extraLarge: 4rem;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$letter-spacing-small: 0.1em;
+$letter-spacing-regular: 0.15em;
+$letter-spacing-large: 0.2em;
+
+$line-height-small: 1.2;
+$line-height-regular: 1.5;
+$line-height-large: 2;
+
 // ------------------ MIXINS ----------------------- //
 // Media Querry Manager              $breakpoint
 /*

@@ -1,8 +1,8 @@
 .nav__lang__item {
   color: $color-grey-light;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  font-weight: 300;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
+  font-weight: $font-weight-light;
   height: 100%;
   width: 3rem;
   @include respond(tab-port) {

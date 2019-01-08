@@ -34,11 +34,11 @@
   border-bottom: 1px solid rgb(224, 224, 224);
 }
 th {
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
   color: $color-primary;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   text-align: start;
 }
 
@@ -54,10 +54,10 @@ th {
 }
 
 .delivery__box__item {
-  font-size: 1.4rem;
+  font-size: $font-size-small;
   color: $color-grey-dark;
-  font-weight: 300;
-  line-height: 1.5;
+  font-weight: $font-weight-light;
+  line-height: $line-height-regular;
   vertical-align: middle;
 }
 
@@ -68,11 +68,11 @@ th {
 .deliveryreport__expired {
   color: $color-grey-dark;
   text-align: center;
-  font-weight: 300;
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-weight: $font-weight-light;
+  font-size: $font-size-small;
+  line-height: $line-height-regular;
   @include respond(tab-port) {
-    font-size: 1rem;
+    font-size: $font-size-small;
   }
 }
 // 0 – SMS not yet processed
@@ -114,9 +114,9 @@ th {
 .filterbutton {
   padding: 5px;
   border: 1px transparent solid;
-  font-weight: 300;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-weight: $font-weight-light;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
 }
 
 .filterbutton__active {
@@ -124,14 +124,14 @@ th {
 }
 
 .report__span {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  font-weight: 700;
+  font-size: $font-size-regular;
+  line-height: $line-height-regular;
+  font-weight: $font-weight-bold;
   color: $color-blue-grey;
   align-self: center;
 
   @include respond(tab-port) {
-    font-size: 1.4rem;
+    font-size: $font-size-small;
   }
 }
 
@@ -154,6 +154,6 @@ th {
   td.delivery__box__item,
   td.deliveryreport,
   input.form-control {
-    font-size: 1rem;
+    font-size: $font-size-extraSmall;
   }
 }

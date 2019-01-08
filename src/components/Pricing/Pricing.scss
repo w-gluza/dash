@@ -15,8 +15,8 @@
 }
 
 .pricing__detail {
-  font-weight: 300;
-  font-size: 1.4rem;
+  font-weight: $font-weight-light;
+  font-size: $font-size-regular;
 }
 
 // .pricing__slot,
@@ -41,15 +41,15 @@
 .pricing__subtitle {
   text-transform: uppercase;
   color: $color-white;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-regular;
 }
 
 .pricing__title {
   padding: 20px 0 0;
-  font-size: 2rem;
+  font-size: $font-size-medium;
   color: $color-white;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
 }
 
 .price__content ul {
@@ -57,13 +57,13 @@
 }
 
 .price__content ul li {
-  font-size: 1rem;
+  font-size: $font-size-extraSmall;
   text-transform: uppercase;
   padding: 10px 0;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }
 
 .pricing__span {
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   opacity: 0.6;
 }

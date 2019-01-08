@@ -75,8 +75,8 @@
   },
   "billings": {
     "aquiredVolume": "Aquired Volume",
-    "planConsumption": "Plan Consumption",
-    "landLineConsumption": "LandLine Consumption",
+    "planConsumption": "Plan Consum.",
+    "landLineConsumption": "Landline Consum.",
     "availableCredits": "Available Credits",
     "scheduledMessages": "Scheduled Messages",
     "realCredit": "Real Credit",

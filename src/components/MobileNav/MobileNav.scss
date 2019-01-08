@@ -27,10 +27,10 @@
   }
   .mobilenav__link {
     max-width: 12.8rem;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: $font-size-small;
+    line-height: $line-height-regular;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     text-align: center;
     fill: rgba($color-white, 0.56);
     &,
