@@ -67,7 +67,7 @@ class SideNav extends Component {
               <Icon
                 name="pricing"
                 className="sidenav__icon"
-                title={this.props.t("sideNav.altLinkBillings")}
+                alt={this.props.t("sideNav.altLinkBillings")}
               />
               {this.props.t("sideNav.billings")}
             </NavLink>

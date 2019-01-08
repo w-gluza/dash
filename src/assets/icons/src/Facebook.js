@@ -3,11 +3,14 @@ import React from "react";
 const SVG = ({
   style = {},
   fill = "",
+  alt = "",
   width = "100%",
   className = "",
   viewBox = "0 0 470.513 470.513"
 }) => (
   <svg
+    fill={fill}
+    alt={alt}
     width={width}
     style={style}
     height={width}

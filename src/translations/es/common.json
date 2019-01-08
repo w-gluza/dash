@@ -8,7 +8,13 @@
     "statisticsMobile": "BI",
     "reports": "Informes",
     "billings": "Facturación",
-    "button": "Actualizar Package"
+    "button": "Actualizar Package",
+    "altLinkEZ4U": "EZ4U icono",
+    "altLinkCampaings": "Campañas icono",
+    "altLinkQuickSMS": "SMS icono",
+    "altLinkStatistics": "Estadística icono",
+    "altLinkReports": "Informes icono",
+    "altLinkBillings": "Facturación icono"
   },
   "topNav": {
     "credit": "Saldo"
