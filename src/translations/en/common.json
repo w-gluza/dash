@@ -8,7 +8,13 @@
     "statisticsMobile": "BI",
     "reports": "Reports",
     "billings": "Billings",
-    "button": "Upgrade Package"
+    "button": "Upgrade Package",
+    "altLinkEZ4U": "EZ4U Icon",
+    "altLinkCampaings": "List&Campaigns Icon",
+    "altLinkQuickSMS": "Quick SMS Icon",
+    "altLinkStatistics": "Business Inteligence Icon",
+    "altLinkReports": "Reports Icon",
+    "altLinkBillings": "Billings Icon"
   },
   "topNav": {
     "credit": "Available Credit"

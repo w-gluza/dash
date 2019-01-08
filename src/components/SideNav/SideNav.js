@@ -12,7 +12,7 @@ class SideNav extends Component {
             <Icon
               name="favicon"
               className="sidenav__icon--title"
-              alt="LinkedIn logo"
+              alt={this.props.t("sideNav.altLinkEZ4U")}
             />
             Ez4U
           </h1>
@@ -23,14 +23,18 @@ class SideNav extends Component {
               <Icon
                 name="inbox"
                 className="sidenav__icon"
-                alt="LinkedIn logo"
+                alt={this.props.t("sideNav.altLinkCampaings")}
               />
               {this.props.t("sideNav.campaigns")}
             </NavLink>
           </li>
           <li className="sidenav__list--item">
             <NavLink to="/quicksms" activeClassName="sidenav__list--activelink">
-              <Icon name="sms" className="sidenav__icon" alt="LinkedIn logo" />
+              <Icon
+                name="sms"
+                className="sidenav__icon"
+                alt={this.props.t("sideNav.altLinkQuickSMS")}
+              />
               {this.props.t("sideNav.quicksms")}
             </NavLink>
           </li>
@@ -39,7 +43,11 @@ class SideNav extends Component {
               to="/statistics"
               activeClassName="sidenav__list--activelink"
             >
-              <Icon name="bi" className="sidenav__icon" alt="LinkedIn logo" />
+              <Icon
+                name="bi"
+                className="sidenav__icon"
+                alt={this.props.t("sideNav.altLinkStatistics")}
+              />
 
               {this.props.t("sideNav.statistics")}
             </NavLink>
@@ -49,7 +57,7 @@ class SideNav extends Component {
               <Icon
                 name="report"
                 className="sidenav__icon"
-                alt="LinkedIn logo"
+                alt={this.props.t("sideNav.altLinkReports")}
               />
               {this.props.t("sideNav.reports")}
             </NavLink>
@@ -59,17 +67,14 @@ class SideNav extends Component {
               <Icon
                 name="pricing"
                 className="sidenav__icon"
-                alt="LinkedIn logo"
+                title={this.props.t("sideNav.altLinkBillings")}
               />
               {this.props.t("sideNav.billings")}
             </NavLink>
           </li>
         </ul>
         <button className="button sidenav__button">
-          {" "}
-          <NavLink to="/billings">
-            {this.props.t("sideNav.button")}
-          </NavLink>{" "}
+          <NavLink to="/billings">{this.props.t("sideNav.button")}</NavLink>{" "}
         </button>
       </nav>
     );
