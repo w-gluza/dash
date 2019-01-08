@@ -22,6 +22,7 @@
 
   @include respond(tab-port) {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
   }
 }
 
@@ -29,6 +30,9 @@
   padding-top: 2rem;
 }
 
+.report__columns {
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
 th {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -52,11 +56,9 @@ th {
 .delivery__box__item {
   font-size: 1.4rem;
   color: $color-grey-dark;
-  // padding: 0.6rem 0.4rem;
   font-weight: 300;
   line-height: 1.5;
   vertical-align: middle;
-  border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 .deliveryreport__notprocessed,

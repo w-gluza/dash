@@ -7,14 +7,16 @@ class SideNav extends Component {
   render() {
     return (
       <nav className="sidenav">
-        <h1 className="sidenav__title">
-          <Icon
-            name="favicon"
-            className="sidenav__icon--title"
-            alt="LinkedIn logo"
-          />
-          Ez4U
-        </h1>
+        <NavLink exact to="/" activeClassName="sidenav__list--activelink">
+          <h1 className="sidenav__title">
+            <Icon
+              name="favicon"
+              className="sidenav__icon--title"
+              alt="LinkedIn logo"
+            />
+            Ez4U
+          </h1>
+        </NavLink>
         <ul>
           <li className="sidenav__list--item">
             <NavLink exact to="/" activeClassName="sidenav__list--activelink">
