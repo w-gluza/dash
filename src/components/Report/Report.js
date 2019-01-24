@@ -16,10 +16,7 @@ class Report extends Component {
       }
     }),
     filter: "all",
-    today: moment().subtract(1, "days"),
     fromDate: moment().subtract(5, "days"),
-    lastWeek: moment().subtract(7, "days"),
-    lastMonth: moment().subtract(30, "days"),
     toDate: moment(),
     recordsToShow: 15
   };
@@ -29,8 +26,14 @@ class Report extends Component {
   };
 
   handleChangeFilterDate = (name, value) => {
+    let today = moment()
+      .subtract(0, "days")
+      .startOf("day");
+    let lastWeek = moment().subtract(7, "days");
+    let lastMonth = moment().subtract(30, "days");
+
     this.setState(state => {
-      let { toDate, fromDate, today, lastWeek, lastMonth } = state;
+      let { toDate, fromDate } = state;
       if (name === "toDate") {
         toDate = value;
         if (value.isBefore(state.fromDate)) {
@@ -47,14 +50,22 @@ class Report extends Component {
 
       if (name === "today") {
         fromDate = today;
+        if (today.isAfter(state.toDate)) {
+          toDate = value;
+        }
       }
       if (name === "lastWeek") {
         fromDate = lastWeek;
+        if (lastWeek.isAfter(state.toDate)) {
+          toDate = value;
+        }
       }
       if (name === "lastMonth") {
         fromDate = lastMonth;
+        if (lastMonth.isAfter(state.toDate)) {
+          toDate = value;
+        }
       }
-
       return { fromDate, toDate, today, lastWeek, lastMonth };
     });
   };
