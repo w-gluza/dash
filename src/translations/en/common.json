@@ -20,6 +20,10 @@
     "credit": "Available Credit"
   },
   "campaigns": {
+    "newCampaign": "New Campaign",
+    "newCampaignTitle": "New Campaign Title",
+    "newCampaignTitleError": "New Campaign Title is missing",
+    "newCampaignSave": "Save Template",
     "newSMSTemplate": "New SMS Template",
     "newSMSTemplateTitle": "SMS title",
     "newSMSTemplateTitleError": "title is missing",
