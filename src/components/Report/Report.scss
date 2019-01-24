@@ -16,12 +16,23 @@
 .card__body,
 .report__columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  // grid-template-columns: repeat(9, minmax(max-content, 100px));
+  // grid-template-columns: repeat(3, minmax(min-content, 1fr)), 1fr,
+  //   repeat(5, minmax(min-content, 1fr));
+
+  grid-template-columns: repeat(3, 7rem) 1fr repeat(2, 7rem) repeat(2, 11rem) 1fr;
+
+  grid-gap: 1rem;
   width: 100%;
   margin-bottom: 0.5rem;
 
+  @include respond(tab-land) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
   @include respond(tab-port) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
   }
 }
@@ -135,14 +146,38 @@ th {
   }
 }
 
-@include respond(tab-port) {
+@include respond(tab-land) {
   td:nth-child(2),
-  td:nth-child(3) {
+  td:nth-child(3),
+  td:nth-child(5),
+  td:nth-child(7) {
     display: none;
   }
 
   th:nth-child(2),
-  th:nth-child(3) {
+  th:nth-child(3),
+  th:nth-child(5),
+  th:nth-child(7) {
+    display: none;
+  }
+}
+
+@include respond(tab-port) {
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(5),
+  td:nth-child(6),
+  td:nth-child(7) {
+    display: none;
+  }
+
+  th:nth-child(2),
+  th:nth-child(3),
+  th:nth-child(4),
+  th:nth-child(5),
+  th:nth-child(6),
+  th:nth-child(7) {
     display: none;
   }
 

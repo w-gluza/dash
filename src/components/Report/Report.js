@@ -155,6 +155,11 @@ class Report extends Component {
           <thead>
             <tr className="card__body">
               <th>{this.props.t("reports.phoneNumber")}</th>
+              <th>{this.props.t("reports.operator")}</th>
+              <th>{this.props.t("reports.nrSms")}</th>
+              <th>{this.props.t("reports.message")}</th>
+              <th>{this.props.t("reports.sender")}</th>
+              <th>{this.props.t("reports.user")}</th>
               <th>{this.props.t("reports.creationTime")}</th>
               <th>{this.props.t("reports.processTime")}</th>
               <th>{this.props.t("reports.status")}</th>
@@ -168,6 +173,19 @@ class Report extends Component {
                   <td className="delivery__box__item">
                     {deliveryReport.PhoneNumber}
                   </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.operator}
+                  </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.nrSms}
+                  </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.message}
+                  </td>
+                  <td className="delivery__box__item">
+                    {deliveryReport.sender}
+                  </td>
+                  <td className="delivery__box__item">{deliveryReport.user}</td>
                   <td className="delivery__box__item">
                     {deliveryReport.CreationTimeStamp}
                   </td>
