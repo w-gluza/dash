@@ -26,9 +26,7 @@ class Report extends Component {
   };
 
   handleChangeFilterDate = (name, value) => {
-    let today = moment()
-      .subtract(0, "days")
-      .startOf("day");
+    let today = moment().startOf("day");
     let lastWeek = moment().subtract(7, "days");
     let lastMonth = moment().subtract(30, "days");
 
