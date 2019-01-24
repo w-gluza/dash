@@ -16,7 +16,10 @@ class Report extends Component {
       }
     }),
     filter: "all",
-    fromDate: moment().subtract(7, "days"),
+    today: moment().subtract(1, "days"),
+    fromDate: moment().subtract(5, "days"),
+    lastWeek: moment().subtract(7, "days"),
+    lastMonth: moment().subtract(30, "days"),
     toDate: moment(),
     recordsToShow: 15
   };
@@ -27,7 +30,7 @@ class Report extends Component {
 
   handleChangeFilterDate = (name, value) => {
     this.setState(state => {
-      let { toDate, fromDate } = state;
+      let { toDate, fromDate, today, lastWeek, lastMonth } = state;
       if (name === "toDate") {
         toDate = value;
         if (value.isBefore(state.fromDate)) {
@@ -42,7 +45,17 @@ class Report extends Component {
         }
       }
 
-      return { fromDate, toDate };
+      if (name === "today") {
+        fromDate = today;
+      }
+      if (name === "lastWeek") {
+        fromDate = lastWeek;
+      }
+      if (name === "lastMonth") {
+        fromDate = lastMonth;
+      }
+
+      return { fromDate, toDate, today, lastWeek, lastMonth };
     });
   };
 
@@ -73,7 +86,7 @@ class Report extends Component {
       <section className="report__container">
         <div className="template__title__container report__title__container">
           <p className="template__heading">{this.props.t("reports.heading")}</p>
-        </div>{" "}
+        </div>
         <div className="filters__status__containers">
           <span className="report__span">
             {this.props.t("reports.filter")}:
@@ -150,6 +163,24 @@ class Report extends Component {
             value={this.state.toDate}
             onChange={value => this.handleChangeFilterDate("toDate", value)}
           />
+          <button
+            value={this.state.today}
+            onClick={value => this.handleChangeFilterDate("today", value)}
+          >
+            Today
+          </button>
+          <button
+            value={this.state.lastWeek}
+            onClick={value => this.handleChangeFilterDate("lastWeek", value)}
+          >
+            Last Week
+          </button>
+          <button
+            value={this.state.lastMonth}
+            onClick={value => this.handleChangeFilterDate("lastMonth", value)}
+          >
+            Last Month
+          </button>
         </div>
         <table>
           <thead>
