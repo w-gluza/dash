@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import "react-toastify/dist/ReactToastify.css";
 import "./main.scss";
 import { ToastContainer } from "react-toastify";
 
+import Register from "./containers/Register";
 import TopNav from "./components/TopNav/TopNav";
 import SideNav from "./components/SideNav/SideNav";
 
@@ -32,15 +33,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Redirect from="/dash" to="/billings" />
-            <Route
-              exact
-              path="/login"
-              render={() => (
-                <Link to="/">
-                  <button>login</button>
-                </Link>
-              )}
-            />
+            <Route exact path="/register" render={() => <Register />} />
             <Route
               path="/"
               render={() => (
