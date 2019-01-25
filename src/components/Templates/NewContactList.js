@@ -113,6 +113,17 @@ class NewContactList extends Component {
             <div className="error_message">{this.state.phoneNumberError}</div>
           </label>
 
+          <form action="/action_page.php">
+            <div class="upload-btn-wrapper">
+              <button className="btn">Upload a file</button>
+              <input
+                type="file"
+                name="myfile"
+                accept=".pdf, .csv, .txt, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              />
+            </div>
+          </form>
+
           <button className="button submit__button button__warm" type="submit">
             {this.props.t("campaigns.newContactsListButton")}
           </button>
