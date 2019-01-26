@@ -2,14 +2,20 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { Link } from "react-router-dom";
 
+const initialFormState = {
+  name: "",
+  nameError: "",
+  email: "",
+  emailError: "",
+  password: "",
+  passwordError: ""
+};
 class SignUp extends Component {
   constructor() {
     super();
 
     this.state = {
-      email: "",
-      password: "",
-      name: ""
+      ...initialFormState
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,11 +32,44 @@ class SignUp extends Component {
     });
   }
 
+  validate = () => {
+    let nameError = "";
+    let emailError = "";
+    let passwordError = "";
+
+    if (!this.state.name) {
+      nameError = this.props.t("Incorrect name");
+    }
+
+    if (!this.state.email) {
+      emailError = this.props.t("Incorrect email");
+    }
+
+    if (!this.state.password) {
+      passwordError = this.props.t("Password is missing");
+    }
+
+    if (nameError || emailError || passwordError) {
+      this.setState({ nameError, emailError, passwordError });
+      return false;
+    }
+
+    return true;
+  };
+
   handleSubmit(e) {
     e.preventDefault();
-
-    console.log("Dummy console log to check if form was subbimited:");
+    const isValid = this.validate();
+    console.log("Dummy console log to check if sign up form was subbimited:");
     console.log(this.state);
+
+    if (isValid) {
+      console.log("Valid SignUp form");
+
+      this.setState({
+        ...initialFormState
+      });
+    }
   }
   render() {
     return (
@@ -48,6 +87,7 @@ class SignUp extends Component {
             value={this.state.name}
             onChange={this.handleChange}
           />
+          <div className="errorTest">{this.state.nameError}</div>
         </div>
         <div className="formField">
           <label className="formField__label" htmlFor="password">
@@ -62,7 +102,9 @@ class SignUp extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
+          <div className="errorTest">{this.state.passwordError}</div>
         </div>
+
         <div className="formField">
           <label className="formField__label" htmlFor="email">
             E-Mail Address
@@ -76,6 +118,7 @@ class SignUp extends Component {
             value={this.state.email}
             onChange={this.handleChange}
           />
+          <div className="errorTest">{this.state.emailError}</div>
         </div>
         <div className="formField">
           <button className="formField__button mr-20">Sign Up</button>

@@ -2,13 +2,19 @@ import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { Link } from "react-router-dom";
 
+const initialFormState = {
+  email: "",
+  emailError: "",
+  password: "",
+  passwordError: ""
+};
+
 class LogIn extends Component {
   constructor() {
     super();
 
     this.state = {
-      email: "",
-      password: ""
+      ...initialFormState
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,11 +31,39 @@ class LogIn extends Component {
     });
   }
 
+  validate = () => {
+    let emailError = "";
+    let passwordError = "";
+
+    if (!this.state.email) {
+      emailError = this.props.t("Incorrect email");
+    }
+
+    if (!this.state.password) {
+      passwordError = this.props.t("Password is missing");
+    }
+
+    if (emailError || passwordError) {
+      this.setState({ emailError, passwordError });
+      return false;
+    }
+
+    return true;
+  };
+
   handleSubmit(e) {
     e.preventDefault();
-
-    console.log("Dummy console log to check if form was subbimited:");
+    const isValid = this.validate();
+    console.log("Dummy console log to check if log in form was subbimited:");
     console.log(this.state);
+
+    if (isValid) {
+      console.log("Valid LogIn Form");
+
+      this.setState({
+        ...initialFormState
+      });
+    }
   }
   render() {
     return (
@@ -47,6 +81,7 @@ class LogIn extends Component {
             value={this.state.email}
             onChange={this.handleChange}
           />
+          <div className="errorTest">{this.state.emailError}</div>
         </div>
         <div className="formField">
           <label className="formField__label" htmlFor="password">
@@ -61,6 +96,7 @@ class LogIn extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
+          <div className="errorTest">{this.state.passwordError}</div>
         </div>
 
         <div className="formField">
