@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import "react-toastify/dist/ReactToastify.css";
 import "./main.scss";
@@ -32,8 +32,8 @@ class App extends Component {
       <>
         <BrowserRouter>
           <Switch>
-            <Redirect from="/dash" to="/billings" />
-            <Route exact path="/register" render={() => <Register />} />
+            <Route from="/dash" to="/billings" />
+            <Route exact path="/" render={() => <Register />} />
             <Route
               path="/"
               render={() => (
@@ -42,7 +42,7 @@ class App extends Component {
                     <TopNav />
                     <SideNav />
                     <main className="main">
-                      <Route exact path="/" component={Campaigns} />
+                      <Route exact path="/campaings" component={Campaigns} />
                       <Route exact path="/quicksms" component={QuickSMS} />
                       <Route exact path="/statistics" component={Statistics} />
                       <Route exact path="/reports" component={Reports} />

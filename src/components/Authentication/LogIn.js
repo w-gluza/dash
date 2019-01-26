@@ -1,64 +1,74 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
+import { Link } from "react-router-dom";
 
 class LogIn extends Component {
-  state = {
-    username: "",
-    usernameError: "",
-    password: "",
-    passwordError: ""
-  };
+  constructor() {
+    super();
 
-  change = e => {
-    this.props.onChange({ [e.target.name]: e.target.value });
+    this.state = {
+      email: "",
+      password: ""
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    let target = e.target;
+    let value = target.value;
+    let name = target.name;
+
     this.setState({
-      [e.target.name]: e.target.value
+      [name]: value
     });
-  };
+  }
 
-  validate = () => {
-    let isError = false;
-    const errors = {};
-
-    if (this.state.username.length < 5) {
-      isError = true;
-      errors.usernameError = "Username at least 5 signs";
-    }
-    if (isError) {
-      this.setState({
-        ...this.state,
-        ...errors
-      });
-    }
-    return isError;
-  };
-
-  onSubmit = e => {
+  handleSubmit(e) {
     e.preventDefault();
-    const err = this.validate();
-    if (!err) {
-      this.setState({
-        username: "",
-        password: ""
-      });
-      this.props.onChange({
-        username: "",
-        password: ""
-      });
-    }
-  };
+
+    console.log("Dummy console log to check if form was subbimited:");
+    console.log(this.state);
+  }
   render() {
     return (
-      <form>
-        <label>
+      <form onSubmit={this.handleSubmit}>
+        <div className="formField">
+          <label className="formField__label" htmlFor="email">
+            E-Mail Address
+          </label>
           <input
-            name="username"
-            placeholder="username"
-            value={this.state.username}
-            onChange={e => this.change(e)}
+            type="email"
+            id="email"
+            className="formField__input"
+            placeholder="Enter your email"
+            name="email"
+            value={this.state.email}
+            onChange={this.handleChange}
           />
-        </label>
-        Something
+        </div>
+        <div className="formField">
+          <label className="formField__label" htmlFor="password">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="formField__input"
+            placeholder="Enter your password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+        </div>
+
+        <div className="formField">
+          <button className="formField__button mr-20">Log In</button>
+          <Link to="/sign-up" className="formField__link">
+            Create an account
+          </Link>
+        </div>
       </form>
     );
   }

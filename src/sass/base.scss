@@ -243,3 +243,10 @@ input.form-control {
   font-weight: $font-weight-regular;
   color: $color-primary;
 }
+
+.register__container {
+  background-color: $color-grey-dark;
+  height: 100vh;
+  background: linear-gradient(65deg, #2193b0, #00acc1);
+  padding: 5rem;
+}
