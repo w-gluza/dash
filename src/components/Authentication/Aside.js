@@ -9,7 +9,7 @@ class Aside extends Component {
         <div className="aside__title">
           <h1 className="aside__heading">Welcome back!</h1>
           <h2 className="aside__subheading">
-            Log in to access your profile or signup to create a new account
+            Log in to access your profile or signup to create a new account!
           </h2>
         </div>
         <div className="asideLogo__wraper">
@@ -17,7 +17,23 @@ class Aside extends Component {
         </div>
 
         <div className="aside__links">
-          <p>EZ4U</p> / <p>info@ez4uteam.com</p> / <p>+351 220 731 391</p>
+          <p>
+            <a
+              href="https://ez4uteam.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              EZ4U
+            </a>
+          </p>
+          |
+          <p>
+            <a href="mailto:webmaster@example.com">info@ez4uteam.com</a>
+          </p>
+          |
+          <p>
+            <a href="tel:+351220731391">+351 220 731 391</a>
+          </p>
         </div>
       </aside>
     );

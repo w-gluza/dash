@@ -19,6 +19,16 @@ import { subscribe, unsubscribe } from "./localStorage";
 import MobileNav from "./components/MobileNav/MobileNav";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loginOption: true,
+      signupOption: false
+    };
+    this.loginToggle = this.loginToggle.bind(this);
+    this.signupToggle = this.signupToggle.bind(this);
+  }
+
   componentDidMount() {
     subscribe(this);
   }
@@ -27,12 +37,36 @@ class App extends Component {
     unsubscribe(this);
   }
 
+  loginToggle() {
+    this.setState({
+      loginOption: true,
+      signupOption: false
+    });
+  }
+  signupToggle() {
+    this.setState({
+      loginOption: false,
+      signupOption: true
+    });
+  }
+
   render() {
     return (
       <>
         <BrowserRouter basename="/dash">
           <Switch>
-            <Route exact path="/" render={() => <Register />} />
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Register
+                  loginOption={this.state.loginOption}
+                  signupOption={this.state.signupOption}
+                  loginToggle={this.loginToggle}
+                  signupToggle={this.signupToggle}
+                />
+              )}
+            />
             <Route
               path="/"
               render={() => (

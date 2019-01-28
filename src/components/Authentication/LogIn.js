@@ -103,9 +103,9 @@ class LogIn extends Component {
           <button className="formField__button">
             <Link to="/billings">Log In</Link>
           </button>
-          <Link to="/sign-up" className="formField__link">
+          <button className="formField__link" onClick={this.props.signupToggle}>
             Create an account
-          </Link>
+          </button>
         </div>
       </form>
     );

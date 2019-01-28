@@ -1,26 +1,20 @@
 .aside__grid {
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-rows: max-content max-content max-content;
   height: 100%;
   width: 100%;
   z-index: 1000;
+  padding: 3rem;
+  grid-gap: 4rem;
 }
 .aside__title {
-  // display: grid;
-  // grid-template-columns: max-content;
-  // grid-template-rows: 1fr 1fr;
-
   justify-content: center;
   align-content: center;
-  background-color: grey;
 }
 .aside__heading {
   font-size: $font-size-large;
   font-weight: $font-weight-regular;
   color: $color-grey;
-  justify-content: center;
-  align-content: center;
-  background-color: red;
   text-align: center;
 }
 .aside__subheading {
@@ -31,27 +25,20 @@
   color: $color-primary-dark;
   justify-content: center;
   align-content: center;
-  background-color: yellow;
+  padding: 0 2rem 0rem 2rem;
 }
 .asideLogo__wraper {
-  justify-content: center;
-  align-content: center;
+  text-align: center;
 }
 .aside__links {
   display: grid;
   grid-template-columns: max-content max-content max-content max-content max-content;
   grid-gap: 1rem;
   color: $color-grey;
-  // color: $color-primary-dark;
-
-  // background-color: rgba(#fff, 0.3);
   align-content: center;
   justify-content: center;
   font-size: $font-size-regular;
   font-weight: $font-weight-light;
-  // background-color: $color-primary-dark;
-  // background-color: $color-blue-grey;
-
   width: 100%;
-  background-color: green;
+  padding-bottom: 4rem;
 }

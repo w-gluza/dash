@@ -5,29 +5,6 @@ import SignUp from "../components/Authentication/SignUp";
 import Aside from "../components/Authentication/Aside";
 
 class Register extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      login: true,
-      signup: false
-    };
-    this.loginToggle = this.loginToggle.bind(this);
-    this.signupToggle = this.signupToggle.bind(this);
-  }
-
-  loginToggle() {
-    this.setState({
-      login: true,
-      signup: false
-    });
-  }
-  signupToggle() {
-    this.setState({
-      login: false,
-      signup: true
-    });
-  }
-
   render() {
     return (
       <main className="registration">
@@ -39,21 +16,21 @@ class Register extends Component {
             <div className="pageSwitcher">
               <button
                 className={
-                  this.state.login
+                  this.props.loginOption
                     ? "pageSwitcher__item pageSwitcher__item--active"
                     : "pageSwitcher__item"
                 }
-                onClick={this.loginToggle}
+                onClick={this.props.loginToggle}
               >
                 Log In
               </button>
               <button
                 className={
-                  this.state.signup
+                  this.props.signupOption
                     ? "pageSwitcher__item pageSwitcher__item--active"
                     : "pageSwitcher__item"
                 }
-                onClick={this.signupToggle}
+                onClick={this.props.signupToggle}
               >
                 Sign Up
               </button>
@@ -63,11 +40,11 @@ class Register extends Component {
             <span>
               <button
                 className={
-                  this.state.login
+                  this.props.loginOption
                     ? "registrationForm__title__link registrationForm__title__link--Active"
                     : "registrationForm__title__link"
                 }
-                onClick={this.loginToggle}
+                onClick={this.props.loginToggle}
               >
                 Log In
               </button>
@@ -75,16 +52,20 @@ class Register extends Component {
             </span>
             <button
               className={
-                this.state.signup
+                this.props.signupOption
                   ? "registrationForm__title__link registrationForm__title__link--Active"
                   : "registrationForm__title__link"
               }
-              onClick={this.signupToggle}
+              onClick={this.props.signupToggle}
             >
               Sign Up
             </button>
           </div>
-          {this.state.login ? <LogIn /> : <SignUp />}
+          {this.props.loginOption ? (
+            <LogIn {...this.props} />
+          ) : (
+            <SignUp {...this.props} />
+          )}
         </section>
       </main>
     );
