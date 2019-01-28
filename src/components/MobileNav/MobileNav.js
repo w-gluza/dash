@@ -12,7 +12,7 @@ class MobileNav extends Component {
             <li className="mobilenav__list--item">
               <NavLink
                 exact
-                to="/"
+                to="/campaigns"
                 className="mobilenav__link "
                 activeClassName="mobilenav__link--active"
               >

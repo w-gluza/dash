@@ -3,13 +3,16 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import LogIn from "../components/Authentication/LogIn";
 import SignUp from "../components/Authentication/SignUp";
+import Aside from "../components/Authentication/Aside";
 
 class Register extends Component {
   render() {
     return (
       <Router>
         <main className="registration">
-          <aside className="registration__aside" />
+          <aside className="registration__aside">
+            <Aside />
+          </aside>
           <section className="registration__form">
             <div className="pageSwitcher__container">
               <div className="pageSwitcher">
@@ -51,9 +54,8 @@ class Register extends Component {
                 Sign Up
               </NavLink>
             </div>
-
-            <Route exact path="/sign-up" component={SignUp} />
             <Route exact path="/" component={LogIn} />
+            <Route exact path="/sign-up" component={SignUp} />
           </section>
         </main>
       </Router>

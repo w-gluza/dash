@@ -30,9 +30,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <BrowserRouter>
+        <BrowserRouter basename="/dash">
           <Switch>
-            <Route from="/dash" to="/billings" />
             <Route exact path="/" render={() => <Register />} />
             <Route
               path="/"
@@ -42,7 +41,7 @@ class App extends Component {
                     <TopNav />
                     <SideNav />
                     <main className="main">
-                      <Route exact path="/campaings" component={Campaigns} />
+                      <Route exact path="/campaigns" component={Campaigns} />
                       <Route exact path="/quicksms" component={QuickSMS} />
                       <Route exact path="/statistics" component={Statistics} />
                       <Route exact path="/reports" component={Reports} />

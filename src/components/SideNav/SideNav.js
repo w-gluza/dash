@@ -19,7 +19,11 @@ class SideNav extends Component {
         </NavLink>
         <ul>
           <li className="sidenav__list--item">
-            <NavLink exact to="/" activeClassName="sidenav__list--activelink">
+            <NavLink
+              exact
+              to="/campaigns"
+              activeClassName="sidenav__list--activelink"
+            >
               <Icon
                 name="inbox"
                 className="sidenav__icon"

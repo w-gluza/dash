@@ -100,7 +100,9 @@ class LogIn extends Component {
         </div>
 
         <div className="formField">
-          <button className="formField__button mr-20">Log In</button>
+          <button className="formField__button">
+            <Link to="/billings">Log In</Link>
+          </button>
           <Link to="/sign-up" className="formField__link">
             Create an account
           </Link>

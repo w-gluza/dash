@@ -121,8 +121,8 @@ class SignUp extends Component {
           <div className="errorTest">{this.state.emailError}</div>
         </div>
         <div className="formField">
-          <button className="formField__button mr-20">Sign Up</button>
-          <Link to="/" className="formField__link">
+          <button className="formField__button">Sign Up</button>
+          <Link to="/log-in" className="formField__link">
             I have an account
           </Link>
         </div>
