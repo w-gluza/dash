@@ -1,6 +1,7 @@
 import React from "react";
 
 import Logo from "./src/Logo";
+import LogoIcon from "./src/LogoIcon";
 import Favicon from "./src/Favicon";
 
 import SMS from "./src/SMS";
@@ -14,6 +15,8 @@ const Icon = props => {
   switch (props.name) {
     case "logo":
       return <Logo {...props} />;
+    case "logoIcon":
+      return <LogoIcon {...props} />;
     case "favicon":
       return <Favicon {...props} />;
     case "sms":
