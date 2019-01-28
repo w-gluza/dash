@@ -1,64 +1,92 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import LogIn from "../components/Authentication/LogIn";
 import SignUp from "../components/Authentication/SignUp";
 import Aside from "../components/Authentication/Aside";
 
 class Register extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      login: true,
+      signup: false
+    };
+    this.loginToggle = this.loginToggle.bind(this);
+    this.signupToggle = this.signupToggle.bind(this);
+  }
+
+  loginToggle() {
+    this.setState({
+      login: true,
+      signup: false
+    });
+  }
+  signupToggle() {
+    this.setState({
+      login: false,
+      signup: true
+    });
+  }
+
   render() {
     return (
-      <Router>
-        <main className="registration">
-          <aside className="registration__aside">
-            <Aside />
-          </aside>
-          <section className="registration__form">
-            <div className="pageSwitcher__container">
-              <div className="pageSwitcher">
-                <NavLink
-                  exact
-                  to="/"
-                  activeClassName="pageSwitcher__item--active"
-                  className="pageSwitcher__item"
-                >
-                  Log In
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/sign-up"
-                  activeClassName="pageSwitcher__item--active"
-                  className="pageSwitcher__item"
-                >
-                  Sign Up
-                </NavLink>
-              </div>
-            </div>
-
-            <div className="registrationForm__title">
-              <NavLink
-                exact
-                to="/"
-                activeClassName="registrationForm__title__link--Active"
-                className="registrationForm__title__link"
+      <main className="registration">
+        <aside className="registration__aside">
+          <Aside />
+        </aside>
+        <section className="registration__form">
+          <div className="pageSwitcher__container">
+            <div className="pageSwitcher">
+              <button
+                className={
+                  this.state.login
+                    ? "pageSwitcher__item pageSwitcher__item--active"
+                    : "pageSwitcher__item"
+                }
+                onClick={this.loginToggle}
               >
                 Log In
-              </NavLink>
-              <span className="registration__form--span">or</span>
-              <NavLink
-                exact
-                to="/sign-up"
-                activeClassName="registrationForm__title__link--Active"
-                className="registrationForm__title__link"
+              </button>
+              <button
+                className={
+                  this.state.signup
+                    ? "pageSwitcher__item pageSwitcher__item--active"
+                    : "pageSwitcher__item"
+                }
+                onClick={this.signupToggle}
               >
                 Sign Up
-              </NavLink>
+              </button>
             </div>
-            <Route exact path="/" component={LogIn} />
-            <Route exact path="/sign-up" component={SignUp} />
-          </section>
-        </main>
-      </Router>
+          </div>
+          <div className="registrationForm__title">
+            <span>
+              <button
+                className={
+                  this.state.login
+                    ? "registrationForm__title__link registrationForm__title__link--Active"
+                    : "registrationForm__title__link"
+                }
+                onClick={this.loginToggle}
+              >
+                Log In
+              </button>
+              <span className="registration__form--span">or</span>
+            </span>
+            <button
+              className={
+                this.state.signup
+                  ? "registrationForm__title__link registrationForm__title__link--Active"
+                  : "registrationForm__title__link"
+              }
+              onClick={this.signupToggle}
+            >
+              Sign Up
+            </button>
+          </div>
+          {this.state.login ? <LogIn /> : <SignUp />}
+        </section>
+      </main>
     );
   }
 }

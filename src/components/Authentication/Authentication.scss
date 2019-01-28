@@ -41,6 +41,7 @@
   cursor: pointer;
   font-size: $font-size-regular;
   text-decoration: none;
+  color: $color-white;
 }
 
 .pageSwitcher__item--active {
@@ -71,7 +72,7 @@
   font-size: $font-size-large;
   font-weight: $font-weight-light;
 }
-a.registrationForm__title__link {
+button.registrationForm__title__link {
   color: $color-blue-grey;
 }
 
@@ -79,7 +80,7 @@ a.registrationForm__title__link {
   margin-left: 0;
 }
 
-a.registrationForm__title__link--Active {
+button.registrationForm__title__link--Active {
   color: $color-white;
   border-bottom: 1px solid $color-primary;
 }
@@ -127,7 +128,7 @@ a.registrationForm__title__link--Active {
   letter-spacing: $letter-spacing-regular;
 }
 
-a.formField__link {
+.formField__link {
   color: $color-blue-grey;
   font-size: $font-size-regular;
   display: inline-block;
