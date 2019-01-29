@@ -19,6 +19,16 @@ class SideNav extends Component {
         </NavLink>
         <ul>
           <li className="sidenav__list--item">
+            <NavLink to="/billings" activeClassName="sidenav__list--activelink">
+              <Icon
+                name="pricing"
+                className="sidenav__icon"
+                alt={this.props.t("sideNav.altLinkBillings")}
+              />
+              {this.props.t("sideNav.billings")}
+            </NavLink>
+          </li>
+          <li className="sidenav__list--item">
             <NavLink
               exact
               to="/campaigns"
@@ -64,16 +74,6 @@ class SideNav extends Component {
                 alt={this.props.t("sideNav.altLinkReports")}
               />
               {this.props.t("sideNav.reports")}
-            </NavLink>
-          </li>
-          <li className="sidenav__list--item">
-            <NavLink to="/billings" activeClassName="sidenav__list--activelink">
-              <Icon
-                name="pricing"
-                className="sidenav__icon"
-                alt={this.props.t("sideNav.altLinkBillings")}
-              />
-              {this.props.t("sideNav.billings")}
             </NavLink>
           </li>
         </ul>

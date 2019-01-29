@@ -11,6 +11,22 @@ class MobileNav extends Component {
           <div>
             <li className="mobilenav__list--item">
               <NavLink
+                to="/billings"
+                className="mobilenav__link "
+                activeClassName="mobilenav__link--active"
+              >
+                <Icon
+                  name="pricing"
+                  className="mobilenav__icon"
+                  alt="Billings Icon"
+                />
+                {this.props.t("sideNav.billings")}
+              </NavLink>
+            </li>
+          </div>
+          <div>
+            <li className="mobilenav__list--item">
+              <NavLink
                 exact
                 to="/campaigns"
                 className="mobilenav__link "
@@ -67,22 +83,6 @@ class MobileNav extends Component {
                   alt="Reports Icon"
                 />
                 {this.props.t("sideNav.reports")}
-              </NavLink>
-            </li>
-          </div>
-          <div>
-            <li className="mobilenav__list--item">
-              <NavLink
-                to="/billings"
-                className="mobilenav__link "
-                activeClassName="mobilenav__link--active"
-              >
-                <Icon
-                  name="pricing"
-                  className="mobilenav__icon"
-                  alt="Billings Icon"
-                />
-                {this.props.t("sideNav.billings")}
               </NavLink>
             </li>
           </div>
