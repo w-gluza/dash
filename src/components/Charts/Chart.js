@@ -21,12 +21,7 @@ class Chart extends Component {
     return (
       <div id="container" className="chart">
         <ResponsiveContainer>
-          <LineChart
-            width={600}
-            height={300}
-            data={data}
-            // margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-          >
+          <LineChart width={600} height={300} data={data}>
             <Line type="monotone" dataKey="sms" stroke="#00acc1" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
             <XAxis dataKey="name" />

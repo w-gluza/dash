@@ -17,20 +17,20 @@ class Pricing extends Component {
               <ul>
                 <li>
                   <span className="pricing__span">
-                    {this.props.t("pricing.package")}10 SMS
-                  </span>
+                    {this.props.t("pricing.package")} 10 SMS
+                  </span>{" "}
                   3.6 cent
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.aquiredVolume")}
-                  </span>
+                  </span>{" "}
                   10
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.unitPrice")}
-                  </span>
+                  </span>{" "}
                   0.00€
                 </li>
               </ul>
@@ -50,13 +50,13 @@ class Pricing extends Component {
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   11989
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   012 361 563
                 </li>
               </ul>
@@ -84,13 +84,13 @@ class Pricing extends Component {
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   11989
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardReferenceNumber")}
-                  </span>
+                  </span>{" "}
                   012 361 563
                 </li>
               </ul>
@@ -118,13 +118,13 @@ class Pricing extends Component {
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   11989
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardReferenceNumber")}
-                  </span>
+                  </span>{" "}
                   012 361 563
                 </li>
               </ul>
@@ -152,13 +152,13 @@ class Pricing extends Component {
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   11989
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardReferenceNumber")}
-                  </span>
+                  </span>{" "}
                   012 361 563
                 </li>
               </ul>
@@ -186,13 +186,13 @@ class Pricing extends Component {
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardEntity")}
-                  </span>
+                  </span>{" "}
                   11989
                 </li>
                 <li>
                   <span className="pricing__span">
                     {this.props.t("pricing.cardReferenceNumber")}
-                  </span>
+                  </span>{" "}
                   012 361 563
                 </li>
               </ul>

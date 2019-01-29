@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
-// import json from "../../assets/json/credit";
 import { getItem } from "../../localStorage";
 
 class AvailableCreditBar extends Component {

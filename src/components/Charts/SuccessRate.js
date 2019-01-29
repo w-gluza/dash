@@ -34,7 +34,6 @@ class SuccessRate extends Component {
             <p className="pie__top__text">{this.props.t("BI.successRate")}</p>
             <p className="pie__top__number">95%</p>
             <p className="pie__bottom__text">
-              {" "}
               {this.props.t("BI.totalNumber")}
             </p>
             <p className="pie__bottom__number"> 1245</p>
