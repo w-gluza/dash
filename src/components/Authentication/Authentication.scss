@@ -6,15 +6,24 @@
 .registration {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 .registration__aside {
   background-color: $color-primary;
-  // background-color: red;
+  @include respond(phone) {
+    display: none;
+  }
 }
-
-.registration__form {
+.registration__form__container {
   background-color: $color-blue-dark;
+  width: 100%;
+  height: 100%;
+}
+.registration__form {
   padding: 2.5rem 4rem;
 }
 
@@ -126,6 +135,9 @@ button.registrationForm__title__link--Active {
   font-size: $font-size-regular;
   font-weight: $font-weight-medium;
   letter-spacing: $letter-spacing-regular;
+  @include respond(phone) {
+    padding: 1.5rem 4rem;
+  }
 }
 
 .formField__link {
@@ -136,4 +148,8 @@ button.registrationForm__title__link--Active {
   padding-bottom: 0.5rem;
   margin-left: 2rem;
   letter-spacing: $letter-spacing-small;
+
+  @include respond(phone) {
+    margin-left: 1rem;
+  }
 }

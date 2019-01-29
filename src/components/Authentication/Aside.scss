@@ -1,9 +1,8 @@
 .aside__grid {
   display: grid;
-  grid-template-rows: max-content max-content max-content;
+  grid-template-rows: min-content max-content max-content;
   height: 100%;
   width: 100%;
-  z-index: 1000;
   padding: 3rem;
   grid-gap: 4rem;
 }
