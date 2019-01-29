@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const initialFormState = {
   email: "",
@@ -36,19 +36,21 @@ class LogIn extends Component {
     let passwordError = "";
 
     if (!this.state.email) {
-      emailError = this.props.t("Incorrect email");
+      emailError = this.props.t(
+        "Incorrect email, please type ANY email like hello@gmail.com"
+      );
     }
 
     if (!this.state.password) {
-      passwordError = this.props.t("Password is missing");
+      passwordError = this.props.t("Password is missing, please type any text");
     }
 
     if (emailError || passwordError) {
       this.setState({ emailError, passwordError });
       return false;
+    } else {
+      this.setState({ isValid: true });
     }
-
-    return true;
   };
 
   handleSubmit(e) {
@@ -66,6 +68,9 @@ class LogIn extends Component {
     }
   }
   render() {
+    if (this.state.isValid === true) {
+      return <Redirect to="/billings" />;
+    }
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="formField">
@@ -100,8 +105,8 @@ class LogIn extends Component {
         </div>
 
         <div className="formField">
-          <button className="formField__button">
-            <Link to="/billings">Log In</Link>
+          <button className="formField__button" onSubmit={this.handleSubmit}>
+            Log In
           </button>
           <button className="formField__link" onClick={this.props.signupToggle}>
             Create an account
